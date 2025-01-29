@@ -8,6 +8,18 @@ class Thing:
         self.prop = prop
         self.sprite = sprite
         self.trans = transform
+    
+    def add(self, other: Word|"Thing"):
+        if isinstance(other, Word):
+            self.prop = list(set(self.prop.append(other._name)))
+        else:
+            self.trans = other
+    
+    def pop(self, other: Word|"Thing"):
+        if isinstance(other, Word):
+            self.prop = list(set(self.prop.remove(other._name)))
+        else:
+            self.trans = None
 
 
 class Word(Thing):
