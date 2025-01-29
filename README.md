@@ -1,2 +1,2 @@
-# soweli_li_sina
+# soweli li sina
 Toki Pona Baba is You
