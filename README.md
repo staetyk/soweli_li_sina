@@ -4,7 +4,7 @@ Toki Pona Baba is You
 By Bach Davis and Nolan McCall (tan jan Pa en jan Nolen)
 
 ## Credits (jan pali)
-* Code by Bach (toki ilo sona tan jan P)
+* Code by Bach (toki sona tan jan P)
 * Levels by Nolan (kipisi tan jan N)
 * Sitelen Leko Luka font by Bach (sitelen leko luka tan jan P)
 * Sprites by Nolan (sitelen tan jan N)
