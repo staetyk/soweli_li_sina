@@ -1,5 +1,5 @@
 # soweli li sina
-Toki Pona Baba is You
+Toki Pona game inspired by *Baba is You* (musi toki pona tan musi *Baba is You*)
 
 By Bach Davis and Nolan McCall (tan jan Pa en jan Nolen)
 
