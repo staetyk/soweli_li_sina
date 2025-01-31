@@ -1,0 +1,4 @@
+read sub-phase 1
+read sub-phase 2
+act phase
+move phase
