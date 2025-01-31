@@ -3,23 +3,33 @@ from typing import *
 
 
 class Thing:
-    def __init__(self, name: str, prop: List[str, None] = [], sprite: pygame.image|None = None, transform: "Thing"|None = None):
+    def __init__(self, name: str, prop: List[str, None] = [], sprite: pygame.image|None = None, transformL: List["Thing", None] = None, transformA: List["Thing", None] = None):
         self._name = name
         self.prop = prop
         self.sprite = sprite
-        self.trans = transform
+        self.transL = transformL
+        self.transA = transformA
     
-    def add(self, other: "Word"|"Thing"):
+    def add(self, other: "Word"|"Thing", b: bool = True):
         if isinstance(other, Word):
-            self.prop = list(set(self.prop.append(other._name)))
+            self.prop = list(set(self.prop.append(("" if b else "-") + other._name)))
+        elif b:
+            self.transL = list(set(self.transL.append(other)))
         else:
-            self.trans = other
+            self.transA = list(set(self.transA.append(other)))
     
-    def pop(self, other: "Word"|"Thing"):
+    def pop(self, other: "Word"|"Thing", b: bool = True):
         if isinstance(other, Word):
-            self.prop = list(set(self.prop.remove(other._name)))
+            self.prop = self.prop.remove(("" if b else "-") + other._name)
+        elif b:
+            self.transL = self.transL.remove(other)
         else:
-            self.trans = None
+            self.transA = self.transA.remove(other)
+    
+    def clr(self):
+        self.prop = []
+        self.transL = []
+        self.transA = []
 
 
 class Word(Thing):
