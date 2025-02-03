@@ -10,7 +10,8 @@ def init(level: int):
     global width
     global height
     global map
-    with open("levels.lvl{level}.csv") as file:
+
+    with open("levels.lvl_{level}.csv") as file:
         lines = reader(file)
         i = -1
         for x in lines:
