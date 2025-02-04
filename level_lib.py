@@ -28,7 +28,7 @@ def init(level: int):
 def act() -> str|None:
     global map
     for index, cell in map.items():
-        old = (cell if len(cell) > 0 else [tkon])
+        old = (cell if len(cell) > 0 else [tKon])
 
         s = []
         p = []
