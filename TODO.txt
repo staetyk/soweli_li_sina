@@ -1,9 +1,10 @@
+change phase
 move phase
 apply phase
 parse phase
 
-phases: input, parse, apply, move, show*, parse, apply, act, show
+phases: input, parse, apply, move, parse, apply, change, act, show
 
-* only if level won
+move phase hierarchy (sing): pini & open > awen > tawa
 
-move phase hierarchy: pini & open > awen > tawa
+move phase hierarchy (plur): awen > tawa > pini & open
