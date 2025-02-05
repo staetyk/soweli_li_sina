@@ -1,6 +1,6 @@
 add facing to Thing
 add Thing list for clr
-rearrange Thing.prop and .ltrans+.atrans into Thing.prop+.aprop+.lprop and .trans+.atrans+.ltrans
+change Thing.prop into Thing.lprop and Thing.aprop
 change phase
 move phase
 apply phase
