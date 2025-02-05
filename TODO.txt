@@ -2,6 +2,8 @@ move phase
 apply phase
 parse phase
 
-phases: input, parse, apply, move, parse, apply, act
+phases: input, parse, apply, move, show*, parse, apply, act, show
+
+* only if level won
 
 move phase hierarchy: pini & open > awen > tawa
