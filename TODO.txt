@@ -1,7 +1,7 @@
-act phase
 move phase
-detect phase
-parse phase
 apply phase
+parse phase
 
-phases: input, detect, parse, apply, move, detect, parse, apply, act
+phases: input, parse, apply, move, parse, apply, act
+
+move phase hierarchy: pini & open > awen > tawa
