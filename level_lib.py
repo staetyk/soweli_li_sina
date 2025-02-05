@@ -25,7 +25,7 @@ def init(level: int):
 
 
 
-def act() -> str|None:
+def act() -> bool:
     global map
     for index, cell in map.items():
         old = (cell if len(cell) > 0 else [tKon])
@@ -52,7 +52,7 @@ def act() -> str|None:
         
         a = []
         if len(s) > 0:
-            if w: return "win"
+            if w: return True
             if m: a.extend(s)
         n = min(len(p), len(o))
         if n > 0:
@@ -62,3 +62,4 @@ def act() -> str|None:
         
         new = [(old[i] for i in range(len(old)) if i not in a)]
         map.update({index : new})
+    return False
