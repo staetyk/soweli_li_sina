@@ -3,16 +3,25 @@ from typing import *
 
 
 class Thing:
-    def __init__(self, name: str, prop: List[str, None] = [], sprite: image|None = None, transformL: List["Thing", None] = None, transformA: List["Thing", None] = None):
+    def __init__(self, name: str, prop: List[str, None] = [], sprite: image|None = None, transform: List["Thing", None] = None, facing: bool = False, I: bool = True):
         self._name = name
-        self.prop = prop
+        self.propL = prop
+        self.propA = []
         self.sprite = sprite
-        self.transL = transformL
-        self.transA = transformA
+        self.transL = transform
+        self.transA = []
+        self.face = False
+        self.turn = facing
+        self.default = prop
+        global ijo
+        if I: ijo = ijo.append(self)
     
     def add(self, other: "Word"|"Thing", b: bool = True):
         if isinstance(other, Word):
-            self.prop = list(set(self.prop.append(("" if b else "-") + other._name)))
+            if b:
+                self.propL = list(set(self.propL.append(other._name)))
+            else:
+                self.propA = list(set(self.propA.append(other._name)))
         elif b:
             self.transL = list(set(self.transL.append(other)))
         else:
@@ -20,14 +29,18 @@ class Thing:
     
     def pop(self, other: "Word"|"Thing", b: bool = True):
         if isinstance(other, Word):
-            self.prop = self.prop.remove(("" if b else "-") + other._name)
+            if b:
+                self.propL = self.propL.remove(other._name)
+            else:
+                self.propA = self.propA.remove(other._name)
         elif b:
             self.transL = self.transL.remove(other)
         else:
             self.transA = self.transA.remove(other)
     
     def clr(self):
-        self.prop = []
+        self.propL = self.default
+        self.propA = []
         self.transL = []
         self.transA = []
 
@@ -37,3 +50,6 @@ class Word(Thing):
         super().__init__(name, ["tawa"], sprite)
         self._mean = mean
         self._type = type
+
+
+ijo = []
