@@ -24,7 +24,6 @@ def init(level: int):
             i += 1
 
 
-
 def act() -> bool:
     global map
     for index, cell in map.items():
@@ -37,13 +36,7 @@ def act() -> bool:
         m = False
         for i in range(len(old)):
             x = old[i]
-            if isinstance(x, Word): continue
-            lprop = []
-            aprop = []
-            for y in x.prop:
-                if y[0] == "-": aprop.append(y.replace("-", ""))
-                else: lprop.append(y)
-            prop = [(y for y in lprop if y not in aprop)]
+            prop = [(y for y in x.propL if y not in x.propA)]
             if "sina" in prop: s.append(i)
             if "pini" in prop: p.append(i)
             if "open" in prop: o.append(i)
@@ -60,6 +53,20 @@ def act() -> bool:
                 a.append(p[i])
                 a.append(o[i])
         
-        new = [(old[i] for i in range(len(old)) if i not in a)]
+        new = [(old[i] for i in range(len(old)) if i not in a & old[i] not is tKon)]
         map.update({index : new})
     return False
+
+
+def change() -> None:
+    global map
+    for index, cell in map.items():
+        old = (cell if len(cell) > 0 else [tKon])
+
+        new = []
+        for x in old:
+            trans = [(y for y in x.transL if y not in x.transA)]
+            if len(trans) == 0: new = new.append(x)
+            else: new = new.extend(trans)
+        new = [(x for x in new if x not is tKon)]
+        map.update({index : new})

@@ -1,4 +1,3 @@
-change phase
 move phase
 apply phase
 parse phase
