@@ -1,13 +1,6 @@
-add facing to Thing
-add Thing list for clr
-change Thing.prop into Thing.lprop and Thing.aprop
 change phase
 move phase
 apply phase
 parse phase
 
 phases: input, parse, apply, move, parse, apply, change, act, show
-
-move phase hierarchy (sing): pini & open > awen > tawa
-
-move phase hierarchy (plur): awen > tawa > pini & open
