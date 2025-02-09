@@ -1,6 +1,6 @@
 from components import *
 from csv import reader
-from classes import Word, Thing, ijo
+from classes import Word, Thing, ijo, clear
 
 
 width = 1
