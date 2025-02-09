@@ -53,3 +53,7 @@ class Word(Thing):
 
 
 ijo = []
+
+
+def clear():
+    for x in ijo: x.clr()
