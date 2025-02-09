@@ -47,7 +47,7 @@ class Thing:
 
 class Word(Thing):
     def __init__(self, name: str, type: int, mean: Thing|None = None, sprite: image|None = None):
-        super().__init__(name, ["tawa"], sprite)
+        super().__init__(name, ["tawa"], sprite, I = False)
         self._mean = mean
         self._type = type
 
