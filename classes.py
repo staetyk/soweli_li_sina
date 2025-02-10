@@ -1,4 +1,4 @@
-from pygame import image
+from pygame import Surface as image
 from typing import *
 
 
@@ -19,7 +19,7 @@ class Thing:
         global ijo
         if I: ijo = ijo.append(self)
     
-    def add(self, other: Word|"Thing", b: bool = True):
+    def add(self, other, b: bool = True): #type: ignore
         if isinstance(other, Word):
             if b:
                 self.propL = unique(self.propL.append(other._name))
@@ -30,16 +30,16 @@ class Thing:
         else:
             self.transA = unique(self.transA.append(other))
     
-    def pop(self, other: Word|"Thing", b: bool = True):
+    def pop(self, other, b: bool = True): #type: ignore
         if isinstance(other, Word):
             if b:
-                self.propL = self.propL.remove(other._name)
+                self.propL = self.propL.remove(other._name) #type: ignore
             else:
-                self.propA = self.propA.remove(other._name)
+                self.propA = self.propA.remove(other._name) #type: ignore
         elif b:
-            self.transL = self.transL.remove(other)
+            self.transL = self.transL.remove(other) #type: ignore
         else:
-            self.transA = self.transA.remove(other)
+            self.transA = self.transA.remove(other) #type: ignore
     
     def clr(self):
         self.propL = self.default
@@ -59,4 +59,4 @@ ijo = []
 
 
 def clear():
-    for x in ijo: x.clr()
+    for x in ijo: x.clr() #type: ignore
