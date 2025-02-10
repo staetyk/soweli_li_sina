@@ -40,8 +40,8 @@ def act() -> bool:
             if "sina" in prop: s.append(i)
             if "pini" in prop: p.append(i)
             if "open" in prop: o.append(i)
-            w = w | "pona" in prop
-            m = m | "moli" in prop
+            w = w | ("pona" in prop)
+            m = m | ("moli" in prop)
         
         a = []
         if len(s) > 0:
