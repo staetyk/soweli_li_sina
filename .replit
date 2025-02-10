@@ -1,8 +1,8 @@
 modules = ["python-3.12"]
-run = "main.py"
+run = "python3 main.py"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "main.py"]
+run = ["sh", "-c", "python3 main.py"]

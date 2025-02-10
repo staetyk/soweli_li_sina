@@ -2,32 +2,35 @@ from pygame import image
 from typing import *
 
 
+unique = lambda x : x if len(x) == 0 else list(set(x))
+
+
 class Thing:
-    def __init__(self, name: str, prop: List[str, None] = [], sprite: image|None = None, transform: List["Thing", None] = None, facing: bool = False, I: bool = True):
+    def __init__(self, name: str, prop: List[str] = [], sprite: image|None = None, transform: List["Thing"] = [], facing: bool = False, I: bool = True):
         self._name = name
-        self.propL = prop
-        self.propA = []
+        self.propL: list = prop
+        self.propA: list = []
         self.sprite = sprite
-        self.transL = transform
-        self.transA = []
+        self.transL: list = transform
+        self.transA: list = []
         self.face = False
         self.turn = facing
         self.default = prop
         global ijo
         if I: ijo = ijo.append(self)
     
-    def add(self, other: "Word"|"Thing", b: bool = True):
+    def add(self, other: Word|"Thing", b: bool = True):
         if isinstance(other, Word):
             if b:
-                self.propL = list(set(self.propL.append(other._name)))
+                self.propL = unique(self.propL.append(other._name))
             else:
-                self.propA = list(set(self.propA.append(other._name)))
+                self.propA = unique(self.propA.append(other._name))
         elif b:
-            self.transL = list(set(self.transL.append(other)))
+            self.transL = unique(self.transL.append(other))
         else:
-            self.transA = list(set(self.transA.append(other)))
+            self.transA = unique(self.transA.append(other))
     
-    def pop(self, other: "Word"|"Thing", b: bool = True):
+    def pop(self, other: Word|"Thing", b: bool = True):
         if isinstance(other, Word):
             if b:
                 self.propL = self.propL.remove(other._name)
