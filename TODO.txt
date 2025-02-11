@@ -3,4 +3,4 @@ parse phase
 apply phase
 
 
-phases: input, detect, parse, apply, move, detect, parse, apply, act, change, show
+phases: input, detect, parse, clear, apply, move, detect, parse, clear, apply, act, change, show
