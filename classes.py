@@ -60,9 +60,13 @@ class Word(Thing):
         super().__init__(name, ["tawa"], sprite, I = False)
         self._mean = mean
         self._type = type
+        global nimi
+        nimi.update({name : self})
 
 
 ijo = []
+
+nimi = {}
 
 
 def clear():

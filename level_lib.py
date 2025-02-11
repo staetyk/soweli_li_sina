@@ -1,6 +1,6 @@
 from components import *
 from csv import reader
-from classes import Word, Thing, ijo, clear
+from classes import Word, Thing, ijo, nimi, clear, unique
 
 
 width = 1
@@ -125,3 +125,25 @@ def move_suli(direction: int):
         else: move_lili(out, toxy(x), direction)
     for x in ijo:
         if "sina" in props(x): x.fac(direction)
+
+
+def parse(*phrases: str):
+    for phrase in phrases:
+        phrase = phrase.split(" li ")
+        subject, predicate = phrase[0], phrase[1:]
+        subject = subject.split(" en ")
+        
+        sub = []
+        for x in subject:
+            if "ala" in x:
+                x = x.replace(" ala", "")
+                sub.extend([(y for y in ijo if y._name != x)])
+            else:
+                sub.append(nimi[x]._mean)
+        sub = unique(sub)
+
+        for x in predicate:
+            a = "ala" in x
+            x = nimi[x.replace(" ala", "")]
+            if x._type == 1: x = x._mean
+            for y in sub: y.add(x, not a)
