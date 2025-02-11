@@ -40,16 +40,18 @@ def act() -> bool:
         o = []
         w = False
         m = False
+        a = []
         for i in range(len(old)):
             x = old[i]
             prop = props(x)
             if "sina" in prop: s.append(i)
-            if "pini" in prop: p.append(i)
+            if "pini" in prop:
+                if "open" in prop: a.append(i)
+                else: p.append(i)
             if "open" in prop: o.append(i)
             w = w | ("pona" in prop)
             m = m | ("moli" in prop)
         
-        a = []
         if len(s) > 0:
             if w: return True
             if m: a.extend(s)
