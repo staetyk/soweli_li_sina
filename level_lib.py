@@ -24,6 +24,12 @@ def init(level: int):
             i += 1
 
 
+toi = lambda x, y : x + y * width
+toxy = lambda i : (i % width, i // width)
+
+props = lambda x : [(y for y in x.propL if y not in x.propA)]
+
+
 def act() -> bool:
     global map
     for index, cell in map.items():
@@ -36,7 +42,7 @@ def act() -> bool:
         m = False
         for i in range(len(old)):
             x = old[i]
-            prop = [(y for y in x.propL if y not in x.propA)]
+            prop = props(x)
             if "sina" in prop: s.append(i)
             if "pini" in prop: p.append(i)
             if "open" in prop: o.append(i)
@@ -53,7 +59,7 @@ def act() -> bool:
                 a.append(p[i])
                 a.append(o[i])
         
-        new = [(old[i] for i in range(len(old)) if i not in a & old[i] not is tKon)]
+        new = [(old[i] for i in range(len(old)) if (i not in a) & (old[i] is not tKon))]
         map.update({index : new})
     return False
 
@@ -66,7 +72,29 @@ def change() -> None:
         new = []
         for x in old:
             trans = [(y for y in x.transL if y not in x.transA)]
-            if len(trans) == 0: new = new.append(x)
-            else: new = new.extend(trans)
-        new = [(x for x in new if x not is tKon)]
+            if len(trans) == 0: new.append(x)
+            else: new.extend(trans)
+        new = [(x for x in new if x is not tKon)]
         map.update({index : new})
+
+
+def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) -> bool:
+    coords1 = (coords[0] + [0, 1, 0, -1][direction], coords[1] + [-1, 0, 1, 0][direction])
+    if not (0 <= coords1[0] < width) or not (0 <= coords1[1] < height): return False
+    index0 = toi(*coords)
+    index1 = toi(*coords1)
+    B = map[index1]
+    if len(B) == 0: B = [tKon]
+
+    nasin = 0
+    for x in A:
+        if "pini" in props(x): nasin += 1
+        if "open" in props(x): nasin -= 1
+        if ("pini" in props(x)) & ("open" in props(x)): A.remove(x)
+
+    out = []
+    for x in B:
+        p = props(x)
+        if "tawa" in p: out.append(x)
+        elif "awen" in p:
+            if (("pini" if nasin < 0 else "open") in p) & abs(nasin) > 0: out.append(x)

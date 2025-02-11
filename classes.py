@@ -6,7 +6,7 @@ unique = lambda x : x if len(x) == 0 else list(set(x))
 
 
 class Thing:
-    def __init__(self, name: str, prop: List[str] = [], sprite: image|None = None, transform: List["Thing"] = [], facing: bool = False, I: bool = True):
+    def __init__(self, name: str, prop: list[str] = [], sprite: image|None = None, transform: list["Thing"] = [], facing: bool = False, I: bool = True):
         self._name = name
         self.propL: list = prop
         self.propA: list = []
@@ -17,29 +17,33 @@ class Thing:
         self.turn = facing
         self.default = prop
         global ijo
-        if I: ijo = ijo.append(self)
+        if I: ijo.append(self)
     
-    def add(self, other, b: bool = True): #type: ignore
+    def add(self, other, b: bool = True):
         if isinstance(other, Word):
             if b:
-                self.propL = unique(self.propL.append(other._name))
+                self.propL.append(other._name)
+                self.propL = unique(self.propL)
             else:
-                self.propA = unique(self.propA.append(other._name))
+                self.propA.append(other._name)
+                self.propA = unique(self.propA)
         elif b:
-            self.transL = unique(self.transL.append(other))
+            self.transL.append(other)
+            self.transL = unique(self.transL)
         else:
-            self.transA = unique(self.transA.append(other))
+            self.transA.append(other)
+            self.transA = unique(self.transA)
     
-    def pop(self, other, b: bool = True): #type: ignore
+    def pop(self, other, b: bool = True):
         if isinstance(other, Word):
             if b:
-                self.propL = self.propL.remove(other._name) #type: ignore
+                self.propL.remove(other._name)
             else:
-                self.propA = self.propA.remove(other._name) #type: ignore
+                self.propA.remove(other._name)
         elif b:
-            self.transL = self.transL.remove(other) #type: ignore
+            self.transL.remove(other)
         else:
-            self.transA = self.transA.remove(other) #type: ignore
+            self.transA.remove(other)
     
     def clr(self):
         self.propL = self.default
