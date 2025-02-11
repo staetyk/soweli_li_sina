@@ -6,14 +6,14 @@ unique = lambda x : x if len(x) == 0 else list(set(x))
 
 
 class Thing:
-    def __init__(self, name: str, prop: list[str] = [], sprite: image|None = None, transform: list["Thing"] = [], facing: bool = False, I: bool = True):
+    def __init__(self, name: str, prop: list[str] = [], sprite: image|None = None, transform: list["Thing"] = [], facing: int = 0, I: bool = True):
         self._name = name
         self.propL: list = prop
         self.propA: list = []
         self.sprite = sprite
         self.transL: list = transform
         self.transA: list = []
-        self.face = False
+        self.face = 1
         self.turn = facing
         self.default = prop
         global ijo
@@ -50,6 +50,9 @@ class Thing:
         self.propA = []
         self.transL = []
         self.transA = []
+
+    def fac(self, direction: int):
+        if (self.turn > 0 & direction % 2 == 1) or self.turn == 2: self.face = direction
 
 
 class Word(Thing):

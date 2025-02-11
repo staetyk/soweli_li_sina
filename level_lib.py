@@ -98,3 +98,30 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
         if "tawa" in p: out.append(x)
         elif "awen" in p:
             if (("pini" if nasin < 0 else "open") in p) & abs(nasin) > 0: out.append(x)
+            else: return False
+        else: continue
+
+    else:
+        if len(out) == 0: next = True
+        else: next = move_lili(out, coords1, direction)
+        if next:
+            coords2 = (coords[0] - [0, 1, 0, -1][direction], coords[1] - [-1, 0, 1, 0][direction])
+            index2 = toi(*coords2)
+            global map
+            for x in [(y for y in A if y is not tKon)]:
+                map[index2].remove(x)
+                map[index0].append(x)
+            return True
+        else: return False
+
+
+def move_suli(direction: int):
+    for x,y in list(map.items())[::(-1 if direction % 3 == 0 else 1)]:
+        if len(y) == 0: y = [tKon]
+        out = []
+        for z in y:
+            if "sina" in props(z): out.append(z)
+        if len(out) == 0: continue
+        else: move_lili(out, toxy(x), direction)
+    for x in ijo:
+        if "sina" in props(x): x.fac(direction)
