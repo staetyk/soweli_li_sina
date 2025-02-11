@@ -1,6 +1,7 @@
-move phase
-detect phase
-parse phase
-apply phase
+move lili
+move suli
+detect
+parse
+apply
 
 phases: input, detect, parse, apply, move, detect, parse, apply, change, act, show
