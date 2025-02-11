@@ -147,3 +147,98 @@ def parse(*phrases: str):
             x = nimi[x.replace(" ala", "")]
             if x._type == 1: x = x._mean
             for y in sub: y.add(x, not a)
+
+
+def search(coords: tuple[int, int], l):
+    if not (0 <= coords[0] < width) or not (0 <= coords[1] < height): return None
+    for x in map[toi(*coords)]:
+        if isinstance(x, Word) & l(x): return x
+    return None
+
+
+def read():
+    out = []
+    for i in range(height):
+        for j in range(width):
+            for d in range(2):
+                phrase = ""
+                node = 0
+                k = 0
+                while node != 7:
+                    phrase += " "
+                    coords = (j + d * k, i + (1 - d) * k)
+                    if node == 0:
+                        n =  search(coords, lambda x : x._type == 1)
+                        if n is not None:
+                            phrase += n._name
+                            node = 1
+                            continue
+                        break
+                    elif node == 1:
+                        n = search(coords, lambda x : x._name == "ala")
+                        if n is not None:
+                            phrase += n._name
+                            node = 2
+                            continue
+                        n = search(coords, lambda x : x._name == "en")
+                        if n is not None:
+                            phrase += n._name
+                            node = 3
+                            continue
+                        n = search(coords, lambda x : x._name == "li")
+                        if n is not None:
+                            phrase += n._name
+                            node = 4
+                            continue
+                        break
+                    elif node == 2:
+                        n = search(coords, lambda x : x._name == "en")
+                        if n is not None:
+                            phrase += n._name
+                            node = 3
+                            continue
+                        n = search(coords, lambda x : x._name == "li")
+                        if n is not None:
+                            phrase += n._name
+                            node = 4
+                            continue
+                        break
+                    elif node == 3:
+                        n = search(coords, lambda x : x._type == 1)
+                        if n is not None:
+                            phrase += n._name
+                            node = 1
+                            continue
+                        break
+                    elif node == 4:
+                        n = search(coords, lambda x : x._type > 0)
+                        if n is not None:
+                            phrase += n._name
+                            node = 5
+                            continue
+                        break
+                    elif node == 5:
+                        n = search(coords, lambda x : x._name == "li")
+                        if n is not None:
+                            phrase += n._name
+                            node = 4
+                            continue
+                        n = search(coords, lambda x : x._name == "ala")
+                        if n is not None:
+                            phrase += n._name
+                            node = 6
+                            continue
+                        node = 7
+                    elif node == 6:
+                        n = search(coords, lambda x : x._name == "li")
+                        if n is not None:
+                            phrase += n._name
+                            node = 4
+                            continue
+                        node = 7
+                    k += 1
+
+                else: continue
+                phrase = phrase.strip()
+                out.append(phrase)
+    return out
