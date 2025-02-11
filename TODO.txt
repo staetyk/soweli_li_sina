@@ -1,4 +1,4 @@
 read phase
 
 
-phases: input, read, clear, parse, move, read, clear, parse, act, change, show
+phases: input, read, clear, parse, act, move, read, clear, parse, act, change, show
