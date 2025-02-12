@@ -2,17 +2,16 @@ from classes import Word, Thing
 
 
 # Things
-tSoweli = Thing("soweli") # animal
+tSoweli = Thing("soweli", facing = 1) # animal
 tSinpin = Thing("sinpin") # wall
 tKiwen = Thing("kiwen") # rock
 tKon = Thing("kon") # air (empty cell)
 tLen = Thing("len") # flag
 tSeli = Thing("seli") # fire
 tLupa = Thing("lupa") # door
-tIlo = Thing("ilo") # key
-tSelo = Thing("selo") # fire
+tIlo = Thing("ilo", facing = 2) # key
+tSelo = Thing("selo") # border
 tPipi = Thing("pipi") # bug
-tAle = Thing("ale") # all (everything; used for N. ala li statements)
 
 # Particles
 wLi = Word("li", 0) # is; and (for predicates only)
