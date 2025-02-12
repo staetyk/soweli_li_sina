@@ -185,8 +185,9 @@ def read():
             for d in range(2):
                 phrase = ""
                 node = 0
-                k = 0
+                k = -1
                 while node != 7:
+                    k += 1
                     phrase += " "
                     coords = (j + d * k, i + (1 - d) * k)
                     if node == 0:
@@ -195,7 +196,7 @@ def read():
                             phrase += n._name
                             node = 1
                             continue
-                        break
+                        else: break
                     elif node == 1:
                         n = search(coords, lambda x : x._name == "ala")
                         if n is not None:
@@ -212,7 +213,7 @@ def read():
                             phrase += n._name
                             node = 4
                             continue
-                        break
+                        else: break
                     elif node == 2:
                         n = search(coords, lambda x : x._name == "en")
                         if n is not None:
@@ -224,21 +225,21 @@ def read():
                             phrase += n._name
                             node = 4
                             continue
-                        break
+                        else: break
                     elif node == 3:
                         n = search(coords, lambda x : x._type == 1)
                         if n is not None:
                             phrase += n._name
                             node = 1
                             continue
-                        break
+                        else: break
                     elif node == 4:
                         n = search(coords, lambda x : x._type > 0)
                         if n is not None:
                             phrase += n._name
                             node = 5
                             continue
-                        break
+                        else: break
                     elif node == 5:
                         n = search(coords, lambda x : x._name == "li")
                         if n is not None:
@@ -250,15 +251,14 @@ def read():
                             phrase += n._name
                             node = 6
                             continue
-                        node = 7
+                        else: node = 7
                     elif node == 6:
                         n = search(coords, lambda x : x._name == "li")
                         if n is not None:
                             phrase += n._name
                             node = 4
                             continue
-                        node = 7
-                    k += 1
+                        else: node = 7
 
                 else: 
                     phrase = phrase.strip()
@@ -269,6 +269,7 @@ def read():
 def step(direction: int) -> bool:
     clear()
     phrases = read()
+    print(phrases)
     if len(phrases) > 0: parse(*tuple(phrases))
     if act(): return True
     if direction != -1:
