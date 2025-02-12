@@ -244,3 +244,18 @@ def read():
                 phrase = phrase.strip()
                 out.append(phrase)
     return out
+
+
+def step(direction: int) -> bool:
+    clear()
+    phrases = read()
+    if len(phrases) > 0: parse(phrases)
+    if act(): return True
+    if direction != -1:
+      move(direction)
+      clear()
+      phrases = read()
+      if len(phrases) > 0: parse(phrases)
+      if act(): return True
+    change()
+    return act()

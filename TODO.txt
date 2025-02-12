@@ -1,1 +1,0 @@
-phases: input, clear, read, parse, act, move, clear, read, parse, act, change, act, show
