@@ -6,7 +6,7 @@ unique = lambda x : x if len(x) == 0 else list(set(x))
 
 
 class Thing:
-    def __init__(self, name: str, prop: list[str] = [], sprite: image|None = None, transform: list["Thing"] = [], facing: int = 0, I: bool = True):
+    def __init__(self, name: str, prop: list[str] = [], sprite: image|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True):
         self._name = name
         self.propL: list = prop
         self.propA: list = []
@@ -17,7 +17,7 @@ class Thing:
         self.turn = facing
         self.default = prop
         global ijo
-        if I: ijo.append(self)
+        if _I: ijo.append(self)
     
     def add(self, other, b: bool = True):
         if isinstance(other, Word):
@@ -57,7 +57,7 @@ class Thing:
 
 class Word(Thing):
     def __init__(self, name: str, type: int, mean: Thing|None = None, sprite: image|None = None):
-        super().__init__(name, ["tawa"], sprite, I = False)
+        super().__init__(name, ["tawa"], sprite, _I = False)
         self._mean = mean
         self._type = type
         global nimi
