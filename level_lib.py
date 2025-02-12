@@ -12,7 +12,7 @@ def init(level: int):
     global height
     global map
 
-    with open("levels.lvl_{level}.csv") as file:
+    with open(f"levels/lvl_{level}.csv") as file:
         lines = reader(file)
         i = -1
         for x in lines:
@@ -20,14 +20,21 @@ def init(level: int):
                 width, height = int(x[0]), int(x[1])
                 map = dict.fromkeys(range(width * height), [])
             elif x[0] != "0":
-                map.update({i : [eval(y) for y in x]})
+                value = []
+                for y in x:
+                    value.append(globals()[y])
+                map.update({i : value})
             i += 1
 
 
 toi = lambda x, y : x + y * width
 toxy = lambda i : (i % width, i // width)
 
-props = lambda x : [(y for y in x.propL if y not in x.propA)]
+def props(x):
+    out = []
+    for y in x.propL:
+        if y not in x.propA: out.append(y)
+    return out
 
 
 def act() -> bool:
@@ -61,7 +68,9 @@ def act() -> bool:
                 a.append(p[i])
                 a.append(o[i])
         
-        new = [(old[i] for i in range(len(old)) if (i not in a) & (old[i] is not tKon))]
+        new = []
+        for i in range(len(old)):
+            if (i not in a) & (old[i] is not tKon): new.append(old[i])
         map.update({index : new})
     return False
 
@@ -73,14 +82,20 @@ def change() -> None:
 
         new = []
         for x in old:
-            trans = [(y for y in x.transL if y not in x.transA)]
+            trans = []
+            for y in x.transL:
+                if y not in x.transA: trans.append(y)
             if len(trans) == 0: new.append(x)
             else: new.extend(trans)
-        new = [(x for x in new if x is not tKon)]
+        new2 = []
+        for x in new:
+            if x is not tKon: new2.append(x)
+        new = new2
         map.update({index : new})
 
 
 def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) -> bool:
+    global map
     coords1 = (coords[0] + [0, 1, 0, -1][direction], coords[1] + [-1, 0, 1, 0][direction])
     if not (0 <= coords1[0] < width) or not (0 <= coords1[1] < height): return False
     index0 = toi(*coords)
@@ -109,7 +124,6 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
         if next:
             coords2 = (coords[0] - [0, 1, 0, -1][direction], coords[1] - [-1, 0, 1, 0][direction])
             index2 = toi(*coords2)
-            global map
             for x in [(y for y in A if y is not tKon)]:
                 map[index2].remove(x)
                 map[index0].append(x)
@@ -118,7 +132,9 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
 
 
 def move_suli(direction: int):
-    for x,y in list(map.items())[::(-1 if direction % 3 == 0 else 1)]:
+    keys = list(map.keys())
+    for x in keys[::(-1 if direction % 3 == 0 else 1)]:
+        y = map[x]
         if len(y) == 0: y = [tKon]
         out = []
         for z in y:
@@ -139,7 +155,10 @@ def parse(*phrases: str):
         for x in subject:
             if "ala" in x:
                 x = x.replace(" ala", "")
-                sub.extend([(y for y in ijo if y._name != x)])
+                ex = []
+                for y in ijo:
+                    if y._name != x: ex.append(y)
+                sub.extend(ex)
             else:
                 sub.append(nimi[x]._mean)
         sub = unique(sub)
@@ -154,7 +173,8 @@ def parse(*phrases: str):
 def search(coords: tuple[int, int], l):
     if not (0 <= coords[0] < width) or not (0 <= coords[1] < height): return None
     for x in map[toi(*coords)]:
-        if isinstance(x, Word) & l(x): return x
+        if isinstance(x, Word):
+            if l(x): return x
     return None
 
 
@@ -240,22 +260,22 @@ def read():
                         node = 7
                     k += 1
 
-                else: continue
-                phrase = phrase.strip()
-                out.append(phrase)
+                else: 
+                    phrase = phrase.strip()
+                    out.append(phrase)
     return out
 
 
 def step(direction: int) -> bool:
     clear()
     phrases = read()
-    if len(phrases) > 0: parse(phrases)
+    if len(phrases) > 0: parse(*tuple(phrases))
     if act(): return True
     if direction != -1:
-      move(direction)
-      clear()
-      phrases = read()
-      if len(phrases) > 0: parse(phrases)
-      if act(): return True
+       move_suli(direction)
+       clear()
+       phrases = read()
+       if len(phrases) > 0: parse(*tuple(phrases))
+       if act(): return True
     change()
     return act()
