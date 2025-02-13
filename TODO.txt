@@ -1,2 +1,9 @@
-main menu
 style
+set up pygame
+menu
+pause
+select
+level
+are you sure
+win
+settings
