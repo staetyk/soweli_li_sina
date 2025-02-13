@@ -1,5 +1,5 @@
-lvl_in_bg, c, 
-lvl_out_bg, c, 
+lvl_in_bg, c, #1f008a
+lvl_out_bg, c, #8a0047
 lvl_grid_col, c, 
 lvl_grid_wid, p, 
 lvl_txt_col, c, 

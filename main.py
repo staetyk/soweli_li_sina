@@ -16,6 +16,6 @@ with open("style.csv", "r") as file:
         elif row[1] == "fc": style.update({row[0] : pygame.font.Font(f"fonts/{row[2]}", 12)})
 
 
-screen = pygame.display.set_mode((0, 0), pygame.RESIZABLE|pygame.SCALED)
+screen = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
 pygame.display.set_caption("soweli li sina")
 # pygame.display.set_icon(pygame.image.load("images/logo.png"))
