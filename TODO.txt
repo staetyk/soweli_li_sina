@@ -1,9 +1,13 @@
-style
-set up pygame
+style.csv
+input event comprehension
+common surface library
+    text
+    button
+    cursor
 menu
-pause
+lvl
 select
-level
-are you sure
+ays
+pause
 win
 settings
