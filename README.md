@@ -1,11 +1,21 @@
 # soweli li sina
-Toki Pona game inspired by *Baba is You* (musi toki pona tan musi *Baba is You*)
+In this fun Toki Pona game, you solve various puzzles by changing the rules of the game itself! This fun, yet challenging, game inspired by *Baba is You* is sure to be a fun time!
+musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e lawa musi a! musi ni li musi, taso ike, li lon tan musi *Baba is You* li tenpo pona, ale la!
 
-By Bach Davis and Nolan McCall (tan jan Pa en jan Nolen)
+## Controls (nasin pali)
+| **Key(s)** | **Effect** |
+| :---: | :--- |
+| `w`, `⇧` | Up |
+| `a`, `⇦` | Left |
+| `s`, `⇩` | Down |
+| `d`, `⇨` | Right |
+| `Enter`, `Space` | Select, Pass |
+| `Esc` | Back, Pause |
+| `r` | Reset |
 
 ## Credits (jan pali)
-* Code by Bach (toki sona tan jan P)
-* Levels by Nolan (kipisi tan jan N)
+* Code by Bach (toki sona tan jan Pa)
+* Levels by Nolan (kipisi tan jan Nolen)
 * Sitelen Leko Luka font by Bach (sitelen leko luka tan jan P)
 * Sprites by Nolan (sitelen tan jan N)
 * Design by Nolan (nasin lukin tan jan N)
