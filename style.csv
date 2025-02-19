@@ -202,3 +202,6 @@ end_txt_siz_y, p,
 end_txt_var, s, 
 glob_fade_dur, n, 
 glob_fade_fps, n, 
+glob_frame, n, 
+glob_hold_del, n, 500
+glob_hold_int, n, 300

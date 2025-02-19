@@ -1,15 +1,4 @@
 style.csv
-main loop
-input event comprehension
-    inputs:
-        0 - Enter/Space
-        1 - W/Up
-        2 - D/Right
-        3 - S/Down
-        4 - A/Left
-        5 - R
-        6 - Backspace
-        7 - Esc
 common surface library
     style
     text
