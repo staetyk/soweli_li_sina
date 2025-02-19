@@ -16,12 +16,21 @@ common surface library
     button
     cursor
     fade
-scenes
-    menu
-    lvl
-    sel
-    ays
-    pause
-    win
-    set
-    end
+scene files
+    scenes:
+        lvl - 0.{level number}
+        pause - 1.{level number}
+        sel - 2.{page number}
+        win - 3.{level number}
+        menu - 4
+        set - 5
+        ays - 6
+        end - 7
+    frame function
+        args:
+            dim: tuple[int, int]
+            key: int = -1
+            preSc: float = -1
+        output:
+            pygame.Surface # screen
+            int # next scene
