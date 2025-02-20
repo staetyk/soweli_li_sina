@@ -10,6 +10,7 @@ pygame.display.set_caption("soweli li sina")
 pygame.display.set_icon(pygame.image.load("images/logo.png"))
 width, height = screen.get_size()
 pygame.key.set_repeat(ComSurLib.style["glob_hold_del"], ComSurLib.style["glob_hold_int"])
+prescene = 4
 
 
 while True:
@@ -25,5 +26,4 @@ while True:
         elif evnt.key in [pygame.K_DOWN, pygame.K_s]: key = 3
         elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
         elif evnt.key == pygame.K_r: key = 5
-        elif evnt.key == pygame.K_BACKSPACE: key = 6
-        elif evnt.key == pygame.K_ESCAPE: key = 7
+        elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
