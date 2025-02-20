@@ -1,7 +1,7 @@
 lvl_in_bg, c, #1f008a
 lvl_out_bg, c, #8a0047
 lvl_grid_col, c, #1f007d
-lvl_grid_wid, p, 
+lvl_grid_wid, p, 1/7
 menu_bg, c, 
 menu_logo_siz_x, p, 
 menu_logo_siz_y, p, 
@@ -201,7 +201,8 @@ end_txt_siz_x, p,
 end_txt_siz_y, p, 
 end_txt_var, s, 
 glob_fade_dur, n, 
-glob_fade_fps, n, 
+glob_fade_spd, n, 
+glob_fade_grph, s, 
 glob_frame, n, 
 glob_hold_del, n, 500
 glob_hold_int, n, 300
