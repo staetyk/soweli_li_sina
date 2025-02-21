@@ -1,4 +1,5 @@
-from pygame import Surface as image
+from pygame import Surface, image, transform
+from pygame
 from typing import *
 
 
@@ -6,11 +7,11 @@ unique = lambda x : x if len(x) == 0 else list(set(x))
 
 
 class Thing:
-    def __init__(self, name: str, prop: list[str] = [], sprite: image|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True):
+    def __init__(self, name: str, prop: list[str] = [], sprite: list[Surface]|Surface|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True):
         self._name = name
         self.propL: list = prop
         self.propA: list = []
-        self.sprite = sprite
+        self.sprite = sprite or image.load("images/placeholder.png")
         self.transL: list = transform
         self.transA: list = []
         self.face = 1
@@ -52,11 +53,23 @@ class Thing:
         self.transA = []
 
     def fac(self, direction: int):
-        if (self.turn > 0 & direction % 2 == 1) or self.turn == 2: self.face = direction
+        if self.turn > 0: self.face = direction
+
+    def draw(self):
+        if self.turn == 0: return self.sprite
+        elif self.turn == 1:
+            if self.face == 0: return self.sprite[0] # type: ignore
+            elif self.face == 2: return self.sprite[2] # type: ignore
+            else:
+                s = self.sprite[1] # type: ignore
+                if self.face == 3: s = transform.flip(s, True, False)
+                return s
+        else:
+            return transform.rotate(self.sprite, ((-90) * self.face) + 90) # type: ignore
 
 
 class Word(Thing):
-    def __init__(self, name: str, type: int, mean: Thing|None = None, sprite: image|None = None):
+    def __init__(self, name: str, type: int, mean: Thing|None = None, sprite: Surface|None = None):
         super().__init__(name, ["tawa"], sprite, _I = False)
         self._mean = mean
         self._type = type
