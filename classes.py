@@ -7,11 +7,17 @@ unique = lambda x : x if len(x) == 0 else list(set(x))
 
 
 class Thing:
-    def __init__(self, name: str, prop: list[str] = [], sprite: list[Surface]|Surface|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True):
+    def __init__(self, name: str, prop: list[str] = [], sprite: list[str]|str|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True):
         self._name = name
         self.propL: list = prop
         self.propA: list = []
-        self.sprite = sprite or image.load("images/placeholder.png")
+        if isinstance(sprite, list):
+            s = []
+            for x in sprite:
+                image.load(f"images/{x}.png")
+            self.sprite = s
+        elif isinstance(sprite, str): self.sprite = image.load(f"images/{sprite}.png")
+        else: self.sprite = image.load("images/placeholder.png")
         self.transL: list = transform
         self.transA: list = []
         self.face = 1

@@ -2,12 +2,12 @@ from classes import Word, Thing
 
 
 # Things
-tSoweli = Thing("soweli", facing = 1) # animal
-tSinpin = Thing("sinpin") # wall
-tKiwen = Thing("kiwen") # rock
+tSoweli = Thing("soweli", sprite = ["Things/tSoweliUp", "Things/tSoweliSide", "Things/tSoweliDown"], facing = 1) # animal
+tSinpin = Thing("sinpin", sprite = "Things/tSinpin") # wall
+tKiwen = Thing("kiwen", sprite = "Things/tKiwen") # rock
 tKon = Thing("kon") # air (empty cell)
-tLen = Thing("len") # flag
-tSeli = Thing("seli") # fire
+tLen = Thing("len", sprite = "Things/tLen") # flag
+tSeli = Thing("seli", sprite = "Things/tSeli") # fire
 tLupa = Thing("lupa") # door
 tIlo = Thing("ilo", facing = 2) # key
 tSelo = Thing("selo") # border
