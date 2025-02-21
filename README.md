@@ -22,7 +22,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 * Design by Nolan (nasin lukin tan jan N)
 * Logo by Bach (sitelen suli tan jan P)
 * Music Performed and Written by Bach (kalama musi tan jan P)
-* Music Composed and Edited by Nolan (nasin kalama musi tan jan N)
+* Music Edited by Nolan (nasin kalama musi tan jan N)
 * Sound Design by Nolan (nasin kalama tan jan N)
 * Inspired by *Baba is You* (sona mama tan musi *Baba is You*)
 * Toki Pona created by Sonja Lang (toki pona tan jan Sonja) 
