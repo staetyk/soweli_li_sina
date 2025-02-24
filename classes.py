@@ -13,9 +13,16 @@ class Thing:
         if isinstance(sprite, list):
             s = []
             for x in sprite:
-                image.load(f"images/{x}.png")
+                try:
+                    s.append(image.load(f"images/{x}.png"))
+                except:
+                    a.append(image.load("images/placeholder.png"))
             self.sprite = s
-        elif isinstance(sprite, str): self.sprite = image.load(f"images/{sprite}.png")
+        elif isinstance(sprite, str):
+            try:
+                self.sprite = image.load(f"images/{sprite}.png")
+            except:
+                self.sprite = image.load("images/placeholder.png")
         else: self.sprite = image.load("images/placeholder.png")
         self.transL: list = transform
         self.transA: list = []

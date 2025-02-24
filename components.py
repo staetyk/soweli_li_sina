@@ -2,7 +2,7 @@ from classes import Word, Thing
 
 
 # Things
-tSoweli = Thing("soweli", sprite = ["Things/tSoweliUp", "Things/tSoweliSide", "Things/tSoweliDown"], facing = 1) # animal
+tSoweli = Thing("soweli", sprite = ["Things/tSoweliBack", "Things/tSoweliSide", "Things/tSoweliFront"], facing = 1) # animal
 tSinpin = Thing("sinpin", sprite = "Things/tSinpin") # wall
 tKiwen = Thing("kiwen", sprite = "Things/tKiwen") # rock
 tKon = Thing("kon") # air (empty cell)

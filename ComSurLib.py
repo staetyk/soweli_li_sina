@@ -5,6 +5,7 @@ from csv import reader
 style = {}
 with open("style.csv", "r") as file:
     for row in reader(file):
+        row = [x.strip() for x in row]
         if row[2] == "": style.update({row[0] : None})
         elif row[1] == "n": style.update({row[0] : int(row[2])})
         elif row[1] == "c": style.update({row[0] : pygame.Color(row[2])})

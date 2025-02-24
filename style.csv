@@ -203,6 +203,6 @@ end_txt_var, s,
 glob_fade_dur, n, 
 glob_fade_spd, n, 
 glob_fade_grph, s, 
-glob_frame, n, 
+glob_frame, n, 1000
 glob_hold_del, n, 500
 glob_hold_int, n, 300

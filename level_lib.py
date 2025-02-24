@@ -269,7 +269,6 @@ def read():
 def step(direction: int) -> bool:
     clear()
     phrases = read()
-    print(phrases)
     if len(phrases) > 0: parse(*tuple(phrases))
     if act(): return True
     if direction != -1:

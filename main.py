@@ -16,7 +16,7 @@ scene = -1
 
 
 while True:
-    evnt = pygame.event.wait(ComSurLib.style["glob_evnt_wait"])
+    evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
     key = -1
     if evnt.type == pygame.QUIT: break
     elif evnt.type == pygame.NOEVENT: continue
