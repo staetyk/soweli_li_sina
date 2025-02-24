@@ -1,5 +1,4 @@
 from pygame import Surface, image, transform
-from pygame
 from typing import *
 
 
