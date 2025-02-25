@@ -146,7 +146,7 @@ def move_suli(direction: int):
         if "sina" in props(x): x.fac(direction)
 
 
-def parse(*phrases: str):
+"""def parse(*phrases: str):
     for phrase in phrases:
         phrase = phrase.split(" li ")
         subject, predicate = phrase[0], phrase[1:]
@@ -169,7 +169,7 @@ def parse(*phrases: str):
             a = ("ala" not in x)
             x = nimi[x.replace(" ala", "")]
             if x._type == 1: x = x._mean
-            for y in sub: y.add(x, a)
+            for y in sub: y.add(x, a)"""
                 
 
 def search(coords: tuple[int, int], l):
