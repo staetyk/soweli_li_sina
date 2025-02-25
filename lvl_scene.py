@@ -25,11 +25,11 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
             show.fill(ComSurLib.style["lvl_in_bg"], (x, y, 140, 140))
             if len(level_lib.map[level_lib.toi(j, i)]) > 0:
                 for k in level_lib.map[level_lib.toi(j, i)]:
-                    k.draw().blit(show, (x, y, 140, 140))
+                    show.blit(k.draw(), (x, y, 140, 140))
 
     out = pygame.Surface(dim)
     out.fill(ComSurLib.style["lvl_out_bg"])
     m = min(dim)
     show = pygame.transform.scale(show, (m, m))
-    show.blit(out, ((dim[0] - m) // 2, (dim[1] - m) // 2))
-    return (PostSc, out)
+    out.blit(show, ((dim[0] - m) // 2, (dim[1] - m) // 2))
+    return (PostSc, out) # type: ignore

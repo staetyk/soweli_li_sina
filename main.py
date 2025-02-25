@@ -33,5 +33,5 @@ while True:
     if scene == -1:
         prescene = scene
         scene, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)
-        next.blit(screen, (0, 0))
+        screen.blit(next, (0, 0))
         pygame.display.update()
