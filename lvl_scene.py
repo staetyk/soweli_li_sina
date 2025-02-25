@@ -5,17 +5,19 @@ from math import *
 
 
 def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[float, pygame.Surface]:
-    if key == -1 or Sc != preSc or key == 5:
+    if Sc != preSc or key == 5:
         PostSc = Sc
         index = (-1 if Sc == -1 else int(str(Sc % 1).replace("0.", "")))
         level_lib.init(index)
     elif 0 <= key <= 4:
+        print("c")
         win = level_lib.step(key)
+        print("d")
         if win & (Sc != -1): PostSc = 3 + Sc
         else: PostSc = Sc
-    elif key == 6:
-        PostSc = Sc + 1
-
+    elif key == 6: PostSc = Sc + 1
+    else: PostSc = Sc
+    
     show = pygame.Surface((int(level_lib.width * 140 + (level_lib.width + 1) * 140 * ComSurLib.style["lvl_grid_wid"]), int(level_lib.height * 140 + (level_lib.height + 1) * 140 * ComSurLib.style["lvl_grid_wid"])))
     show.fill(ComSurLib.style["lvl_grid_col"])
     for i in range(level_lib.height):

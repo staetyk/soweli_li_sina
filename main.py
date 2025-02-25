@@ -29,9 +29,12 @@ while True:
         elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
         elif evnt.key == pygame.K_r: key = 5
         elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
+    elif evnt.type == pygame.KEYUP: continue
+    elif evnt.type == pygame.MOUSEMOTION or evnt.type == pygame.MOUSEBUTTONDOWN or evnt.type == pygame.MOUSEBUTTONUP: continue
+    print(key)
 
     if scene == -1:
-        prescene = scene
-        scene, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        new, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        prescene, scene = scene, new
         screen.blit(next, (0, 0))
-        pygame.display.update()
+        pygame.display.flip()

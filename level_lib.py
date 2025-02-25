@@ -51,15 +51,17 @@ def act() -> bool:
         for i in range(len(old)):
             x = old[i]
             prop = props(x)
+            print(x._name, props(x), x.propL)
             if "sina" in prop: s.append(i)
             if "pini" in prop:
                 if "open" in prop: a.append(i)
                 else: p.append(i)
             if "open" in prop: o.append(i)
-            w = w | ("pona" in prop)
-            m = m | ("moli" in prop)
+            w = w or ("pona" in prop)
+            m = m or ("moli" in prop)
         
         if len(s) > 0:
+            print(s, w)
             if w: return True
             if m: a.extend(s)
         n = min(len(p), len(o))
@@ -132,13 +134,17 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
 
 
 def move_suli(direction: int):
+    print("a")
     keys = list(map.keys())
     for x in keys[::(-1 if direction % 3 == 0 else 1)]:
         y = map[x]
         if len(y) == 0: y = [tKon]
         out = []
         for z in y:
-            if "sina" in props(z): out.append(z)
+            print(props(z))
+            if "sina" in props(z):
+                out.append(z)
+                print("a")
         if len(out) == 0: continue
         else: move_lili(out, toxy(x), direction)
     for x in ijo:
@@ -267,15 +273,19 @@ def read():
 
 
 def step(direction: int) -> bool:
+    print(type(direction))
     clear()
     phrases = read()
+    print(phrases)
     if len(phrases) > 0: parse(*tuple(phrases))
     if act(): return True
+    print(f"direction: {direction}")
     if direction != -1:
-       move_suli(direction)
-       clear()
-       phrases = read()
-       if len(phrases) > 0: parse(*tuple(phrases))
-       if act(): return True
+        print("e")
+        move_suli(direction)
+        clear()
+        phrases = read()
+        if len(phrases) > 0: parse(*tuple(phrases))
+        if act(): return True
     change()
     return act()
