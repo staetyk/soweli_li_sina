@@ -170,7 +170,35 @@ def move_suli(direction: int):
             x = nimi[x.replace(" ala", "")]
             if x._type == 1: x = x._mean
             for y in sub: y.add(x, a)"""
-                
+
+
+def parse(*phrases: str):
+    clear()
+    for phrase in phrases:
+        phrase = phrase.split(" li ")
+        su, ob = phrase[0], phrase[1:]
+        s = su.split(" en ")
+        sub = []
+        for x in s:
+            if x.endswith(" ala"):
+                x = x.replace(" ala", "")
+                for y in ijo:
+                    if y._name != x: sub.append(y)
+            else:
+                sub.append(nimi[x]._mean)
+        print(*(x._name for x in sub))
+        for x in ob:
+            a = x.endswith(" ala")
+            if a: x = x.replace(" ala", "")
+            x = nimi[x]
+            if x._type == 1: x = x._mean
+            for y in sub:
+                print(y._name)
+                y.add(x, not(a))
+
+    for x in ijo:
+        print(x._name, x.propL)
+
 
 def search(coords: tuple[int, int], l):
     if not (0 <= coords[0] < width) or not (0 <= coords[1] < height): return None

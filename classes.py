@@ -33,6 +33,7 @@ class Thing:
         if _I: ijo.append(self)
     
     def add(self, other, b: bool = True):
+        print("add", self._name)
         if isinstance(other, Word):
             if b:
                 self.propL.append(other._name)
@@ -59,6 +60,7 @@ class Thing:
             self.transA.remove(other)
     
     def clr(self):
+        print("clr", self._name)
         self.propL = self.default
         self.propA = []
         self.transL = []
@@ -82,7 +84,7 @@ class Thing:
 
 class Word(Thing):
     def __init__(self, name: str, type: int, mean: Thing|None = None, sprite: Surface|None = None):
-        super().__init__(name, ["tawa"], sprite, _I = False)
+        super().__init__(name, ["tawa"], sprite = sprite, _I = False) # type: ignore
         self._mean = mean
         self._type = type
         global nimi
