@@ -40,7 +40,7 @@ def props(x):
 def act() -> bool:
     global map
     for index, cell in map.items():
-        old = (cell if len(cell) > 0 else [tKon])
+        old = (list(cell) if len(cell) > 0 else [tKon])
 
         s = []
         p = []
@@ -124,9 +124,11 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
         if next:
             coords2 = (coords[0] - [0, 1, 0, -1][direction], coords[1] - [-1, 0, 1, 0][direction])
             index2 = toi(*coords2)
-            for x in [(y for y in A if y is not tKon)]:
-                map[index2].remove(x)
-                map[index0].append(x)
+            for x in [y for y in A if y is not tKon]:
+                try: map[index2].remove(x)
+                except: pass
+                try: map[index0].append(x)
+                except: pass
             return True
         else: return False
 
@@ -146,7 +148,8 @@ def move_suli(direction: int):
         if "sina" in props(x): x.fac(direction)
 
 
-"""def parse(*phrases: str):
+"""
+def parse(*phrases: str):
     for phrase in phrases:
         phrase = phrase.split(" li ")
         subject, predicate = phrase[0], phrase[1:]
@@ -169,7 +172,8 @@ def move_suli(direction: int):
             a = ("ala" not in x)
             x = nimi[x.replace(" ala", "")]
             if x._type == 1: x = x._mean
-            for y in sub: y.add(x, a)"""
+            for y in sub: y.add(x, a)
+"""
 
 
 def parse(*phrases: str):
@@ -186,19 +190,14 @@ def parse(*phrases: str):
                     if y._name != x: sub.append(y)
             else:
                 sub.append(nimi[x]._mean)
-        print(*(x._name for x in sub))
-        ob = [" "].extend(ob)
-        for x in ob: # type: ignore
+        ob = [" "] + ob
+        for x in ob:
             a = x.endswith(" ala")
             if a: x = x.replace(" ala", "")
             x = nimi[x]
             if x._type == 1: x = x._mean
             for y in sub:
-                print(y._name)
                 y.add(x, not(a))
-
-    for x in ijo:
-        print(x._name, x.propL)
 
 
 def search(coords: tuple[int, int], l):

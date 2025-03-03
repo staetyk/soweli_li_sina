@@ -32,6 +32,7 @@ while True:
     elif evnt.type == pygame.KEYUP: continue
     elif evnt.type == pygame.MOUSEMOTION or evnt.type == pygame.MOUSEBUTTONDOWN or evnt.type == pygame.MOUSEBUTTONUP: continue
     print(key)
+    pygame.event.pump()
 
     if scene == -1:
         new, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)

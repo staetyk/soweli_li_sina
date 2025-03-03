@@ -38,3 +38,4 @@ wAwen = Word("awen", 2, sprite = "Words/wAwen") # stop
 wTawa = Word("tawa", 2, sprite = "Words/wTawa") # push
 wPona = Word("pona", 2, sprite = "Words/wPona") # win
 wMoli = Word("moli", 2, sprite = "Words/wMoli") # kill
+wDummy = Word(" ", 2)
