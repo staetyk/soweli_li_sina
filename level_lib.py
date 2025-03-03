@@ -187,7 +187,8 @@ def parse(*phrases: str):
             else:
                 sub.append(nimi[x]._mean)
         print(*(x._name for x in sub))
-        for x in ob:
+        ob = [" "].extend(ob)
+        for x in ob: # type: ignore
             a = x.endswith(" ala")
             if a: x = x.replace(" ala", "")
             x = nimi[x]
