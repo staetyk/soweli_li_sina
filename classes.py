@@ -33,7 +33,6 @@ class Thing:
         if _I: ijo.append(self)
     
     def add(self, other, b: bool = True):
-        print("add", self._name)
         if isinstance(other, Word):
             if b:
                 self.propL.append(other._name)
@@ -60,7 +59,6 @@ class Thing:
             self.transA.remove(other)
     
     def clr(self):
-        print("clr", self._name)
         self.propL = self.default
         self.propA = []
         self.transL = []
