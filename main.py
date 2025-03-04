@@ -11,12 +11,23 @@ pygame.display.set_caption("soweli li sina")
 pygame.display.set_icon(pygame.image.load("images/logo.png"))
 width, height = screen.get_size()
 pygame.key.set_repeat(ComSurLib.style["glob_hold_del"], ComSurLib.style["glob_hold_int"])
+pygame.event.set_blocked([pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.KEYUP])
+
 prescene = 4
 scene = -1
 
 
 while True:
     evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
+    
+    """
+    if pygame.event.peek():
+        post = pygame.event.poll()
+        pygame.event.clear()
+        pygame.event.post(post)
+    else: pygame.event.clear()
+    """
+    
     key = -1
     if evnt.type == pygame.QUIT: break
     elif evnt.type == pygame.NOEVENT: continue
@@ -29,8 +40,6 @@ while True:
         elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
         elif evnt.key == pygame.K_r: key = 5
         elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
-    elif evnt.type == pygame.KEYUP: continue
-    elif evnt.type == pygame.MOUSEMOTION or evnt.type == pygame.MOUSEBUTTONDOWN or evnt.type == pygame.MOUSEBUTTONUP: continue
     print(key)
     pygame.event.pump()
 

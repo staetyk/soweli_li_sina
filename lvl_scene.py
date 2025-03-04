@@ -29,7 +29,7 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
 
     out = pygame.Surface(dim)
     out.fill(ComSurLib.style["lvl_out_bg"])
-    m = min(dim)
-    show = pygame.transform.scale(show, (m, m))
-    out.blit(show, ((dim[0] - m) // 2, (dim[1] - m) // 2))
+    if (dim[0] / show.get_width()) * show.get_height() > dim[1]: show = pygame.transform.scale(show, ((dim[1] / show.get_height()) * show.get_width(), dim[1]))
+    else: show = pygame.transform.scale(show, (dim[0], (dim[0] / show.get_width()) * show.get_height()))
+    out.blit(show, ((dim[0] - show.get_width()) // 2, (dim[1] - show.get_height()) // 2))
     return (PostSc, out) # type: ignore
