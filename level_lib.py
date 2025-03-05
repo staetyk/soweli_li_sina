@@ -1,6 +1,6 @@
 from components import *
 from csv import reader
-from classes import Word, Thing, ijo, nimi, clear, unique
+from classes import Word, Thing, ijo, nimi, clear, reset
 
 
 width = 1
@@ -25,6 +25,8 @@ def init(level: int):
                     value.append(globals()[y])
                 map.update({i : value})
             i += 1
+
+    reset()
 
 
 toi = lambda x, y : x + y * width

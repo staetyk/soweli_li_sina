@@ -1,4 +1,6 @@
-DEBUG
+DEBUG:
+    expenetially slower each key press
+    no movement
 style.csv
 common surface library
     style

@@ -31,6 +31,7 @@ class Thing:
         self.default = prop
         global ijo
         if _I: ijo.append(self)
+        self.start = facing
     
     def add(self, other, b: bool = True):
         if isinstance(other, Word):
@@ -79,6 +80,10 @@ class Thing:
         else:
             return transform.rotate(self.sprite, ((-90) * self.face) + 90) # type: ignore
 
+    def rst(self):
+        self.clr()
+        self.face = self.start
+
 
 class Word(Thing):
     def __init__(self, name: str, type: int, mean: Thing|None = None, sprite: Surface|None = None):
@@ -95,4 +100,7 @@ nimi = {}
 
 
 def clear():
-    for x in ijo: x.clr() #type: ignore
+    for x in ijo: x.clr()
+
+def reset():
+    for x in ijo: x.rst()
