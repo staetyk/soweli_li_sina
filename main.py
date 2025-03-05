@@ -12,13 +12,20 @@ pygame.display.set_icon(pygame.image.load("images/logo.png"))
 width, height = screen.get_size()
 pygame.key.set_repeat(ComSurLib.style["glob_hold_del"], ComSurLib.style["glob_hold_int"])
 pygame.event.set_blocked([pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.KEYUP])
+clock = pygame.time.Clock()
 
 prescene = 4
 scene = -1
 
+i = 0
+last = clock.get_time()
 
 while True:
+    i += 1
+    clock.tick()
     evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
+    between, last = clock.get_time() - last, clock.get_time()
+    print(i, clock.get_fps(), between, sep = " | ")
     
     """
     if pygame.event.peek():
