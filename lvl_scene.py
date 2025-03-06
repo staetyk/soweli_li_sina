@@ -9,6 +9,14 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
         PostSc = Sc
         index = (-1 if Sc == -1 else int(str(Sc % 1).replace("0.", "")))
         level_lib.init(index)
+        try: pygame.mixer.music.load("sounds/lape_sona.mp3")
+        except: pass
+        else:
+            if Sc != preSc:
+                pygame.mixer.music.play(loops = -1, fade_ms = ComSurLib.style["glob_fade_dur"])
+            else:
+                pygame.mixer.music.fadeout(ceil(ComSurLib.style["glob_fade_dur"] / 2))
+                pygame.mixer.music.play(loops = -1, fade_ms = ComSurLib.style["glob_fade_dur"] // 2)
     elif 0 <= key <= 4:
         win = level_lib.step(key - 1)
         if win & (Sc != -1): PostSc = 3 + Sc
