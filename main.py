@@ -13,6 +13,7 @@ width, height = screen.get_size()
 pygame.key.set_repeat(ComSurLib.style["glob_hold_del"], ComSurLib.style["glob_hold_int"])
 pygame.event.set_blocked([pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.KEYUP])
 clock = pygame.time.Clock()
+pygame.mixer.init()
 
 prescene = 4
 scene = -1
