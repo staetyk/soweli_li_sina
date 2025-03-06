@@ -56,3 +56,12 @@ while True:
         prescene, scene = scene, new
         screen.blit(next, (0, 0))
         pygame.display.flip()
+
+    elif int(scene) == 0:
+        new, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        prescene, scene = scene, new
+        screen.blit(next, (0, 0))
+        pygame.display.flip()
+
+    else:
+        pygame.mixer.music.fadeout(ComSurLib.style["glob_fade_dur"])
