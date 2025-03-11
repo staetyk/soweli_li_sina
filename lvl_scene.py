@@ -20,9 +20,9 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
                 pygame.mixer.music.play(loops = -1, fade_ms = ComSurLib.style["glob_fade_dur"] // 2)
                 
     elif 0 <= key <= 4:
-        win, sound = *level_lib.step(key - 1)
+        win, sound = level_lib.step(key - 1)
         if sound:
-            try: sfx = pygame.mixer.Sound(f"sounds/{}.mp3".format(["pass", "move", "push", "fail", "trans", "lock", "die", "win"][sound - 1]))
+            try: sfx = pygame.mixer.Sound(f"sounds/{0}.mp3".format(["pass", "move", "push", "fail", "trans", "lock", "die", "win"][sound - 1]))
             except: pass
             else: sfx.play()
             
