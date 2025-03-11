@@ -1,3 +1,4 @@
+from pygame.mixer import Sound
 from components import *
 from csv import reader
 from classes import Word, Thing, ijo, nimi, clear, reset
@@ -41,6 +42,7 @@ def props(x):
 
 def act() -> bool:
     global map
+    global sound
     for index, cell in map.items():
         old = (list(cell) if len(cell) > 0 else [tKon])
 
@@ -62,10 +64,15 @@ def act() -> bool:
             m = m or ("moli" in prop)
         
         if len(s) > 0:
-            if w: return True
-            if m: a.extend(s)
+            if w:
+                sound = max(sound, 8)
+                return True
+            if m:
+                sound = max(sound, 7)
+                a.extend(s)
         n = min(len(p), len(o))
         if n > 0:
+            sound = max(sound, 6)
             for i in range(n):
                 a.append(p[i])
                 a.append(o[i])
@@ -79,6 +86,7 @@ def act() -> bool:
 
 def change() -> None:
     global map
+    global sound
     for index, cell in map.items():
         old = (cell if len(cell) > 0 else [tKon])
 
@@ -88,7 +96,9 @@ def change() -> None:
             for y in x.transL:
                 if y not in x.transA: trans.append(y)
             if len(trans) == 0: new.append(x)
-            else: new.extend(trans)
+            else:
+                sound = max(sound, 5)
+                new.extend(trans)
         new2 = []
         for x in new:
             if x is not tKon: new2.append(x)
@@ -96,10 +106,10 @@ def change() -> None:
         map.update({index : new})
 
 
-def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) -> bool:
+def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int, length: int = 0) -> int:
     global map
     coords1 = (coords[0] + [0, 1, 0, -1][direction], coords[1] + [-1, 0, 1, 0][direction])
-    if not (0 <= coords1[0] < width) or not (0 <= coords1[1] < height): return False
+    if not (0 <= coords1[0] < width) or not (0 <= coords1[1] < height): return 0
     index0 = toi(*coords)
     index1 = toi(*coords1)
     B = map[index1]
@@ -117,12 +127,12 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
         if "tawa" in p: out.append(x)
         elif "awen" in p:
             if (("pini" if nasin < 0 else "open") in p) & abs(nasin) > 0: out.append(x)
-            else: return False
+            else: return 0
         else: continue
 
     else:
-        if len(out) == 0: next = True
-        else: next = move_lili(out, coords1, direction)
+        if len(out) == 0: next = length + 1
+        else: next = move_lili(out, coords1, direction, length + 1)
         if next:
             coords2 = (coords[0] - [0, 1, 0, -1][direction], coords[1] - [-1, 0, 1, 0][direction])
             index2 = toi(*coords2)
@@ -131,11 +141,12 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int) ->
                 except: pass
                 try: map[index0].append(x)
                 except: pass
-            return True
-        else: return False
+            return next
+        else: return 0
 
 
 def move_suli(direction: int):
+    global sound
     keys = list(map.keys())
     for x in keys[::(-1 if direction % 3 == 0 else 1)]:
         y = map[x]
@@ -145,7 +156,11 @@ def move_suli(direction: int):
             if "sina" in props(z):
                 out.append(z)
         if len(out) == 0: continue
-        else: move_lili(out, toxy(x), direction)
+        else:
+            lili = move_lili(out, toxy(x), direction)
+            if lili > 1: sound = max(sound, 3)
+            elif lili == 1: sound = max(sound, 2)
+            else: sound = max(sound, 4)
     for x in ijo:
         if "sina" in props(x): x.fac(direction)
 
@@ -298,16 +313,19 @@ def read():
     return out
 
 
-def step(direction: int) -> bool:
+def step(direction: int) -> tuple[bool, int]:
+    global sound
+    sound = 0
+    if direction == -1: sound = 1
     clear()
     phrases = read()
     if len(phrases) > 0: parse(*tuple(phrases))
-    if act(): return True
+    if act(): return (True, sound)
     if direction != -1:
         move_suli(direction)
         clear()
         phrases = read()
         if len(phrases) > 0: parse(*tuple(phrases))
-        if act(): return True
+        if act(): return (True, sound)
     change()
-    return act()
+    return (act(), sound)
