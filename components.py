@@ -32,8 +32,8 @@ wPipi = Word("pipi", 1, tPipi, sprite = "Words/wPipi")
 
 # Adjectives
 wSina = Word("sina", 2, sprite = "Words/wSina") # you
-wPini = Word("pini", 2, "Words/wPini") # closed
-wOpen = Word("open", 2, "Words/wOpen") # open
+wPini = Word("pini", 2, sprite = "Words/wPini") # closed
+wOpen = Word("open", 2, sprite = "Words/wOpen") # open
 wAwen = Word("awen", 2, sprite = "Words/wAwen") # stop
 wTawa = Word("tawa", 2, sprite = "Words/wTawa") # push
 wPona = Word("pona", 2, sprite = "Words/wPona") # win
