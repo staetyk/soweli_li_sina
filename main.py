@@ -15,6 +15,16 @@ pygame.event.set_blocked([pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN, pygame.MOU
 clock = pygame.time.Clock()
 pygame.mixer.init()
 
+
+settings = {
+    "English" : False,
+    "Sitelen Pona" : True,
+    "Master" : 100,
+    "Music" : 100,
+    "SFX" : 100
+}
+
+
 prescene = 4
 scene = -1
 
