@@ -206,3 +206,6 @@ glob_fade_grph, s,
 glob_frame, n, 10000
 glob_hold_del, n, 500
 glob_hold_int, n, 300
+glob_vol_main, n, 10
+glob_vol_mus, n, 10
+glob_vol_sfx, n, 10

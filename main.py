@@ -1,6 +1,7 @@
 import pygame
 import ComSurLib
 import lvl_scene
+import csv
 
 
 pygame.init()
@@ -19,10 +20,32 @@ pygame.mixer.init()
 settings = {
     "English" : False,
     "Sitelen Pona" : True,
-    "Master" : 100,
-    "Music" : 100,
-    "SFX" : 100
+    "Master" : ComSurLib.style["glob_vol_main"],
+    "Music" : ComSurLib.style["glob_vol_mus"],
+    "SFX" : ComSurLib.style["glob_vol_sfx"]
 }
+
+
+def save(progress: int):
+    with open("save.csv", "w") as file:
+        w = csv.writer(file)
+        w.writerow([progress, *settings.values()])
+
+
+def load() -> int:
+    global settings
+    with open("save.csv", "r") as file:
+        r = csv.reader(file)
+        s = next(r)
+        out = int(s[0])
+        settings.update({
+            "English" : bool(s[1]),
+            "Sitelen Pona" : bool(s[2]),
+            "Master" : int(s[3]),
+            "Music" : int(s[4]),
+            "SFX" : int(s[5])
+        })
+        return out
 
 
 prescene = 4
@@ -62,15 +85,15 @@ while True:
     pygame.event.pump()
 
     if scene == -1:
-        new, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key)
         prescene, scene = scene, new
-        screen.blit(next, (0, 0))
+        screen.blit(nextS, (0, 0))
         pygame.display.flip()
 
     elif int(scene) == 0:
-        new, next = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key)
         prescene, scene = scene, new
-        screen.blit(next, (0, 0))
+        screen.blit(nextS, (0, 0))
         pygame.display.flip()
 
     else:
