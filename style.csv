@@ -2,13 +2,13 @@ lvl_in_bg, c, #1f008a
 lvl_out_bg, c, #8a0047
 lvl_grid_col, c, #1f007d
 lvl_grid_wid, p, 1/7
-menu_bg, c, 
+menu_bg, c, #E1A0B5
 menu_logo_siz_x, p, 
 menu_logo_siz_y, p, 
 menu_logo_pad_y, p, 
 menu_title_col, c, 
 menu_title_font_eng, f, 
-menu_title_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+menu_title_font_sp, f, 
 menu_title_font_sl, f, 
 menu_title_siz_x, p, 
 menu_title_siz_y, p, 
@@ -69,7 +69,7 @@ set_bg, c,
 set_lab_t_col, c, 
 set_lab_f_col, c, 
 set_lab_font_eng, f, 
-set_lab_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+set_lab_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 set_lab_font_sl, f, 
 set_lab_siz_x, p, 
 set_lab_siz_y, p, 
@@ -101,7 +101,7 @@ set_cur_pad_y, p,
 ays_bg, c, 
 ays_txt_col, c, 
 ays_txt_font_eng, f, 
-ays_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+ays_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 ays_txt_font_sl, f, 
 ays_txt_siz_x, p, 
 ays_txt_siz_y, p, 
@@ -134,7 +134,7 @@ ays_cur_pad_x, p,
 ays_cur_pad_y, p, 
 win_bg, c, 
 win_txt_font_eng, f, 
-win_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+win_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 win_txt_font_sl, f, 
 win_txt_col, c, 
 win_txt_siz_x, p, 
@@ -166,7 +166,7 @@ pause_bg, c,
 pause_opa, p, 
 pause_txt_col, c, 
 pause_txt_font_eng, f, 
-pause_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+pause_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 pause_txt_font_sl, f, 
 pause_txt_siz_x, p, 
 pause_txt_siz_y, p, 
@@ -194,7 +194,7 @@ pause_cur_pad_x, p,
 pause_cur_pad_y, p, 
 end_bg, c, 
 end_txt_font_eng, f, 
-end_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+end_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 end_txt_font_sl, f, 
 end_txt_col, c, 
 end_txt_siz_x, p, 
