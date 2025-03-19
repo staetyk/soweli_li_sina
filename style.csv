@@ -1,6 +1,6 @@
-lvl_in_bg, c, #1f008a
-lvl_out_bg, c, #8a0047
-lvl_grid_col, c, #1f007d
+lvl_in_bg, c, #1F008A
+lvl_out_bg, c, #8A0047
+lvl_grid_col, c, #1F007D
 lvl_grid_wid, p, 1/7
 menu_bg, c, #E1A0B5
 menu_logo_siz_x, p, 
@@ -12,7 +12,7 @@ menu_title_font_sp, f,
 menu_title_font_sl, f, 
 menu_title_siz_x, p, 
 menu_title_siz_y, p, 
-menu_title_var, s, 
+menu_title_var, s, b
 menu_title_pad_y, p, 
 menu_but_txt_col, c, 
 menu_but_txt_font_eng, f, 
@@ -20,8 +20,8 @@ menu_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_but_txt_font_sl, f, 
 menu_but_txt_pad_x, p, 
 menu_but_txt_pad_y, p, 
-menu_but_txt_var, s, 
-menu_but_fill, c, 
+menu_but_txt_var, s, n
+menu_but_fill, c, #A0CFE1
 menu_but_out, c, 
 menu_but_wid, p, 
 menu_but_siz_x, p, 
@@ -98,14 +98,14 @@ set_cur_col, c,
 set_cur_len, p, 
 set_cur_pad_x, p, 
 set_cur_pad_y, p, 
-ays_bg, c, 
+ays_bg, c, #AECA91
 ays_txt_col, c, 
 ays_txt_font_eng, f, 
 ays_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 ays_txt_font_sl, f, 
 ays_txt_siz_x, p, 
 ays_txt_siz_y, p, 
-ays_txt_var, s, 
+ays_txt_var, s, ib
 ays_txt_pad_x, p, 
 ays_txt_pad_y, p, 
 ays_txt_lin, p, 
