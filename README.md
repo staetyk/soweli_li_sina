@@ -15,14 +15,15 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `r` | Reset |
 
 ## Credits (jan pali)
-* Code by Bach *( toki sona tan jan Pa )*
-* Levels by Nolan *( kipisi tan jan Nolen )*
-* Sitelen Leko Luka Font by Bach *( sitelen leko luka tan jan P )*
-* Sprites by Nolan *( sitelen tan jan N )*
-* Design by Nolan *( nasin lukin tan jan N )*
-* Logo by Bach *( sitelen suli tan jan P )*
-* Music Performed and Written by Bach *( kalama musi tan jan P )*
-* Music Edited by Nolan *( nasin kalama musi tan jan N )*
-* Sound Design by Nolan *( nasin kalama tan jan N )*
-* Inspired by *Baba is You* *( sona mama tan musi* Baba is You *)*
-* Toki Pona created by Sonja Lang *( toki pona tan jan Sonja )* 
+* Code by Bach Davis *(toki sona tan jan Pa)*
+* Levels by Nolan McCall *(kipisi tan jan Nolen)*
+* Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan P)*
+* Sprites by Nolan McCall *(sitelen tan jan N)*
+* Design by Nolan McCall *(nasin lukin tan jan N)*
+* Logo by Bach Davis *(sitelen suli tan jan P)*
+* Music Performed and Written by Bach Davis *(kalama musi tan jan P)*
+* Music Edited by Nolan McCall *(nasin kalama musi tan jan N)*
+* Sound Design by Nolan McCall *(nasin kalama tan jan N)*
+* Inspired by *Baba is You* by Hempuli Oy *(sona mama tan musi* Baba is You *tan jan Empuli)*
+* Toki Pona Created by Sonja Lang *(toki pona tan jan Sonja)* 
+* Sitelen Seli Kiwen Font Family by Rebecca Bettencourt *(sitelen seli kiwen tan jan Lepeka)*
