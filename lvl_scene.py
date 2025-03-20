@@ -35,8 +35,8 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
     show.fill(ComSurLib.style["lvl_grid_col"])
     for i in range(level_lib.height):
         for j in range(level_lib.width):
-            x = j * int(140 + ComSurLib.style["lvl_grid_wid"] * 140)
-            y = i * int(140 + ComSurLib.style["lvl_grid_wid"] * 140)
+            x = j * int(140 + ComSurLib.style["lvl_grid_wid"] * 140) + ComSurLib.style["lvl_grid_wid"] * 140
+            y = i * int(140 + ComSurLib.style["lvl_grid_wid"] * 140) + ComSurLib.style["lvl_grid_wid"] * 140
             show.fill(ComSurLib.style["lvl_in_bg"], (x, y, 140, 140))
             if len(level_lib.map[level_lib.toi(j, i)]) > 0:
                 for k in level_lib.map[level_lib.toi(j, i)]:

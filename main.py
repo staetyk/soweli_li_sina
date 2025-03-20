@@ -55,11 +55,7 @@ i = 0
 last = clock.get_time()
 
 while True:
-    i += 1
-    clock.tick()
     evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
-    between, last = clock.get_time() - last, clock.get_time()
-    print(i, clock.get_fps(), between, sep = " | ")
     
     
     if pygame.event.peek():
