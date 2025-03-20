@@ -1,6 +1,8 @@
 import pygame
 from csv import reader
 
+pygame.init()
+
 
 style = {}
 with open("style.csv", "r") as file:

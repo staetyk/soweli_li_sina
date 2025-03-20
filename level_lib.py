@@ -131,24 +131,20 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int, le
         else: continue
 
     else:
-        if len(out) == 0: next = length + 1
-        else: next = move_lili(out, coords1, direction, length + 1)
-        if next:
-            coords2 = (coords[0] - [0, 1, 0, -1][direction], coords[1] - [-1, 0, 1, 0][direction])
-            index2 = toi(*coords2)
+        if len(out) == 0: nextM = length + 1
+        else: nextM = move_lili(out, coords1, direction, length + 1)
+        if nextM:
             for x in [y for y in A if y is not tKon]:
-                try: map[index2].remove(x)
-                except: pass
-                try: map[index0].append(x)
-                except: pass
-            return next
+                map[index0].remove(x)
+                map[index1].append(x)
+            return nextM
         else: return 0
 
 
 def move_suli(direction: int):
     global sound
     keys = list(map.keys())
-    for x in keys[::(-1 if direction % 3 == 0 else 1)]:
+    for x in keys[::(1 if direction % 3 == 0 else -1)]:
         y = map[x]
         if len(y) == 0: y = [tKon]
         out = []
@@ -158,6 +154,7 @@ def move_suli(direction: int):
         if len(out) == 0: continue
         else:
             lili = move_lili(out, toxy(x), direction)
+            print(lili)
             if lili > 1: sound = max(sound, 3)
             elif lili == 1: sound = max(sound, 2)
             else: sound = max(sound, 4)

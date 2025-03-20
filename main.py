@@ -61,13 +61,13 @@ while True:
     between, last = clock.get_time() - last, clock.get_time()
     print(i, clock.get_fps(), between, sep = " | ")
     
-    """
+    
     if pygame.event.peek():
         post = pygame.event.poll()
         pygame.event.clear()
         pygame.event.post(post)
     else: pygame.event.clear()
-    """
+    
     
     key = -1
     if evnt.type == pygame.QUIT: break
