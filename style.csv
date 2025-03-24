@@ -15,9 +15,9 @@ menu_title_siz_y, p,
 menu_title_var, s, b
 menu_title_pad_y, p, 
 menu_but_txt_col, c, 
-menu_but_txt_font_eng, f, 
+menu_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-menu_but_txt_font_sl, f, 
+menu_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_but_txt_pad_x, p, 
 menu_but_txt_pad_y, p, 
 menu_but_txt_var, s, n
@@ -68,9 +68,9 @@ sel_num_y, n, 3
 set_bg, c, 
 set_lab_t_col, c, 
 set_lab_f_col, c, 
-set_lab_font_eng, f, 
+set_lab_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 set_lab_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
-set_lab_font_sl, f, 
+set_lab_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 set_lab_siz_x, p, 
 set_lab_siz_y, p, 
 set_lab_var, s, 
@@ -100,9 +100,9 @@ set_cur_pad_x, p,
 set_cur_pad_y, p, 
 ays_bg, c, #AECA91
 ays_txt_col, c, 
-ays_txt_font_eng, f, 
+ays_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
-ays_txt_font_sl, f, 
+ays_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_txt_siz_x, p, 
 ays_txt_siz_y, p, 
 ays_txt_var, s, ib
@@ -118,9 +118,9 @@ ays_but_siz_x, p,
 ays_but_siz_y, p, 
 ays_but_t_txt_col, c, 
 ays_but_f_txt_col, c, 
-ays_but_txt_font_eng, f, 
+ays_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-ays_but_txt_font_sl, f, 
+ays_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_but_txt_pad_x, p, 
 ays_but_txt_pad_y, p, 
 ays_but_txt_var, s, 
@@ -133,17 +133,17 @@ ays_cur_len, p,
 ays_cur_pad_x, p, 
 ays_cur_pad_y, p, 
 win_bg, c, 
-win_txt_font_eng, f, 
+win_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
-win_txt_font_sl, f, 
+win_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_txt_col, c, 
 win_txt_siz_x, p, 
 win_txt_siz_y, p, 
 win_txt_var, s, 
 win_txt_pad_y, p, 
-win_but_txt_font_eng, f, 
+win_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-win_but_txt_font_sl, f, 
+win_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_but_txt_col, c, 
 win_but_txt_pad_x, p, 
 win_but_txt_pad_y, p, 
@@ -165,9 +165,9 @@ win_cur_pad_y, p,
 pause_bg, c, 
 pause_opa, p, 
 pause_txt_col, c, 
-pause_txt_font_eng, f, 
+pause_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 pause_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
-pause_txt_font_sl, f, 
+pause_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 pause_txt_siz_x, p, 
 pause_txt_siz_y, p, 
 pause_txt_var, s, 
@@ -178,9 +178,9 @@ pause_but_wid, p,
 pause_but_siz_x, p, 
 pause_but_siz_y, p, 
 pause_but_txt_col, c, 
-pause_but_txt_font_eng, f, 
+pause_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 pause_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-pause_but_txt_font_sl, f, 
+pause_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 pause_but_txt_pad_x, p, 
 pause_but_txt_pad_y, p, 
 pause_but_txt_var, s, 
@@ -193,9 +193,9 @@ pause_cur_len, p,
 pause_cur_pad_x, p, 
 pause_cur_pad_y, p, 
 end_bg, c, 
-end_txt_font_eng, f, 
+end_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 end_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
-end_txt_font_sl, f, 
+end_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 end_txt_col, c, 
 end_txt_siz_x, p, 
 end_txt_siz_y, p, 
@@ -213,7 +213,7 @@ tut_act_var, s,
 tut_act_col, c, 
 tut_act_siz_x, p, 
 tut_act_size_y, p, 
-tut_sep_str, s, 
+tut_sep_str, s, ~
 tut_sep_font, f, 
 tut_sep_col, c, 
 tut_sep_var, s, 
