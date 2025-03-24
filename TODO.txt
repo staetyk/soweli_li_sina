@@ -1,6 +1,3 @@
-DEBUG:
-    expenetially slower each key press
-    no movement
 style.csv
 common surface library
     style
@@ -18,6 +15,7 @@ scene files
         set - 5
         ays - 6
         end - 7
+        tut - 8
         testing - -1
     frame function
         args:
