@@ -32,3 +32,12 @@ def translate(txt: str, system: int) -> str:
             out = out.replace("-", " ")
         out = out.rstrip(" ")
     return out
+
+
+settings = {
+    "English" : False,
+    "Sitelen Pona" : True,
+    "Master" : style["glob_vol_main"],
+    "Music" : style["glob_vol_mus"],
+    "SFX" : style["glob_vol_sfx"]
+}

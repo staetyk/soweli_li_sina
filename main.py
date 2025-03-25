@@ -17,28 +17,19 @@ clock = pygame.time.Clock()
 pygame.mixer.init()
 
 
-settings = {
-    "English" : False,
-    "Sitelen Pona" : True,
-    "Master" : ComSurLib.style["glob_vol_main"],
-    "Music" : ComSurLib.style["glob_vol_mus"],
-    "SFX" : ComSurLib.style["glob_vol_sfx"]
-}
-
-
 def save(progress: int):
     with open("save.csv", "w") as file:
         w = csv.writer(file)
-        w.writerow([progress, *settings.values()])
+        w.writerow([progress, *ComSurLib.settings.values()])
 
 
 def load() -> int:
-    global settings
+    global ComSurLib.settings
     with open("save.csv", "r") as file:
         r = csv.reader(file)
         s = next(r)
         out = int(s[0])
-        settings.update({
+        ComSurLib.settings.update({
             "English" : bool(s[1]),
             "Sitelen Pona" : bool(s[2]),
             "Master" : int(s[3]),
