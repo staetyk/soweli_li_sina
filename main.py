@@ -24,7 +24,6 @@ def save(progress: int):
 
 
 def load() -> int:
-    global ComSurLib.settings
     with open("save.csv", "r") as file:
         r = csv.reader(file)
         s = next(r)

@@ -6,10 +6,10 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 ## Controls (nasin pali)
 | **Key(s)** | **Effect** |
 | :---: | :--- |
-| `w`, `⇧` | Up |
-| `a`, `⇦` | Left |
-| `s`, `⇩` | Down |
-| `d`, `⇨` | Right |
+| `w`, `🡅` | Up |
+| `a`, `🡄` | Left |
+| `s`, `🡇` | Down |
+| `d`, `🡆` | Right |
 | `Enter`, `Space` | Select, Pass |
 | `Esc`, `Backspace` | Back, Pause |
 | `r` | Reset |
