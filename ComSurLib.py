@@ -15,3 +15,20 @@ with open("style.csv", "r") as file:
         elif row[1] == "s": style.update({row[0] : row[2]})
         elif row[1] == "fs": style.update({row[0] : pygame.font.SysFont(row[2], 12)})
         elif row[1] == "fc": style.update({row[0] : pygame.font.Font(f"fonts/{row[2]}", 12)})
+
+
+scale = lambda frame, pic : (int(frame[1] / pic[1] * pic[0]), int(frame[1])) if frame[0] / pic[0] * pic[1] > frame[1] else (int(frame[0]), int(frame[0] / pic[0] * pic[1]))
+
+
+def translate(txt: str, system: int) -> str:
+    if system == 2:
+        out = txt
+    else:
+        out = ""
+        for x in txt:
+            out += x
+            out += " "
+        if system == 1:
+            out = out.replace("-", " ")
+        out = out.rstrip(" ")
+    return out
