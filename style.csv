@@ -1,5 +1,5 @@
 lvl_in_bg, c, #1F008A
-lvl_out_bg, c, #8A0047
+lvl_out_bg, c, #551122
 lvl_grid_col, c, #1F007D
 lvl_grid_wid, p, 1/7
 menu_bg, c, #E1A0B5
@@ -229,7 +229,7 @@ glob_fade_spd, n,
 glob_fade_grph, s, 
 glob_frame, n, 10000
 glob_hold_del, n, 500
-glob_hold_int, n, 300
+glob_hold_int, n, 150
 glob_vol_main, n, 10
 glob_vol_mus, n, 10
 glob_vol_sfx, n, 10
