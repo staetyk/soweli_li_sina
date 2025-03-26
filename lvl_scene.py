@@ -7,7 +7,7 @@ from math import *
 def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[float, pygame.Surface]:
     if Sc != preSc or key == 5:
         PostSc = Sc
-        index = (1 if Sc == -1 else int(str(Sc % 1).replace("0.", "")))
+        index = (-1 if Sc == -1 else int(str(Sc % 1).replace("0.", "")))
         print(f"index: {index}")
         level_lib.init(index)
         

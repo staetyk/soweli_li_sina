@@ -64,12 +64,12 @@ def act() -> bool:
             m = m or ("moli" in prop)
         
         if len(s) > 0:
-            if w:
-                sound = max(sound, 8)
-                return True
             if m:
                 sound = max(sound, 7)
                 a.extend(s)
+            elif w:
+                sound = max(sound, 8)
+                return True
         n = min(len(p), len(o))
         if n > 0:
             sound = max(sound, 6)
