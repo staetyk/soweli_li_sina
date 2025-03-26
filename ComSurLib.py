@@ -1,5 +1,7 @@
 import pygame
 from csv import reader
+import copy
+
 
 pygame.init()
 
@@ -41,3 +43,13 @@ settings = {
     "Music" : style["glob_vol_mus"],
     "SFX" : style["glob_vol_sfx"]
 }
+
+
+def text(txt: str, font: pygame.font.Font, var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
+    font = copy.copy(font)
+    font.set_bold("b" in var)
+    font.set_italic("i" in var)
+    font.set_underline("u" in var)
+    new = scale((x, y), font.size(txt))
+    out = font.render(txt, True, col)
+    return pygame.transform.scale(out, new)
