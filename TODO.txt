@@ -1,9 +1,6 @@
 style.csv
 common surface library
-    style
-    text
-    button
-    cursor
+    button & cursor
     fade
 scene files
     scenes:
@@ -17,11 +14,3 @@ scene files
         end - 7
         tut - 8
         testing - -1
-    frame function
-        args:
-            dim: tuple[int, int]
-            key: int = -1
-            preSc: float = -1
-        output:
-            pygame.Surface # screen
-            int # next scene
