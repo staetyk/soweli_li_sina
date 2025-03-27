@@ -318,11 +318,11 @@ def step(direction: int) -> tuple[bool, int]:
     phrases = read()
     if len(phrases) > 0: parse(*tuple(phrases))
     if act(): return (True, sound)
+    change()
     if direction != -1:
         move_suli(direction)
         clear()
         phrases = read()
         if len(phrases) > 0: parse(*tuple(phrases))
         if act(): return (True, sound)
-    change()
     return (act(), sound)

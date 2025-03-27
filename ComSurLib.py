@@ -53,3 +53,7 @@ def text(txt: str, font: pygame.font.Font, var: str, col: pygame.Color, x: float
     new = scale((x, y), font.size(txt))
     out = font.render(txt, True, col)
     return pygame.transform.scale(out, new)
+
+
+def button(txt: str, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float) -> pygame.Surface:
+    inside = 
