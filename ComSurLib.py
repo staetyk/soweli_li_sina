@@ -27,6 +27,8 @@ script = {}
 with open("script.csv", "r") as file:
     i = 0
     for row in reader(file):
+        i += 1
+        if len(row) < 2: continue
         script.update({i : list(row)})
 
 

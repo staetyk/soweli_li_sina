@@ -15,15 +15,17 @@ pygame.key.set_repeat(ComSurLib.style["glob_hold_del"], ComSurLib.style["glob_ho
 pygame.event.set_blocked([pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.KEYUP])
 clock = pygame.time.Clock()
 pygame.mixer.init()
+plus = False
 
 
 def save(progress: int):
     with open("save.csv", "w") as file:
         w = csv.writer(file)
-        w.writerow([progress, *ComSurLib.settings.values()])
+        w.writerow([progress, *ComSurLib.settings.values(), plus])
 
 
 def load() -> int:
+    global plus
     with open("save.csv", "r") as file:
         r = csv.reader(file)
         s = next(r)
@@ -35,7 +37,14 @@ def load() -> int:
             "Music" : int(s[4]),
             "SFX" : int(s[5])
         })
+        plus = bool(s[6])
         return out
+
+
+def newsave(ngp: bool = False):
+    global plus
+    plus = ngp
+    save(0)
 
 
 prescene = 4
