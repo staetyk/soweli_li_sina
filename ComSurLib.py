@@ -1,3 +1,4 @@
+from re import L
 import pygame
 from csv import reader
 import copy
@@ -22,16 +23,29 @@ with open("style.csv", "r") as file:
 scale = lambda frame, pic : (int(frame[1] / pic[1] * pic[0]), int(frame[1])) if frame[0] / pic[0] * pic[1] > frame[1] else (int(frame[0]), int(frame[0] / pic[0] * pic[1]))
 
 
+script = {}
+with open("script.csv", "r") as file:
+    i = 0
+    for row in reader(file):
+        script.update({i : list(row)})
+
+
+# eng, sl, sp
 def translate(txt: str, system: int) -> str:
     if system == 2:
         out = txt
     else:
-        out = ""
+        if system == 1:
+            txt = txt.replace("-", " ").replace("[", "").replace("]", "")
+            txt2 = ""
+            for x in txt.split():
+                txt2 += " "
+                txt2 += (x if x.islower() else x.title())
+            txt = txt2.lstrip(" ")
+        out = txt
         for x in txt:
             out += x
             out += " "
-        if system == 1:
-            out = out.replace("-", " ")
         out = out.rstrip(" ")
     return out
 
@@ -45,7 +59,8 @@ settings = {
 }
 
 
-def text(txt: str, font: pygame.font.Font, var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
+def text(line: int, system: int, font: pygame.font.Font, var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
+    txt = translate(script[line][(0 if system == 0 else 1)], system)
     font = copy.copy(font)
     font.set_bold("b" in var)
     font.set_italic("i" in var)
