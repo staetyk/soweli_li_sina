@@ -95,7 +95,7 @@ def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pyg
     base.blit(txt, (w0 + xpad * w, h0 + ypad * h))
 
     new = pygame.Surface((width + 2 * width * (cpadx + cwidy), height + 2 * height * (cpady + cwidx)))
-    new.blit(base, (width * (cpadx + cwidy), height * (cpady + cwidx))
+    new.blit(base, (width * (cpadx + cwidy), height * (cpady + cwidx)))
     base = new
 
     if cursor:
@@ -105,6 +105,6 @@ def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pyg
                 p = []
                 for k in points:
                     p.append((k[0] if i == 0 else width - k[0], k[1] if j == 0 else height - k[1]))
-                pygame.draw.polygon(base, cursol, p)
+                pygame.draw.polygon(base, curscol, p)
 
     return base
