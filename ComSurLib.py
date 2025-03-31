@@ -72,5 +72,39 @@ def text(line: int, system: int, font: pygame.font.Font, var: str, col: pygame.C
     return pygame.transform.scale(out, new)
 
 
-def button(txt: str, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float) -> pygame.Surface:
-    ...
+def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float) -> pygame.Surface:
+    base = pygame.Surface((width, height))
+
+    r = rad * min(width, height)
+    pygame.draw.polygon(base, outcol, ((r, 0), (width - r, 0), (width, r), (width, height - r), (width - r, height), (r, height), (0, height - r), (0, r)))
+    for i in range(2):
+        for j in range(2):
+            pygame.draw.circle(base, outcol, ([r, width - r][i], [r, height - r][j]), r)
+
+    r = rad * min(width, height) * (1 - outwid)
+    w = width * (1 - outwid)
+    h = height * (1 - outwid)
+    w0 = w * outwid
+    h0 = h * outwid
+    pygame.draw.polygon(base, incol, ((w0 + r, h0), (w0 + w - r, h0), (w0 + w, h0 + r), (w0 + w, h0 + h - r), (w0 + w - r, h0 + h), (w0 + r, h0 + h), (w0, h0 + h - r), (w0, h0 + r)))
+    for i in range(2):
+        for j in range(2):
+            pygame.draw.circle(base, incol, ([w0 + r, w0 + w - r][i], [h0 + r, h0 + h - r][j]), r)
+
+    txt = text(line, system, font, var, txtcol, w - 2 * xpad * w, h - 2 * ypad * h)
+    base.blit(txt, (w0 + xpad * w, h0 + ypad * h))
+
+    new = pygame.Surface((width + 2 * width * (cpadx + cwidy), height + 2 * height * (cpady + cwidx)))
+    new.blit(base, (width * (cpadx + cwidy), height * (cpady + cwidx))
+    base = new
+
+    if cursor:
+        points = [(0, 0), (clenx * width, 0), (clenx * width, cwidx * height), (cwidy * width, cwidx * height), (cwidy * width, cleny * height), (0, cleny * height)]
+        for i in range(2):
+            for j in range(2):
+                p = []
+                for k in points:
+                    p.append((k[0] if i == 0 else width - k[0], k[1] if j == 0 else height - k[1]))
+                pygame.draw.polygon(base, cursol, p)
+
+    return base

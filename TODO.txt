@@ -1,6 +1,5 @@
 style.csv
 common surface library
-    button & cursor
     fade
 scene files
     scenes:
