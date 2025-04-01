@@ -1,5 +1,5 @@
 import pygame
-import lib.ComSurLib as ComSurLib
+import ComSurLib
 from math import *
 
 

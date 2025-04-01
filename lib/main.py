@@ -1,6 +1,6 @@
 import pygame
-import lib.ComSurLib as ComSurLib
-import lib.lvl_scene as lvl_scene
+import ComSurLib
+import lvl_scene
 import csv
 
 
@@ -76,7 +76,6 @@ while True:
         elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
         elif evnt.key == pygame.K_r: key = 5
         elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
-    print(key)
     pygame.event.pump()
 
     if scene == -1:

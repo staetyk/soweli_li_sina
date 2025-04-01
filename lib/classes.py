@@ -12,6 +12,7 @@ class Thing:
         self.propA: list = []
         if isinstance(sprite, list):
             s = []
+            a = []
             for x in sprite:
                 try:
                     s.append(image.load(f"images/{x}.png"))

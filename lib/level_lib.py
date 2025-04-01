@@ -1,7 +1,7 @@
 from pygame.mixer import Sound
-from lib.components import *
+from components import *
 from csv import reader
-from lib.classes import Word, Thing, ijo, nimi, clear, reset
+from classes import Word, Thing, ijo, nimi, clear, reset
 
 
 width = 1

@@ -1,4 +1,4 @@
-from lib.classes import Word, Thing
+from classes import Word, Thing
 
 
 # Things
