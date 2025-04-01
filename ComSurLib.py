@@ -94,7 +94,7 @@ def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pyg
     txt = text(line, system, font, var, txtcol, w - 2 * xpad * w, h - 2 * ypad * h)
     base.blit(txt, (w0 + xpad * w, h0 + ypad * h))
 
-    new = pygame.Surface((width + 2 * width * (cpadx + cwidy), height + 2 * height * (cpady + cwidx)))
+    new = pygame.Surface((width + 2 * width * (cpadx + cwidy), height + 2 * height * (cpady + cwidx) if cursor else height))
     new.blit(base, (width * (cpadx + cwidy), height * (cpady + cwidx)))
     base = new
 

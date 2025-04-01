@@ -35,7 +35,7 @@ menu_cur_len, p,
 menu_cur_pad_x, p, 
 menu_cur_pad_y, p, 
 sel_bg, c, #2E1E99
-sel_lvl_lock_fill, c, 
+sel_lvl_lock_fill, c, #A80000
 sel_lvl_lock_out, c, 
 sel_lvl_lock_txt_col, c, 
 sel_lvl_lock_txt_var, s, 
@@ -50,7 +50,7 @@ sel_lvl_done_txt_var, s,
 sel_lvl_siz_x, p, 
 sel_lvl_siz_y, p, 
 sel_lvl_wid, p, 
-sel_lvl_txt_font, f, 
+sel_lvl_txt_font, fc, Press_Start_2P/PressStart2P-Regular.ttf
 sel_lvl_txt_pad_x, p, 
 sel_lvl_txt_pad_y, p, 
 sel_lvl_txt_var, s, 
