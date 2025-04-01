@@ -67,12 +67,13 @@ def text(line: int, system: int, font: pygame.font.Font, var: str, col: pygame.C
     font.set_bold("b" in var)
     font.set_italic("i" in var)
     font.set_underline("u" in var)
+    font.set_strikethrough("s" in var)
     new = scale((x, y), font.size(txt))
     out = font.render(txt, True, col)
     return pygame.transform.scale(out, new)
 
 
-def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float) -> pygame.Surface:
+def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool) -> pygame.Surface:
     base = pygame.Surface((width, height))
 
     r = rad * min(width, height)
@@ -94,7 +95,7 @@ def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pyg
     txt = text(line, system, font, var, txtcol, w - 2 * xpad * w, h - 2 * ypad * h)
     base.blit(txt, (w0 + xpad * w, h0 + ypad * h))
 
-    new = pygame.Surface((width + 2 * width * (cpadx + cwidy), height + 2 * height * (cpady + cwidx) if cursor else height))
+    new = pygame.Surface((width + 2 * width * (cpadx + cwidy) if cursor or cinx else width, height + 2 * height * (cpady + cwidx) if cursor or ciny else height))
     new.blit(base, (width * (cpadx + cwidy), height * (cpady + cwidx)))
     base = new
 

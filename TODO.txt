@@ -3,7 +3,7 @@ common surface library
     fade
 scene files
     scenes:
-        lvl - 0.{level number}
+        lvl - 0.{level number} 
         pause - 1.{level number}
         sel - 2.{page number}
         win - 3.{level number}
