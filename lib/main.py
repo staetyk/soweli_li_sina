@@ -91,5 +91,5 @@ while True:
         pygame.display.flip()
 
     else:
-        try: pygame.mixer.music.fadeout(ComSurLib.style["glob_fade_dur"])
+        try: pygame.mixer.music.stop()
         except: pass

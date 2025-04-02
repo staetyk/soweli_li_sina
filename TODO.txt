@@ -1,6 +1,4 @@
 style.csv
-common surface library
-    fade
 scene files
     scenes:
         lvl - 0.{level number} 

@@ -22,7 +22,7 @@ menu_but_txt_pad_x, p,
 menu_but_txt_pad_y, p, 
 menu_but_txt_var, s, n
 menu_but_fill, c, #A0CFE1
-menu_but_out, c, 
+menu_but_out, c, #245F5C
 menu_but_wid, p, 
 menu_but_siz_x, p, 
 menu_but_siz_y, p, 
@@ -56,13 +56,13 @@ sel_lvl_txt_pad_x, p, 0.15
 sel_lvl_txt_pad_y, p, 0.15
 sel_lvl_txt_var, s, u
 sel_lvl_rad, p, 0.175
-sel_cur_wid_x, p, 
-sel_cur_wid_y, p, 
-sel_cur_col, c, 
-sel_cur_len_x, p, 
-sel_cur_len_y, p, 
-sel_cur_pad_x, p, 
-sel_cur_pad_y, p, 
+sel_cur_wid_x, p, 0.15
+sel_cur_wid_y, p, 0.15
+sel_cur_col, c, #000000
+sel_cur_len_x, p, 0.2
+sel_cur_len_y, p, 0.2
+sel_cur_pad_x, p, 0.05
+sel_cur_pad_y, p, 0.05
 sel_num_x, n, 5
 sel_num_y, n, 3
 set_bg, c, 
@@ -228,9 +228,6 @@ tut_sep_right, p,
 tut_lin, p, 
 tut_pad_x, p, 
 tut_pad_y, p, 
-glob_fade_dur, n, 
-glob_fade_spd, n, 
-glob_fade_grph, s, 
 glob_frame, n, 10000
 glob_hold_del, n, 500
 glob_hold_int, n, 100
