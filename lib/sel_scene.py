@@ -33,4 +33,7 @@ def frame(dim: tuple[int, int], scene: float, preSc: float, key: int) -> tuple[f
 
     base = pygame.Surface(dim)
     base.fill(ComSurLib.style["sel_bg"])
-    
+    for i in range(ComSurLib.style["sel_num_y"]):
+        for j in range(ComSurLib.style["sel_num_x"]):
+            cell = pygame.Rect(j * (dim[0] - 2 * ComSurLib.style["sel_pad_x"]) // ComSurLib.style["sel_num_x"], i * (dim[1] - 2 * ComSurLib.style["sel_pad_y"]) // ComSurLib.style["sel_num_y"], (dim[0] - 2 * ComSurLib.style["sel_pad_x"]) // ComSurLib.style["sel_num_x"], (dim[1] - 2 * ComSurLib.style["sel_pad_y"]) // ComSurLib.style["sel_num_y"])
+            sub = (cell.width - ComSurLib.style["sel_lvl_pad_x"])

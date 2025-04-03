@@ -3,17 +3,17 @@ lvl_out_bg, c, #551122
 lvl_grid_col, c, #1F007D
 lvl_grid_wid, p, 1/7
 menu_bg, c, #E1A0B5
-menu_logo_siz_x, p, 
-menu_logo_siz_y, p, 
-menu_logo_pad_y, p, 
-menu_title_col, c, 
+menu_logo_siz_x, p, 0.5
+menu_logo_siz_y, p, 0.5
+menu_logo_pad_y, p, 0.25
+menu_title_col, c, #000000
 menu_title_font_eng, f, 
 menu_title_font_sp, f, 
 menu_title_font_sl, f, 
-menu_title_siz_x, p, 
-menu_title_siz_y, p, 
+menu_title_siz_x, p, .2
+menu_title_siz_y, p, 0.2
 menu_title_var, s, b
-menu_title_pad_y, p, 
+menu_title_pad_y, p, 0.1
 menu_but_txt_col, c, #45FF8A
 menu_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
