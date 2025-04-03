@@ -6,7 +6,7 @@ unique = lambda x : x if len(x) == 0 else list(set(x))
 
 
 class Thing:
-    def __init__(self, name: str, prop: list[str] = [], sprite: list[str]|str|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True):
+    def __init__(self, name: str, prop: list[str] = [], sprite: list[str]|str|None = None, transform: list["Thing"] = [], facing: int = 0, _I: bool = True, p: bool = False):
         self._name = name
         self.propL: list = prop
         self.propA: list = []
@@ -25,6 +25,7 @@ class Thing:
             except:
                 self.sprite = image.load("images/placeholder.png")
         else: self.sprite = image.load("images/placeholder.png")
+        self.plus = p
         self.transL: list = transform
         self.transA: list = []
         self.face = 1
@@ -69,8 +70,12 @@ class Thing:
     def fac(self, direction: int):
         if self.turn > 0: self.face = direction
 
-    def draw(self):
-        if self.turn == 0: return self.sprite
+    def draw(self, plus: bool = False):
+        if self.plus & plus:
+            out = image.load("images/Things/kije.jpg")
+            try: return transform.scale(out, self.sprite.get_size()) # type: ignore
+            except: return transform.scale(out, self.sprite[0].get_size()) # type: ignore
+        elif self.turn == 0: return self.sprite
         elif self.turn == 1:
             if self.face == 0: return self.sprite[0] # type: ignore
             elif self.face == 2: return self.sprite[2] # type: ignore

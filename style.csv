@@ -14,27 +14,27 @@ menu_title_siz_x, p,
 menu_title_siz_y, p, 
 menu_title_var, s, b
 menu_title_pad_y, p, 
-menu_but_txt_col, c, 
+menu_but_txt_col, c, #45FF8A
 menu_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-menu_but_txt_pad_x, p, 
-menu_but_txt_pad_y, p, 
+menu_but_txt_pad_x, p, 0.2
+menu_but_txt_pad_y, p, 0.2
 menu_but_txt_var, s, n
 menu_but_fill, c, #A0CFE1
 menu_but_out, c, #245F5C
-menu_but_wid, p, 
-menu_but_siz_x, p, 
-menu_but_siz_y, p, 
-menu_but_pad_y, p, 
-menu_but_rad, p, 
-menu_cur_wid_x, p, 
-menu_cur_wid_y, p, 
-menu_cur_col, c, 
-menu_cur_len_x, p, 
-menu_cur_len_y, p, 
-menu_cur_pad_x, p, 
-menu_cur_pad_y, p, 
+menu_but_wid, p, 0.05
+menu_but_siz_x, p, 1/5
+menu_but_siz_y, p, 2/3
+menu_but_pad_y, p, 1/3
+menu_but_rad, p, 0.1
+menu_cur_wid_x, p, 0.1
+menu_cur_wid_y, p, 0.1
+menu_cur_col, c, #000000
+menu_cur_len_x, p, 0.5
+menu_cur_len_y, p, 0.5
+menu_cur_pad_x, p, 0.15
+menu_cur_pad_y, p, 0.15
 sel_bg, c, #2E1E99
 sel_lvl_lock_fill, c, #A80000
 sel_lvl_lock_out, c, #FF0303

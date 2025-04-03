@@ -79,13 +79,13 @@ while True:
     pygame.event.pump()
 
     if scene == -1:
-        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, plus)
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))
         pygame.display.flip()
 
     elif int(scene) == 0:
-        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key)
+        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, plus)
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))
         pygame.display.flip()

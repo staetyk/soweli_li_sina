@@ -31,4 +31,6 @@ def frame(dim: tuple[int, int], scene: float, preSc: float, key: int) -> tuple[f
         try: pygame.mixer.Sound("sounds/click.mp3").play()
         except: pass
 
+    base = pygame.Surface(dim)
+    base.fill(ComSurLib.style["sel_bg"])
     

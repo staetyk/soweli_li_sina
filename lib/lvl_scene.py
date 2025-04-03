@@ -4,7 +4,7 @@ import level_lib
 from math import *
 
 
-def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[float, pygame.Surface]:
+def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int, plus: bool) -> tuple[float, pygame.Surface]:
     if Sc != preSc or key == 5:
         PostSc = Sc
         index = (1 if Sc == -1 else int(str(Sc % 1).replace("0.", "")))
@@ -40,7 +40,7 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
             show.fill(ComSurLib.style["lvl_in_bg"], (x, y, 140, 140))
             if len(level_lib.map[level_lib.toi(j, i)]) > 0:
                 for k in level_lib.map[level_lib.toi(j, i)]:
-                    show.blit(k.draw(), (x, y, 140, 140))
+                    show.blit(k.draw(plus), (x, y, 140, 140))
 
     out = pygame.Surface(dim)
     out.fill(ComSurLib.style["lvl_out_bg"])
