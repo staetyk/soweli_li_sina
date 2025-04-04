@@ -1,5 +1,5 @@
 import pygame
-from csv import reader
+from csv import reader, writer
 import copy
 
 
@@ -60,8 +60,11 @@ settings = {
 }
 
 
-def text(line: int, system: int, font: pygame.font.Font, var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
-    txt = translate(script[line][(0 if system == 0 else 1)], system)
+lang = lambda : (2 if settings["English"] else (0 if settings["Sitelen Pona"] else 1))
+
+
+def text(line: int|str, system: int, font: pygame.font.Font, var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
+    txt = translate(script[line][(0 if system == 0 else 1) if isinstance(line, int) else line], system)
     font = copy.copy(font)
     font.set_bold("b" in var)
     font.set_italic("i" in var)
@@ -72,7 +75,7 @@ def text(line: int, system: int, font: pygame.font.Font, var: str, col: pygame.C
     return pygame.transform.scale(out, new)
 
 
-def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool) -> pygame.Surface:
+def button(line: int|str, system: int, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool) -> pygame.Surface:
     base = pygame.Surface((width, height))
 
     r = rad * min(width, height)
@@ -108,3 +111,30 @@ def button(line: int, system: int, font: pygame.font.Font, var: str, txtcol: pyg
                 pygame.draw.polygon(base, curscol, p)
 
     return base
+
+
+def save(progress: int, plus: bool = False):
+    with open("save.csv", "w") as file:
+        w = writer(file)
+        w.writerow([progress, *settings.values(), plus])
+
+
+def load() -> tuple[int, bool]:
+    with open("save.csv", "r") as file:
+        r = reader(file)
+        s = next(r)
+        out = int(s[0])
+        settings.update({
+            "English" : bool(s[1]),
+            "Sitelen Pona" : bool(s[2]),
+            "Master" : int(s[3]),
+            "Music" : int(s[4]),
+            "SFX" : int(s[5])
+        })
+        plus = bool(s[6])
+        return (out, plus)
+
+
+def newsave(ngp: bool = False):
+    plus = ngp
+    save(0)

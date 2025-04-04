@@ -1,13 +1,12 @@
 style.csv
 scene files
     scenes:
-        lvl - 0.{level number} 
-        pause - 1.{level number}
-        sel - 2.{page number}
-        win - 3.{level number}
-        menu - 4
-        set - 5
-        ays - 6
-        end - 7
-        tut - 8
+        lvl - 0.{level number} - level
+        pause - 1.{level number} - pause
+        sel - 2.{page number} - level select
+        win - 3.{level number} - win
+        menu - 4 - main menu
+        set - 5 - settings
+        ays - 6 - are you sure
+        tut - 7 - tutorial
         testing - -1

@@ -7,9 +7,9 @@ menu_logo_siz_x, p, 0.5
 menu_logo_siz_y, p, 0.5
 menu_logo_pad_y, p, 0.25
 menu_title_col, c, #000000
-menu_title_font_eng, f, 
-menu_title_font_sp, f, 
-menu_title_font_sl, f, 
+menu_title_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+menu_title_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
+menu_title_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 menu_title_siz_x, p, .2
 menu_title_siz_y, p, 0.2
 menu_title_var, s, b
@@ -38,23 +38,20 @@ menu_cur_pad_y, p, 0.15
 sel_bg, c, #2E1E99
 sel_lvl_lock_fill, c, #A80000
 sel_lvl_lock_out, c, #FF0303
-sel_lvl_lock_txt_col, c, #DB0000
-sel_lvl_lock_txt_var, s, n
+sel_lvl_lock_txt, c, #DB0000
 sel_lvl_next_fill, c, #E1D700
 sel_lvl_next_out, c, #E2AA01
-sel_lvl_next_txt_col, c, #E29B01
-sel_lvl_next_txt_var, s, n
+sel_lvl_next_txt, c, #E29B01
 sel_lvl_done_fill, c, #16DB00
 sel_lvl_done_out, c, #14BE01
-sel_lvl_done_txt_col, c, #109901
-sel_lvl_done_txt_var, s, bi
+sel_lvl_done_txt, c, #109901
 sel_lvl_siz_x, p, 0.875
 sel_lvl_siz_y, p, 0.875
 sel_lvl_wid, p, 0.1
 sel_lvl_txt_font, fc, Press_Start_2P/PressStart2P-Regular.ttf
 sel_lvl_txt_pad_x, p, 0.15
 sel_lvl_txt_pad_y, p, 0.15
-sel_lvl_txt_var, s, u
+sel_lvl_txt_var, s, n
 sel_lvl_rad, p, 0.175
 sel_cur_wid_x, p, 0.15
 sel_cur_wid_y, p, 0.15
@@ -65,31 +62,31 @@ sel_cur_pad_x, p, 0.05
 sel_cur_pad_y, p, 0.05
 sel_num_x, n, 5
 sel_num_y, n, 3
-set_bg, c, 
-set_lab_t_col, c, 
-set_lab_f_col, c, 
+set_bg, c, #9DB29E
+set_lab_t_col, c, #00ff00
+set_lab_f_col, c, #ff0000
 set_lab_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 set_lab_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 set_lab_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-set_lab_siz_x, p, 
-set_lab_siz_y, p, 
-set_lab_var, s, 
-set_lab_pad_x, p, 
-set_lab_pad_y, p, 
-set_ctrl_bar_f_col, c, 
-set_ctrl_bar_t_col, c, 
-set_ctrl_bar_wid, p, 
-set_ctrl_bar_tab_wid, p, 
-set_ctrl_bar_tab_len, p, 
-set_ctrl_bar_len, p, 
-set_ctrl_tog_f_fill, c, 
-set_ctrl_tog_f_out, c, 
-set_ctrl_tog_f_wid, p, 
-set_ctrl_tog_f_siz, p, 
-set_ctrl_tog_t_fill, c, 
-set_ctrl_tog_t_out, c, 
-set_ctrl_tog_t_wid, p, 
-set_ctrl_tog_t_siz, p, 
+set_lab_siz_x, p, 0.1
+set_lab_siz_y, p, 0.1
+set_lab_var, s, n
+set_lab_pad_x, p, 0.1
+set_lab_pad_y, p, 0.1
+set_ctrl_bar_f_col, c, #ff0000
+set_ctrl_bar_t_col, c, #0000ff
+set_ctrl_bar_wid, p, 0.1
+set_ctrl_bar_tab_wid, p, 0.1
+set_ctrl_bar_tab_len, p, 0.1
+set_ctrl_bar_len, p, 0.1
+set_ctrl_tog_f_fill, c, #FC0000
+set_ctrl_tog_f_out, c, #FC5400
+set_ctrl_tog_f_wid, p, 0.1
+set_ctrl_tog_f_siz, p, 0.1
+set_ctrl_tog_t_fill, c, #00FF00
+set_ctrl_tog_t_out, c, #03ABFF
+set_ctrl_tog_t_wid, p, 0.1
+set_ctrl_tog_t_siz, p, 0.1
 set_ctrl_tog_shp, s, 
 set_ctrl_pad_x, p, 
 set_cur_wid_x, p, 
@@ -106,7 +103,7 @@ ays_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 ays_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_txt_siz_x, p, 
 ays_txt_siz_y, p, 
-ays_txt_var, s, ib
+ays_txt_var, s, bi
 ays_txt_pad_x, p, 
 ays_txt_pad_y, p, 
 ays_txt_lin, p, 
@@ -196,14 +193,6 @@ pause_cur_len_x, p,
 pause_cur_len_y, p, 
 pause_cur_pad_x, p, 
 pause_cur_pad_y, p, 
-end_bg, c, 
-end_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-end_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
-end_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-end_txt_col, c, 
-end_txt_siz_x, p, 
-end_txt_siz_y, p, 
-end_txt_var, s, 
 tut_bg_col, c, 
 tut_key_font, f, 
 tut_key_var, s, 

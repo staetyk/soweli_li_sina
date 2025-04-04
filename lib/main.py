@@ -18,35 +18,6 @@ pygame.mixer.init()
 plus = False
 
 
-def save(progress: int):
-    with open("save.csv", "w") as file:
-        w = csv.writer(file)
-        w.writerow([progress, *ComSurLib.settings.values(), plus])
-
-
-def load() -> int:
-    global plus
-    with open("save.csv", "r") as file:
-        r = csv.reader(file)
-        s = next(r)
-        out = int(s[0])
-        ComSurLib.settings.update({
-            "English" : bool(s[1]),
-            "Sitelen Pona" : bool(s[2]),
-            "Master" : int(s[3]),
-            "Music" : int(s[4]),
-            "SFX" : int(s[5])
-        })
-        plus = bool(s[6])
-        return out
-
-
-def newsave(ngp: bool = False):
-    global plus
-    plus = ngp
-    save(0)
-
-
 prescene = 4
 scene = -1
 
