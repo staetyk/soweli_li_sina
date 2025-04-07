@@ -6,6 +6,12 @@ import copy
 pygame.init()
 
 
+def fonts(name: str, place: str):
+    if place == "fs": return pygame.font.SysFont(name, 12)
+    elif place == "fc": return pygame.font.Font(f"fonts/{name}", 12)
+    else: raise Exception
+
+
 style = {}
 with open("style.csv", "r") as file:
     for row in reader(file):
@@ -15,8 +21,7 @@ with open("style.csv", "r") as file:
         elif row[1] == "c": style.update({row[0] : pygame.Color(row[2])})
         elif row[1] == "p": style.update({row[0] : eval(row[2])})
         elif row[1] == "s": style.update({row[0] : row[2]})
-        elif row[1] == "fs": style.update({row[0] : pygame.font.SysFont(row[2], 12)})
-        elif row[1] == "fc": style.update({row[0] : pygame.font.Font(f"fonts/{row[2]}", 12)})
+        else: style.update({row[0] : (row[2], row[1])})
 
 
 scale = lambda frame, pic : (int(frame[1] / pic[1] * pic[0]), int(frame[1])) if frame[0] / pic[0] * pic[1] > frame[1] else (int(frame[0]), int(frame[0] / pic[0] * pic[1]))
@@ -63,9 +68,9 @@ settings = {
 lang = lambda : (2 if settings["English"] else (0 if settings["Sitelen Pona"] else 1))
 
 
-def text(line: int|str, system: int, font: pygame.font.Font, var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
-    txt = translate(script[line][(0 if system == 0 else 1) if isinstance(line, int) else line], system)
-    font = copy.copy(font)
+def text(line: int|str, system: int, font: tuple[str, str], var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
+    txt = translate(line if isinstance(line, str) else (script[line][(0 if system == 0 else 1)]), system)
+    font = fonts(*font)
     font.set_bold("b" in var)
     font.set_italic("i" in var)
     font.set_underline("u" in var)
@@ -75,7 +80,7 @@ def text(line: int|str, system: int, font: pygame.font.Font, var: str, col: pyga
     return pygame.transform.scale(out, new)
 
 
-def button(line: int|str, system: int, font: pygame.font.Font, var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool) -> pygame.Surface:
+def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool) -> pygame.Surface:
     base = pygame.Surface((width, height))
 
     r = rad * min(width, height)
@@ -120,19 +125,21 @@ def save(progress: int, plus: bool = False):
 
 
 def load() -> tuple[int, bool]:
-    with open("save.csv", "r") as file:
-        r = reader(file)
-        s = next(r)
-        out = int(s[0])
-        settings.update({
-            "English" : bool(s[1]),
-            "Sitelen Pona" : bool(s[2]),
-            "Master" : int(s[3]),
-            "Music" : int(s[4]),
-            "SFX" : int(s[5])
-        })
-        plus = bool(s[6])
-        return (out, plus)
+    try:
+        with open("save.csv", "r") as file:
+            r = reader(file)
+            s = next(r)
+            out = int(s[0])
+            settings.update({
+                "English" : bool(s[1]),
+                "Sitelen Pona" : bool(s[2]),
+                "Master" : int(s[3]),
+                "Music" : int(s[4]),
+                "SFX" : int(s[5])
+            })
+            plus = bool(s[6])
+            return (out, plus)
+    except: return (0, False)
 
 
 def newsave(ngp: bool = False):

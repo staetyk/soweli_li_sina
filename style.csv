@@ -87,7 +87,6 @@ set_ctrl_tog_t_fill, c, #00FF00
 set_ctrl_tog_t_out, c, #03ABFF
 set_ctrl_tog_t_wid, p, 0.1
 set_ctrl_tog_t_siz, p, 0.1
-set_ctrl_tog_shp, s, 
 set_ctrl_pad_x, p, 
 set_cur_wid_x, p, 
 set_cur_wid_y, p, 
@@ -97,37 +96,37 @@ set_cur_len_y, p,
 set_cur_pad_x, p, 
 set_cur_pad_y, p, 
 ays_bg, c, #AECA91
-ays_txt_col, c, 
+ays_txt_col, c, #CB5656
 ays_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 ays_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-ays_txt_siz_x, p, 
-ays_txt_siz_y, p, 
+ays_txt_siz_x, p, 0.1
+ays_txt_siz_y, p, 0.1
 ays_txt_var, s, bi
-ays_txt_pad_x, p, 
-ays_txt_pad_y, p, 
-ays_txt_lin, p, 
-ays_but_t_fill, c, 
-ays_but_t_out, c, 
-ays_but_f_fill, c, 
-ays_but_f_out, c, 
-ays_but_wid, p, 
-ays_but_siz_x, p, 
-ays_but_siz_y, p, 
-ays_but_t_txt_col, c, 
-ays_but_f_txt_col, c, 
+ays_txt_pad_x, p, 0.05
+ays_txt_pad_y, p, 0.05
+ays_txt_lin, p, 0.05
+ays_but_t_fill, c, #03FF64
+ays_but_t_out, c, #50EF0C
+ays_but_f_fill, c, #D61A1A
+ays_but_f_out, c, #FF0303
+ays_but_wid, p, 0.05
+ays_but_siz_x, p, 0.2
+ays_but_siz_y, p, 0.15
+ays_but_t_txt_col, c, #480CEF
+ays_but_f_txt_col, c, #EF980C
 ays_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 ays_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-ays_but_txt_pad_x, p, 
-ays_but_txt_pad_y, p, 
-ays_but_txt_var, s, 
-ays_but_pad_x, p, 
-ays_but_rad, p, 
-ays_cur_wid_x, p, 
-ays_cur_wid_y, p, 
-ays_cur_col, c, 
-ays_cur_len_x, p, 
+ays_but_txt_pad_x, p, 0.2
+ays_but_txt_pad_y, p, 0.05
+ays_but_txt_var, s, n
+ays_but_pad_x, p, 0.75
+ays_but_rad, p, 0.15
+ays_cur_wid_x, p, 0.1
+ays_cur_wid_y, p, 0.1
+ays_cur_col, c, #000000
+ays_cur_len_x, p, 0.
 ays_cur_len_y, p, 
 ays_cur_pad_x, p, 
 ays_cur_pad_y, p, 

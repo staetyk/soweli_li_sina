@@ -1,6 +1,7 @@
 import pygame
 import ComSurLib
 import lvl_scene
+import sel_scene
 import csv
 
 
@@ -19,7 +20,7 @@ plus = False
 
 
 prescene = 4
-scene = -1
+scene = 2
 
 i = 0
 last = clock.get_time()
@@ -64,3 +65,8 @@ while True:
     else:
         try: pygame.mixer.music.stop()
         except: pass
+
+    if int(scene) == 2:
+        new, nextS = sel_scene.frame(screen.get_size(), scene, prescene, key)
+        prescene, scene = scene, new
+        if nextS: screen.blit(nextS, (0, 0))
