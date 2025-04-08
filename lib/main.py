@@ -66,7 +66,8 @@ while True:
         try: pygame.mixer.music.stop()
         except: pass
 
-    if int(scene) == 2:
-        new, nextS = sel_scene.frame(screen.get_size(), scene, prescene, key)
+    if scene == 2:
+        new, nextS = sel_scene.frame(screen.get_size(), prescene, key)
         prescene, scene = scene, new
         if nextS: screen.blit(nextS, (0, 0))
+        pygame.display.flip()

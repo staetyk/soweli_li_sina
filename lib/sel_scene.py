@@ -14,24 +14,24 @@ def check(i: int) -> bool:
 
 num, cursed = 1, 0
 
-def init(page: int = 0):
+def init():
     global num, cursed
     num = 0
     while check(num): num += 1
-    num += 1
-    cursed = ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] * page
-
-init()
+    cursed = 0
 
 
-def frame(dim: tuple[int, int], scene: float, preSc: float, key: int) -> tuple[float, Optional[pygame.Surface]]:
-    scene = int(str(scene).zfill(2).lstrip("2."))
-    if preSc != scene: init(scene)
+def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional[pygame.Surface]]:
+    if preSc != 2: init()
 
+    global cursed
     if key == 0:
         try: pygame.mixer.Sound("sounds/click.mp3").play()
         except: pass
         return (cursed / 100, None)
+    elif key == 6: return (4, None)        
+
+    page = cursed // (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])
 
     current = ComSurLib.load()[0]
 
@@ -39,7 +39,8 @@ def frame(dim: tuple[int, int], scene: float, preSc: float, key: int) -> tuple[f
     base.fill(ComSurLib.style["sel_bg"])
     for i in range(ComSurLib.style["sel_num_y"]):
         for j in range(ComSurLib.style["sel_num_x"]):
-            n = j + i * ComSurLib.style["sel_num_x"] + scene * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"]
+            n = j + i * ComSurLib.style["sel_num_x"] + page * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"]
+            if n >= num: break
             this = ["lock", "next", "done"][0 if n < current else (1 if n == current else 2)]
             
             cell = pygame.Rect(j * ComSurLib.style["sel_lvl_siz_x"] // ComSurLib.style["sel_num_x"], i * ComSurLib.style["sel_lvl_siz_y"] // ComSurLib.style["sel_num_y"], ComSurLib.style["sel_lvl_siz_x"] // ComSurLib.style["sel_num_x"], ComSurLib.style["sel_lvl_siz_y"] // ComSurLib.style["sel_num_y"])
@@ -49,4 +50,4 @@ def frame(dim: tuple[int, int], scene: float, preSc: float, key: int) -> tuple[f
             padded = ((cell.width - level.get_width()) / 2, (cell.height - level.get_height()) / 2)
             base.blit(level, (cell.x + padded[0], cell.y + padded[1]))
 
-    return (scene, base)
+    return (2, base)

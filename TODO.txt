@@ -1,9 +1,9 @@
 style.csv
 scene files
     scenes:
-        lvl - 0.{level number} - level
+        lvl - 0.{0 level number} - level
         pause - 1.{level number} - pause
-        sel - 2.{page number} - level select
+        sel - 2 - level select
         win - 3.{level number} - win
         menu - 4 - main menu
         set - 5 - settings

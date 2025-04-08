@@ -87,14 +87,14 @@ set_ctrl_tog_t_fill, c, #00FF00
 set_ctrl_tog_t_out, c, #03ABFF
 set_ctrl_tog_t_wid, p, 0.1
 set_ctrl_tog_t_siz, p, 0.1
-set_ctrl_pad_x, p, 
-set_cur_wid_x, p, 
-set_cur_wid_y, p, 
-set_cur_col, c, 
-set_cur_len_x, p, 
-set_cur_len_y, p, 
-set_cur_pad_x, p, 
-set_cur_pad_y, p, 
+set_ctrl_pad_x, p, 0.1
+set_cur_wid_x, p, 0.1
+set_cur_wid_y, p, 0.1
+set_cur_col, c, #000000
+set_cur_len_x, p, 0.1
+set_cur_len_y, p, 0.1
+set_cur_pad_x, p, 0.15
+set_cur_pad_y, p, 0.15
 ays_bg, c, #AECA91
 ays_txt_col, c, #CB5656
 ays_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
@@ -126,34 +126,36 @@ ays_but_rad, p, 0.15
 ays_cur_wid_x, p, 0.1
 ays_cur_wid_y, p, 0.1
 ays_cur_col, c, #000000
-ays_cur_len_x, p, 0.
-ays_cur_len_y, p, 
-ays_cur_pad_x, p, 
-ays_cur_pad_y, p, 
-win_bg, c, 
+ays_cur_len_x, p, 0.1
+ays_cur_len_y, p, 0.1
+ays_cur_pad_x, p, 0.15
+ays_cur_pad_y, p, 0.15
+win_bg, c, #84CB00
 win_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 win_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-win_txt_col, c, 
-win_txt_siz_x, p, 
-win_txt_siz_y, p, 
-win_txt_var, s, 
-win_txt_pad_y, p, 
+win_txt_col, c, #03637B
+win_txt_siz_x, p, 1/3
+win_txt_siz_y, p, 0.2
+win_txt_var, s, b
+win_txt_pad_y, p, 0.1
 win_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_but_txt_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
-win_but_txt_col, c, 
-win_but_txt_pad_x, p, 
-win_but_txt_pad_y, p, 
-win_but_txt_var, s, 
-win_but_fill, c, 
+win_but_txt_col, c, #E2835A
+win_but_txt_pad_x, p, 0.1
+win_but_txt_pad_y, p, 0.1
+win_but_txt_var, s, ui
+win_but_fill, c, #635AE2
 win_but_out, c, 
 win_but_wid, p, 
 win_but_siz_x, p, 
 win_but_siz_y, p, 
 win_but_pad_x, p, 
-win_but_pad_y, p, 
+win_but_pad_y_up, p, 
+win_but_pad_y_dn, p, 
 win_but_rad, p, 
+win_but_lin, p, 
 win_cur_wid_x, p, 
 win_cur_wid_y, p, 
 win_cur_col, c, 
