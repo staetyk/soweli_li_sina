@@ -26,7 +26,7 @@ menu_but_out, c, #245F5C
 menu_but_wid, p, 0.05
 menu_but_siz_x, p, 1/5
 menu_but_siz_y, p, 2/3
-menu_but_pad_y, p, 1/3
+menu_but_pad_y, p, 2/3
 menu_but_rad, p, 0.1
 menu_cur_wid_x, p, 0.1
 menu_cur_wid_y, p, 0.1
