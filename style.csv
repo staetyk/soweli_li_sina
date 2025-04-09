@@ -53,13 +53,13 @@ sel_lvl_txt_pad_x, p, 0.15
 sel_lvl_txt_pad_y, p, 0.15
 sel_lvl_txt_var, s, n
 sel_lvl_rad, p, 0.175
-sel_cur_wid_x, p, 0.15
-sel_cur_wid_y, p, 0.15
+sel_cur_wid_x, p, 0.05
+sel_cur_wid_y, p, 0.1
 sel_cur_col, c, #000000
-sel_cur_len_x, p, 0.2
-sel_cur_len_y, p, 0.2
+sel_cur_len_x, p, 0.25
+sel_cur_len_y, p, 0.25
 sel_cur_pad_x, p, 0.05
-sel_cur_pad_y, p, 0.05
+sel_cur_pad_y, p, 0.03
 sel_num_x, n, 5
 sel_num_y, n, 3
 set_bg, c, #9DB29E
@@ -147,8 +147,8 @@ win_but_txt_pad_x, p, 0.1
 win_but_txt_pad_y, p, 0.1
 win_but_txt_var, s, ui
 win_but_fill, c, #635AE2
-win_but_out, c, 
-win_but_wid, p, 
+win_but_out, c, #2988CA
+win_but_wid, p, 0.1
 win_but_siz_x, p, 
 win_but_siz_y, p, 
 win_but_pad_x, p, 

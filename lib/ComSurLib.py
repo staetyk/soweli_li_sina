@@ -6,7 +6,7 @@ import copy
 pygame.init()
 
 
-def fonts(name: str, place: str):
+def fonts(name: str, place: str) -> pygame.font.FontType:
     if place == "fs": return pygame.font.SysFont(name, 12)
     elif place == "fc": return pygame.font.Font(f"fonts/{name}", 12)
     else: raise Exception
@@ -69,19 +69,20 @@ lang = lambda : (2 if settings["English"] else (0 if settings["Sitelen Pona"] el
 
 
 def text(line: int|str, system: int, font: tuple[str, str], var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
-    txt = translate(line if isinstance(line, str) else (script[line][(0 if system == 0 else 1)]), system)
-    font = fonts(*font)
-    font.set_bold("b" in var)
-    font.set_italic("i" in var)
-    font.set_underline("u" in var)
-    font.set_strikethrough("s" in var)
-    new = scale((x, y), font.size(txt))
-    out = font.render(txt, True, col)
+    txt = translate((script[line][(0 if system == 0 else 1)]), system) if type(line) == int else line
+    font = fonts(*font) # type: ignore
+    font.set_bold("b" in var) # type: ignore
+    font.set_italic("i" in var) # type: ignore
+    font.set_underline("u" in var) # type: ignore
+    font.set_strikethrough("s" in var) # type: ignore
+    new = scale((x, y), font.size(txt)) # type: ignore
+    out = font.render(txt, True, col) # type: ignore
     return pygame.transform.scale(out, new)
 
 
-def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool) -> pygame.Surface:
+def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: pygame.Color, xpad: float, ypad: float, incol: pygame.Color, outcol: pygame.Color, outwid: float, width: float, height: float, rad: float, cursor: bool, curscol: pygame.Color, cpadx: float, cpady: float, clenx: float, cleny: float, cwidx: float, cwidy: float, cinx: bool, ciny: bool, bg: pygame.Color) -> pygame.Surface:
     base = pygame.Surface((width, height))
+    base.fill(bg)
 
     r = rad * min(width, height)
     pygame.draw.polygon(base, outcol, ((r, 0), (width - r, 0), (width, r), (width, height - r), (width - r, height), (r, height), (0, height - r), (0, r)))
@@ -92,8 +93,8 @@ def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: 
     r = rad * min(width, height) * (1 - outwid)
     w = width * (1 - outwid)
     h = height * (1 - outwid)
-    w0 = w * outwid
-    h0 = h * outwid
+    w0 = w * outwid / 2
+    h0 = h * outwid / 2
     pygame.draw.polygon(base, incol, ((w0 + r, h0), (w0 + w - r, h0), (w0 + w, h0 + r), (w0 + w, h0 + h - r), (w0 + w - r, h0 + h), (w0 + r, h0 + h), (w0, h0 + h - r), (w0, h0 + r)))
     for i in range(2):
         for j in range(2):
@@ -103,6 +104,7 @@ def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: 
     base.blit(txt, (w0 + xpad * w, h0 + ypad * h))
 
     new = pygame.Surface((width + 2 * width * (cpadx + cwidy) if cursor or cinx else width, height + 2 * height * (cpady + cwidx) if cursor or ciny else height))
+    new.fill(bg)
     new.blit(base, (width * (cpadx + cwidy), height * (cpady + cwidx)))
     base = new
 
@@ -112,7 +114,7 @@ def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: 
             for j in range(2):
                 p = []
                 for k in points:
-                    p.append((k[0] if i == 0 else width - k[0], k[1] if j == 0 else height - k[1]))
+                    p.append((k[0] if i == 0 else base.get_width() - k[0], k[1] if j == 0 else base.get_height() - k[1]))
                 pygame.draw.polygon(base, curscol, p)
 
     return base
