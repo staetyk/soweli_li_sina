@@ -27,7 +27,7 @@ cursed = lambda : curse[0] * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel
 def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional[pygame.Surface]]:
     if preSc != 2: init()
 
-    global cursed
+    global curse
     if key == 0:
         try: pygame.mixer.Sound("sounds/click.mp3").play()
         except: pass
