@@ -40,6 +40,7 @@ while True:
     if evnt.type == pygame.QUIT: break
     elif evnt.type == pygame.NOEVENT: continue
     elif evnt.type == pygame.WINDOWSIZECHANGED: width, height = evnt.size
+    elif evnt.type == pygame.event.Event(pygame.USEREVENT + 1): key = -1
     elif evnt.type == pygame.KEYDOWN:
         if evnt.key in [pygame.K_SPACE, pygame.K_RETURN]: key = 0
         elif evnt.key in [pygame.K_UP, pygame.K_w]: key = 1
@@ -69,5 +70,8 @@ while True:
     if scene == 2:
         new, nextS = sel_scene.frame(screen.get_size(), prescene, key)
         prescene, scene = scene, new
-        if nextS: screen.blit(nextS, (0, 0))
-        pygame.display.flip()
+        if nextS is not None:
+            screen.blit(nextS, (0, 0))
+            pygame.display.flip()
+        else:
+            pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
