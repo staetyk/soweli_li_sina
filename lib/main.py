@@ -75,3 +75,7 @@ while True:
             pygame.display.flip()
         else:
             pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
+
+    elif int(scene) == 3:
+        scene = 2
+        pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))

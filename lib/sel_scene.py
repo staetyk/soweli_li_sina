@@ -27,33 +27,55 @@ cursed = lambda : curse[0] * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel
 def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional[pygame.Surface]]:
     if preSc != 2: init()
 
+    current = ComSurLib.load()[0]
+
     global curse
     if key == 0:
-        try: pygame.mixer.Sound("sounds/click.mp3").play()
-        except: pass
-        return (cursed() / 100, None)
+        if cursed() < current:
+            try: pygame.mixer.Sound("sounds/click.mp3").play()
+            except: pass
+            return (cursed() / 100, None)
+        else:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
     elif key == 6: return (4, None) 
     elif key == 1:
         if curse[2] > 0: curse[2] -= 1
+        else:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
     elif key == 3:
-        if cursed() + ComSurLib.style["sel_num_x"] > num: pass
+        if cursed() + ComSurLib.style["sel_num_x"] > num:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
         elif curse[2] < ComSurLib.style["sel_num_y"]: curse[2] += 1
+        else:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
     elif key == 2:
-        if cursed() + 1 >= num: pass
+        if cursed() + 1 >= num:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
         elif curse[1] < ComSurLib.style["sel_num_x"]: curse[1] += 1
-        elif cursed() + ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] - curse[1] >= num: pass
+        elif cursed() + ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] - curse[1] >= num:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
         elif curse[0] < ceil(num / (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])):
             curse[1] = 0
             curse[0] += 1
+        else:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
     elif key == 4:
         if curse[1] > 0: curse[1] -= 1
         elif curse[0] > 0:
             curse[1] = ComSurLib.style["sel_num_x"]
             curse[0] -= 1
+        else:
+            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            except: pass
 
     page = cursed() // (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])
-
-    current = ComSurLib.load()[0]
 
     base = pygame.Surface(dim)
     base.fill(ComSurLib.style["sel_bg"])

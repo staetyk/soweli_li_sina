@@ -1,10 +1,10 @@
 style.csv
 scene files
     scenes:
-        lvl - 0.{0 level number} - level
-        pause - 1.{level number} - pause
+        lvl - 0.{level number zfill 2} - level
+        pause - 1.{level number zfill 2} - pause
         sel - 2 - level select
-        win - 3.{level number} - win
+        win - 3.{level number zfill 2} - win
         menu - 4 - main menu
         set - 5 - settings
         ays - 6 - are you sure
