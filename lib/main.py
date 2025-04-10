@@ -62,6 +62,8 @@ while True:
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))
         pygame.display.flip()
+        if int(scene) == 3:
+            ComSurLib.save(int(prescene * 100) + 1, plus)
 
     else:
         try: pygame.mixer.music.stop()

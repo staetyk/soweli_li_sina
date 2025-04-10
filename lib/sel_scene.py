@@ -31,7 +31,7 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
 
     global curse
     if key == 0:
-        if cursed() < current:
+        if cursed() <= current:
             try: pygame.mixer.Sound("sounds/click.mp3").play()
             except: pass
             return (cursed() / 100, None)
