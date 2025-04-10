@@ -21,7 +21,7 @@ def init():
     curse = [0, 0, 0]
 
 
-cursed = lambda : curse[0] * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] + curse[1] * ComSurLib.style["sel_num_x"] + curse[2]
+cursed = lambda : curse[0] * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] + curse[2] * ComSurLib.style["sel_num_x"] + curse[1]
 
 
 def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional[pygame.Surface]]:
@@ -36,7 +36,7 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
     elif key == 1:
         if curse[2] > 0: curse[2] -= 1
     elif key == 3:
-        if cursed() + ComSurLib.style["sel_num_x"] < num: pass
+        if cursed() + ComSurLib.style["sel_num_x"] > num: pass
         elif curse[2] < ComSurLib.style["sel_num_y"]: curse[2] += 1
     elif key == 2:
         if cursed() + 1 >= num: pass
@@ -51,7 +51,7 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
             curse[1] = ComSurLib.style["sel_num_x"]
             curse[0] -= 1
 
-    page = cursed // (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])
+    page = cursed() // (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])
 
     current = ComSurLib.load()[0]
 
