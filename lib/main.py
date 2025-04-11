@@ -50,11 +50,11 @@ while True:
         elif evnt.key == pygame.K_r: key = 5
         elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
         elif evnt.key == pygame.K_n:
-            ComSurLib.new(False)
+            ComSurLib.newsave(False)
             prescene, scene = 4, 2
             continue
         elif evnt.key == pygame.K_m:
-            ComSurLib.new(True)
+            ComSurLib.newsave(True)
             prescrne, scene = 4, 2
             continue
     pygame.event.pump()
