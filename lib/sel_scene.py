@@ -15,10 +15,9 @@ def check(i: int) -> bool:
 num, curse = 1, [0, 0, 0]
 
 def init():
-    global num, curse
+    global num
     num = 0
     while check(num): num += 1
-    curse = [0, 0, 0]
 
 
 cursed = lambda : curse[0] * ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] + curse[2] * ComSurLib.style["sel_num_x"] + curse[1]
