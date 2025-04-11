@@ -56,15 +56,11 @@ def translate(txt: str, system: int) -> str:
 
 
 settings = {
-    "English" : False,
-    "Sitelen Pona" : True,
+    "Lang" : 0,
     "Master" : style["glob_vol_main"],
     "Music" : style["glob_vol_mus"],
     "SFX" : style["glob_vol_sfx"]
 }
-
-
-lang = lambda : (2 if settings["English"] else (0 if settings["Sitelen Pona"] else 1))
 
 
 def text(line: int|str, system: int, font: tuple[str, str], var: str, col: pygame.Color, x: float, y: float) -> pygame.Surface:
@@ -136,13 +132,12 @@ def load() -> tuple[int, bool]:
             s = next(r)
             out = int(s[0])
             settings.update({
-                "English" : bool(s[1]),
-                "Sitelen Pona" : bool(s[2]),
-                "Master" : int(s[3]),
-                "Music" : int(s[4]),
-                "SFX" : int(s[5])
+                "Lang" : int(s[1]),
+                "Master" : int(s[2]),
+                "Music" : int(s[3]),
+                "SFX" : int(s[4])
             })
-            plus = bool(s[6])
+            plus = bool(s[5])
             return (out, plus)
     except: return (0, False)
 
