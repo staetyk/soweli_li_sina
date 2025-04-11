@@ -32,48 +32,75 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
     global curse
     if key == 0:
         if cursed() <= current:
-            try: pygame.mixer.Sound("sounds/click.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/click.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
             return (cursed() / 100, None)
         else:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
     elif key == 6: return (4, None) 
     elif key == 1:
         if curse[2] > 0: curse[2] -= 1
         else:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
     elif key == 3:
         if cursed() + ComSurLib.style["sel_num_x"] > num:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
         elif curse[2] < ComSurLib.style["sel_num_y"]: curse[2] += 1
         else:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
     elif key == 2:
         if cursed() + 1 >= num:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
         elif curse[1] < ComSurLib.style["sel_num_x"]: curse[1] += 1
         elif cursed() + ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] - curse[1] >= num:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
         elif curse[0] < ceil(num / (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])):
             curse[1] = 0
             curse[0] += 1
         else:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
     elif key == 4:
         if curse[1] > 0: curse[1] -= 1
         elif curse[0] > 0:
             curse[1] = ComSurLib.style["sel_num_x"]
             curse[0] -= 1
         else:
-            try: pygame.mixer.Sound("sounds/fail.mp3").play()
+            try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
 
     page = cursed() // (ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"])
 

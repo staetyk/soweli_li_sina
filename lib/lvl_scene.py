@@ -12,6 +12,9 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int, plus: bool) -
         
         try: pygame.mixer.music.load("sounds/lape_sona.mp3")
         except: pass
+        else:
+            pygame.mixer.music.set_volume(ComSurLib.settings["Music"] / ComSurLib.style["glob_vol_mus"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+            pygame.mixer.music.play()
         """else:
             if Sc != preSc:
                 pygame.mixer.music.play(loops = -1, fade_ms = ComSurLib.style["glob_fade_dur"])
@@ -24,7 +27,9 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int, plus: bool) -
         if sound:
             try: sfx = pygame.mixer.Sound(f"sounds/{0}.mp3".format(["pass", "move", "push", "fail", "trans", "lock", "die", "win"][sound - 1]))
             except: pass
-            else: sfx.play()
+            else:
+                sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
+                sfx.play()
             
         if win & (Sc != -1): PostSc = 3 + Sc
         else: PostSc = Sc
