@@ -19,7 +19,6 @@ pygame.key.set_repeat(ComSurLib.style["glob_hold_del"], ComSurLib.style["glob_ho
 pygame.event.set_blocked([pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.KEYUP])
 clock = pygame.time.Clock()
 pygame.mixer.init()
-plus = False
 
 
 prescene = 4
@@ -29,6 +28,7 @@ i = 0
 last = clock.get_time()
 
 while True:
+    plus = ComSurLib.plus
     evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
     
     
@@ -74,7 +74,7 @@ while True:
         screen.blit(nextS, (0, 0))
         pygame.display.flip()
         if int(scene) == 3:
-            ComSurLib.save(int(prescene * 100) + 1, plus)
+            ComSurLib.save(int(prescene * 100) + 1)
 
     else:
         try: pygame.mixer.music.stop()

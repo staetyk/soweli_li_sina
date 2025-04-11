@@ -119,13 +119,17 @@ def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: 
     return base
 
 
-def save(progress: int, ngp: bool = False):
+
+plus = False
+
+def save(progress: int):
     with open("save.csv", "w") as file:
         w = writer(file)
-        w.writerow([progress, *settings.values(), ngp])
+        w.writerow([progress, *settings.values(), plus])
 
 
 def load() -> tuple[int, bool]:
+    global plus
     try:
         with open("save.csv", "r") as file:
             r = reader(file)
@@ -146,4 +150,4 @@ def load() -> tuple[int, bool]:
 def newsave(ngp: bool = False):
     global plus
     plus = ngp
-    save(0, ngp)
+    save(0)
