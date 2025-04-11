@@ -1,6 +1,5 @@
 import pygame
 from csv import reader, writer
-import copy
 
 
 pygame.init()
@@ -147,4 +146,4 @@ def load() -> tuple[int, bool]:
 def newsave(ngp: bool = False):
     global plus
     plus = ngp
-    save(0)
+    save(0, ngp)
