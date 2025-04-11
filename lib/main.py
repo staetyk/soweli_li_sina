@@ -28,7 +28,6 @@ i = 0
 last = clock.get_time()
 
 while True:
-    plus = ComSurLib.plus
     evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
     
     
@@ -63,13 +62,14 @@ while True:
     pygame.event.pump()
 
     if scene == -1:
-        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, plus)
+        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, ComSurLib.plus)
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))
         pygame.display.flip()
 
     elif int(scene) == 0:
-        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, plus)
+        new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, ComSurLib.plus)
+        print(ComSurLib.plus)
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))
         pygame.display.flip()
