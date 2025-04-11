@@ -63,8 +63,7 @@ sel_cur_pad_y, p, 0.03
 sel_num_x, n, 5
 sel_num_y, n, 3
 set_bg, c, #9DB29E
-set_lab_t_col, c, #00ff00
-set_lab_f_col, c, #ff0000
+set_lab_col, c, #220000
 set_lab_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 set_lab_font_sp, fc, sitelenselikiwen/sitelenselikiwenasuki.ttf
 set_lab_font_sl, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
