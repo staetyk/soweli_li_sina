@@ -56,7 +56,7 @@ def translate(txt: str, system: int) -> str:
 
 
 settings = {
-    "Lang" : 0,
+    "Lang" : 2,
     "Master" : style["glob_vol_main"],
     "Music" : style["glob_vol_mus"],
     "SFX" : style["glob_vol_sfx"]
