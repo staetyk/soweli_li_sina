@@ -8,6 +8,9 @@ import csv
 pygame.init()
 
 
+demo = True
+
+
 screen = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
 pygame.display.set_caption("soweli li sina")
 pygame.display.set_icon(pygame.image.load("images/logo.png"))
@@ -49,11 +52,11 @@ while True:
         elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
         elif evnt.key == pygame.K_r: key = 5
         elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
-        elif evnt.key == pygame.K_n:
+        elif demo and evnt.key == pygame.K_n:
             ComSurLib.newsave(False)
             prescene, scene = 4, 2
             continue
-        elif evnt.key == pygame.K_m:
+        elif demo and evnt.key == pygame.K_m:
             ComSurLib.newsave(True)
             prescrne, scene = 4, 2
             continue
@@ -86,6 +89,6 @@ while True:
         else:
             pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
 
-    elif int(scene) == 3:
+    elif demo and int(scene) == 3:
         scene = 2
         pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
