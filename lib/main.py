@@ -28,6 +28,7 @@ i = 0
 last = clock.get_time()
 
 while True:
+    ComSurLib.load()
     evnt = pygame.event.wait(ComSurLib.style["glob_frame"])
     
     
@@ -58,6 +59,11 @@ while True:
         elif demo and evnt.key == pygame.K_m:
             ComSurLib.newsave(True)
             prescrne, scene = 4, 2
+            continue
+        elif demo and evnt.key == pygame.K_p:
+            ComSurLib.plus = not ComSurLib.plus
+            ComSurLib.save(0)
+            prescene, scene = 4, 2
             continue
     pygame.event.pump()
 
