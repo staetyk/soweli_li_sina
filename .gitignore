@@ -170,5 +170,5 @@ cython_debug/
 .pypirc
 
 # Misc.
-save.txt
+save.csv
 */lvl_-2.csv
