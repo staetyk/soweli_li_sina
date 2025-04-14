@@ -7,7 +7,7 @@ from math import *
 def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int, plus: bool) -> tuple[float, pygame.Surface]:
     if Sc != preSc or key == 5:
         PostSc = Sc
-        index = (1 if Sc == -1 else int(Sc * 100))
+        index = (5 if Sc == -1 else int(Sc * 100))
         level_lib.init(index)
         
         try: pygame.mixer.music.load("sounds/lape_sona.mp3")

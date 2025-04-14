@@ -1,7 +1,6 @@
 import pygame
 import ComSurLib
 from math import *
-from csv import reader
 from typing import Optional
 
 
