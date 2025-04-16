@@ -51,4 +51,21 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
 
     base = pygame.Surface(dim)
     base.fill(ComSurLib.style["win_bg"])
-    ...
+
+    """
+    txt pad y [screen] {frame}
+    txt [screen] {pic}
+    but pad y up [screen] {frame}
+    body [screen] {pic}
+        but [body] {pic}
+        but lin [but] {frame}
+        but [body] {pic}
+    but pad y dn [screen] {frame}
+    """
+
+    """
+    body > txt
+
+    1. txt pad y - A - but pad y dn
+    2. txt pad 
+    """

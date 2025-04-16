@@ -129,6 +129,7 @@ win_txt_col, c, #03637B
 win_txt_siz_x, p, 1/3
 win_txt_siz_y, p, 0.2
 win_txt_var, s, b
+win_txt_pad_x, p, 
 win_txt_pad_y, p, 0.1
 win_but_txt_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
 win_but_txt_font_sp, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
@@ -145,8 +146,8 @@ win_but_siz_y, p,
 win_but_pad_x, p, 
 win_but_pad_y_up, p, 
 win_but_pad_y_dn, p, 
-win_but_rad, p, 
 win_but_lin, p, 
+win_but_rad, p, 
 win_cur_wid_x, p, 
 win_cur_wid_y, p, 
 win_cur_col, c, 
@@ -154,6 +155,7 @@ win_cur_len_x, p,
 win_cur_len_y, p, 
 win_cur_pad_x, p, 
 win_cur_pad_y, p, 
+win_body, p, 
 pause_bg, c, 
 pause_opa, p, 
 pause_txt_col, c, 
