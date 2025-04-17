@@ -52,13 +52,13 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
                 sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
                 sfx.play()
     elif key == 3:
-        if cursed() + ComSurLib.style["sel_num_x"] > num:
+        if cursed() + ComSurLib.style["sel_num_x"] >= num:
             try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
             else:
                 sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
                 sfx.play()
-        elif curse[2] < ComSurLib.style["sel_num_y"]: curse[2] += 1
+        elif curse[2] < ComSurLib.style["sel_num_y"] - 1: curse[2] += 1
         else:
             try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
@@ -72,7 +72,7 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
             else:
                 sfx.set_volume(ComSurLib.settings["SFX"] / ComSurLib.style["glob_vol_sfx"] * ComSurLib.settings["Master"] / ComSurLib.style["glob_vol_main"])
                 sfx.play()
-        elif curse[1] < ComSurLib.style["sel_num_x"]: curse[1] += 1
+        elif curse[1] < ComSurLib.style["sel_num_x"] - 1: curse[1] += 1
         elif cursed() + ComSurLib.style["sel_num_x"] * ComSurLib.style["sel_num_y"] - curse[1] >= num:
             try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
             except: pass
