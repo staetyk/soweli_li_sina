@@ -64,8 +64,14 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
     """
 
     """
-    body > txt
+    b = but_siz_y
+    S = body
+    p = but_lin
+    B = final button size
+    P = final padding size
+    R = final real button size
 
-    1. txt pad y - A - but pad y dn
-    2. txt pad 
+    B = S / (p + 2)
+    P = p * S / (p + 2)
+    R = min(b * S, S / (p + 2))
     """

@@ -119,9 +119,10 @@ def button(line: int|str, system: int, font: tuple[str, str], var: str, txtcol: 
 plus = False
 
 def save(progress: int, x: bool = False):
+    nprog = progress if x else max(load()[0], progress)
     with open("save.csv", "w") as file:
         w = writer(file)
-        w.writerow([(progress if x else max(progress, load()[0])), *settings.values(), plus])
+        w.writerow([nprog, *settings.values(), plus])
 
 
 def load() -> tuple[int, bool]:
