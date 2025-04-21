@@ -3,6 +3,7 @@ run = "python3 lib/main.py"
 
 [nix]
 channel = "stable-24_05"
+packages = ["SDL2", "SDL2_image", "SDL2_mixer", "SDL2_ttf", "fontconfig", "freetype", "libjpeg", "libpng", "pkg-config", "portmidi"]
 
 [deployment]
 run = ["sh", "-c", "python3 lib/main.py"]
