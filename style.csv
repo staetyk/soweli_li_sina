@@ -212,7 +212,7 @@ tut_lin, p,
 tut_pad_x, p, 
 tut_pad_y, p, 
 glob_frame, n, 10000
-glob_hold_del, n, 500
+glob_hold_del, n, 300
 glob_hold_int, n, 100
 glob_vol_main, n, 10
 glob_vol_mus, n, 10
