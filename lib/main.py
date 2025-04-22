@@ -69,6 +69,9 @@ while True:
             sel_scene.init()
             ComSurLib.save(sel_scene.num)
             prescene, scene = 4, 2
+        elif demo and evnt.key == pygame.K_e:
+            prescene, scene = scene, 2
+            continue
     pygame.event.pump()
 
     if scene == -1:
