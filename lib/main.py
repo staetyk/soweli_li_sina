@@ -82,6 +82,9 @@ while True:
 
     elif int(scene) == 0:
         new, nextS = lvl_scene.frame(screen.get_size(), scene, prescene, key, ComSurLib.plus)
+        if nextS == None:
+            pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
+            continue
         print(ComSurLib.plus)
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))

@@ -8,12 +8,16 @@ width = 1
 height = 1
 map = {0: []}
 
-def init(level: int):
+def init(level: int) -> bool:
     global width
     global height
     global map
 
     with open(f"levels/lvl_{level}.csv") as file:
+        if len(file.readlines()) == 0:
+            width, height = 1, 1
+            map = {0 : []}
+            return True
         lines = reader(file)
         i = -1
         for x in lines:
@@ -26,6 +30,7 @@ def init(level: int):
                     value.append(globals()[y])
                 map.update({i : value})
             i += 1
+        return False
 
     reset()
 

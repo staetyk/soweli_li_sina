@@ -2,14 +2,15 @@ import pygame
 import ComSurLib
 import level_lib
 from math import *
+from typing import Optional
 
 
-def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int, plus: bool) -> tuple[float, pygame.Surface]:
+def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int, plus: bool) -> tuple[float, Optional[pygame.Surface]]:
     if Sc != preSc or key == 5:
         PostSc = Sc
         index = (5 if Sc == -1 else int(Sc * 100))
-        level_lib.init(index)
-        
+        if level_lib.init(index):
+            return (2, None)
         try: pygame.mixer.music.load("sounds/lape_sona.mp3")
         except: pass
         else:
