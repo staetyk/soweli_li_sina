@@ -55,12 +55,12 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
     """
     txt pad y [screen] {frame}
     txt [screen] {pic}
-    but pad y up [screen] {frame}
+    but pad y [screen] {frame}
     body [screen] {pic}
         but [body] {pic}
         but lin [but] {frame}
         but [body] {pic}
-    but pad y dn [screen] {frame}
+    padding
     """
 
     """
@@ -75,3 +75,7 @@ def frame(dim: tuple[int, int], Sc: float, preSc: float, key: int) -> tuple[floa
     P = p * S / (p + 2)
     R = min(b * S, S / (p + 2))
     """
+
+    txt = pygame.Rect((dim[0] * ComSurLib.style["win_txt_pad_x"], dim[1] * ComSurLib.style["win_txt_pad_y"]), (dim[0] * (1 - 2 * ComSurLib.style["win_txt_pad_x"]), dim[1] * ComSurLib.style["win_txt_siz_y"]))
+
+    body = pygame.Rect((dim[0] * ComSurLib.style["win_but_pad_x"], dim[1] * (ComSurLib.style["win_txt_pad_y"] + ComSurLib.style["win_txt_siz_y"] + ComSurLib.style["win_but_pad_y"])), (dim[0] * (1 - 2 * ComSurLib.style["win_but_pad_x"]), dim[1] * ComSurLib.style["win_body"]))
