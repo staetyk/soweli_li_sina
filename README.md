@@ -16,7 +16,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
-* Levels by Nolan McCall and Bach Davis *(kipisi tan jan Nolen en jan P)*
+* Levels by Nolan McCall *(kipisi tan jan Nolen)*
 * Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan P)*
 * Sprites by Nolan McCall *(sitelen tan jan N)*
 * Design by Nolan McCall *(nasin lukin tan jan N)*
