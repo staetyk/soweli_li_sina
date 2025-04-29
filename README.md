@@ -26,6 +26,11 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `moli` | kill | Destroys any `sina` object on it. |
 | `powe` | pretend | Wins level when on a `pona` object. |
 
+## Misc. Instructions (toki lawa ante)
+Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
+
+sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
+
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
 * Levels by Nolan McCall and Bach Davis *(kipisi tan jan Nolen en jan Pa)*
