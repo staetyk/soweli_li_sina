@@ -23,4 +23,4 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 * Logo by Bach Davis *(sitelen suli tan jan P)*
 * Sound Design by Bach Davis *(nasin kalama tan jan P)*
 * Inspired by *Baba is You* by Hempuli Oy *(sona mama tan musi* Baba is You *tan jan Empuli)*
-* Toki Pona Created by Sonja Lang *(toki pona tan jan Sonja)* 
+* [Toki Pona](tokipona.org) Created by Sonja Lang *([toki pona](tokipona.org) tan jan Sonja)* 
