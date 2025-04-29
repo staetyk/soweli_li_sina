@@ -24,4 +24,3 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 * Sound Design by Bach Davis *(nasin kalama tan jan P)*
 * Inspired by *Baba is You* by Hempuli Oy *(sona mama tan musi* Baba is You *tan jan Empuli)*
 * Toki Pona Created by Sonja Lang *(toki pona tan jan Sonja)* 
-* Sitelen Seli Kiwen Font Family by Rebecca Bettencourt *(sitelen seli kiwen tan jan Lepeka)*
