@@ -53,6 +53,7 @@ while True:
         elif evnt.key == pygame.K_r: key = 5
         elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]:
             prescene, scene = scene, 2
+            pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
             continue
         elif demo and evnt.key == pygame.K_n:
             ComSurLib.newsave(False)
@@ -75,7 +76,6 @@ while True:
         if nextS == None:
             pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
             continue
-        print(ComSurLib.plus)
         prescene, scene = scene, new
         screen.blit(nextS, (0, 0))
         pygame.display.flip()
@@ -95,6 +95,6 @@ while True:
         else:
             pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
 
-    elif demo and int(scene) == 3:
+    elif int(scene) == 3:
         scene = 2
         pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))

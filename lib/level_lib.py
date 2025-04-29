@@ -155,7 +155,6 @@ def move_suli(direction: int):
         if len(out) == 0: continue
         else:
             lili = move_lili(out, toxy(x), direction)
-            print(lili)
             if lili > 1: sound = max(sound, 3)
             elif lili == 1: sound = max(sound, 2)
             else: sound = max(sound, 4)
