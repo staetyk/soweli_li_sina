@@ -4,15 +4,15 @@ In this fun Toki Pona game, you solve various puzzles by changing the rules of t
 musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e lawa musi a! musi ni li musi, taso ike, li lon tan musi *Baba is You* li tenpo pona, ale la!
 
 ## Controls (nasin pali)
-| **Key(s)** | **Effect** |
+| **Key *(ilo)*** | **Effect *(pali)*** |
 | :---: | :--- |
-| `w`, `↑` | Up |
-| `a`, `←` | Left |
-| `s`, `↓` | Down |
-| `d`, `→` | Right |
-| `Enter`, `Space` | Select, Pass |
-| `Esc`, `Backspace` | Back |
-| `r` | Reset |
+| `w`, `↑` | Up *(sewi)* |
+| `a`, `←` | Left *(soto)* |
+| `s`, `↓` | Down *(anpa)* |
+| `d`, `→` | Right *(teje)* |
+| `Enter`, `Space` | Select *(lon)*, Pass *(lape)* |
+| `Esc`, `Backspace` | Back *(weka)* |
+| `r` | Reset *(open sin)* |
 
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
