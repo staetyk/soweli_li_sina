@@ -14,7 +14,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `Esc`, `Backspace` | Back |
 | `r` | Reset |
 
-## Credits (jan pali)
+## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
 * Levels by Nolan McCall and Bach Davis *(kipisi tan jan Nolen en jan P)*
 * Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan P)*
