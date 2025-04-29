@@ -11,7 +11,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `s`, `↓` | Down |
 | `d`, `→` | Right |
 | `Enter`, `Space` | Select, Pass |
-| `Esc`, `Backspace` | Back, Pause |
+| `Esc`, `Backspace` | Back |
 | `r` | Reset |
 
 ## Credits (jan pali)
