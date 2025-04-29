@@ -16,10 +16,10 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
-* Levels by Nolan McCall *(kipisi tan jan Nolen)*
-* Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan P)*
-* Sprites by Nolan McCall *(sitelen tan jan N)*
-* Design by Nolan McCall *(nasin lukin tan jan N)*
-* Logo by Bach Davis *(sitelen suli tan jan P)*
+* Levels by Nolan McCall and Bach Davis *(kipisi tan jan Nolen en jan Pa)*
+* Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan Pa)*
+* Sprites by Nolan McCall *(sitelen tan jan Nolen)*
+* Design by Nolan McCall *(nasin lukin tan jan Nolen)*
+* Logo by Bach Davis *(sitelen suli tan jan Pa)*
 * Inspired by [*Baba is You*](https://store.steampowered.com/app/736260/Baba_Is_You/) by Hempuli Oy *(sona mama tan* [*musi* Baba is You](https://store.steampowered.com/app/736260/Baba_Is_You/) *tan jan Empuli)*
 * [Toki Pona](tokipona.org) Created by Sonja Lang *([toki pona](tokipona.org) tan jan Sonja)* 
