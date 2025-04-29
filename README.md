@@ -5,7 +5,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 
 ## Controls (nasin pali)
 | **Key *(ilo)*** | **Effect *(pali)*** |
-| :---: | :--- |
+| :---: | ---: |
 | `w`, `↑` | Up *(sewi)* |
 | `a`, `←` | Left *(soto)* |
 | `s`, `↓` | Down *(anpa)* |
@@ -13,6 +13,18 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `Enter`, `Space` | Select *(lon)*, Pass *(lape)* |
 | `Esc`, `Backspace` | Back *(weka)* |
 | `r` | Reset *(open sin)* |
+
+## Adjectives (nimi nasin)
+| **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
+| :---: | :---: | :--- |
+| `sina` | you | Controllable object, wins level when on a `pona` object. |
+| `pini` | shut | Destroys self and an `open` object when they share a space. |
+| `open` | open | Destroys self and a `pini` object when they share a space. |
+| `awen` | stop | Object cannot be moved. |
+| `tawa` | push | Object is pushable. |
+| `pona` | win | Wins level when on `sina` or `powe` object. |
+| `moli` | kill | Destroys any `sina` object on it. |
+| `powe` | pretend | Wins level when on a `pona` object. |
 
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*

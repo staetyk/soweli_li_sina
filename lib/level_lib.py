@@ -56,7 +56,7 @@ def act() -> bool:
         for i in range(len(old)):
             x = old[i]
             prop = props(x)
-            if "sina" in prop or "kepeken" in prop: s.append(i)
+            if "sina" in prop or "powe" in prop: s.append(i)
             if "pini" in prop:
                 if "open" in prop: a.append(i)
                 else: p.append(i)
