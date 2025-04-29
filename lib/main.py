@@ -51,27 +51,17 @@ while True:
         elif evnt.key in [pygame.K_DOWN, pygame.K_s]: key = 3
         elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
         elif evnt.key == pygame.K_r: key = 5
-        elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]: key = 6
+        elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]:
+            prescene, scene = scene, 2
+            continue
         elif demo and evnt.key == pygame.K_n:
             ComSurLib.newsave(False)
-            prescene, scene = 4, 2
-            continue
-        elif demo and evnt.key == pygame.K_m:
-            ComSurLib.newsave(True)
-            prescrne, scene = 4, 2
-            continue
-        elif demo and evnt.key == pygame.K_p:
-            ComSurLib.plus = not ComSurLib.plus
-            ComSurLib.save(0)
             prescene, scene = 4, 2
             continue
         elif demo and evnt.key == pygame.K_f:
             sel_scene.init()
             ComSurLib.save(sel_scene.num)
             prescene, scene = 4, 2
-        elif demo and evnt.key == pygame.K_e:
-            prescene, scene = scene, 2
-            continue
     pygame.event.pump()
 
     if scene == -1:
