@@ -48,6 +48,7 @@ def act() -> bool:
         old = (list(cell) if len(cell) > 0 else [tKon])
 
         s = []
+        k = []
         p = []
         o = []
         w = False
@@ -56,7 +57,8 @@ def act() -> bool:
         for i in range(len(old)):
             x = old[i]
             prop = props(x)
-            if "sina" in prop or "powe" in prop: s.append(i)
+            if "sina" in prop: s.append(i)
+            if "sina" in prop or "powe" in prop: k.append(i)
             if "pini" in prop:
                 if "open" in prop: a.append(i)
                 else: p.append(i)
@@ -64,7 +66,7 @@ def act() -> bool:
             w = w or ("pona" in prop)
             m = m or ("moli" in prop)
         
-        if len(s) > 0:
+        if len(k) > 0:
             if m:
                 sound = max(sound, 7)
                 a.extend(s)
