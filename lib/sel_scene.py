@@ -91,7 +91,7 @@ def frame(dim: tuple[int, int], preSc: float, key: int) -> tuple[float, Optional
     elif key == 4:
         if curse[1] > 0: curse[1] -= 1
         elif curse[0] > 0:
-            curse[1] = ComSurLib.style["sel_num_x"]
+            curse[1] = ComSurLib.style["sel_num_x"] - 1
             curse[0] -= 1
         else:
             try: sfx = pygame.mixer.Sound("sounds/fail.mp3")
