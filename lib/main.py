@@ -45,24 +45,27 @@ while True:
     elif evnt.type == pygame.WINDOWSIZECHANGED: width, height = evnt.size
     elif evnt.type == pygame.event.Event(pygame.USEREVENT + 1): key = -1
     elif evnt.type == pygame.KEYDOWN:
-        if evnt.key in [pygame.K_SPACE, pygame.K_RETURN]: key = 0
-        elif evnt.key in [pygame.K_UP, pygame.K_w]: key = 1
-        elif evnt.key in [pygame.K_RIGHT, pygame.K_d]: key = 2
-        elif evnt.key in [pygame.K_DOWN, pygame.K_s]: key = 3
-        elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
-        elif evnt.key == pygame.K_r: key = 5
-        elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]:
-            prescene, scene = scene, 2
-            pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
-            continue
-        elif demo and evnt.key == pygame.K_n:
-            ComSurLib.newsave(False)
-            prescene, scene = 4, 2
-            continue
-        elif demo and evnt.key == pygame.K_f:
-            sel_scene.init()
-            ComSurLib.save(sel_scene.num)
-            prescene, scene = 4, 2
+        try: evnt.key
+        except: key = 0
+        else:
+            if evnt.key in [pygame.K_SPACE, pygame.K_RETURN]: key = 0
+            elif evnt.key in [pygame.K_UP, pygame.K_w]: key = 1
+            elif evnt.key in [pygame.K_RIGHT, pygame.K_d]: key = 2
+            elif evnt.key in [pygame.K_DOWN, pygame.K_s]: key = 3
+            elif evnt.key in [pygame.K_LEFT, pygame.K_a]: key = 4
+            elif evnt.key == pygame.K_r: key = 5
+            elif evnt.key in [pygame.K_BACKSPACE, pygame.K_ESCAPE]:
+                prescene, scene = scene, 2
+                pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
+                continue
+            elif demo and evnt.key == pygame.K_n:
+                ComSurLib.newsave(False)
+                prescene, scene = 4, 2
+                continue
+            elif demo and evnt.key == pygame.K_f:
+                sel_scene.init()
+                ComSurLib.save(sel_scene.num)
+                prescene, scene = 4, 2
     pygame.event.pump()
 
     if scene == -1:
