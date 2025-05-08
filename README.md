@@ -24,7 +24,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `tawa` | push | Object is pushable. |
 | `pona` | win | Wins level when on `sina` or `powe` object. |
 | `moli` | kill | Destroys any `sina` object on it. |
-| `powe` | pretend | Wins level when on a `pona` object. |
+| `powe` | proxy | Wins level when on a `pona` object. |
 
 ## Misc. Instructions (toki lawa ante)
 Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
