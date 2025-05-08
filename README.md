@@ -40,3 +40,4 @@ sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka 
 * Logo by Bach Davis *(sitelen suli tan jan Pa)*
 * Inspired by [*Baba is You*](https://store.steampowered.com/app/736260/Baba_Is_You/) by Hempuli Oy *(sona mama tan* [*musi* Baba is You](https://store.steampowered.com/app/736260/Baba_Is_You/) *tan jan Empuli)*
 * [Toki Pona](tokipona.org) Created by Sonja Lang *([toki pona](tokipona.org) tan jan Sonja)* 
+* Emotional Support from Sullivan Plitt *(pali pi pona pilin tan jan Suliwan)*
