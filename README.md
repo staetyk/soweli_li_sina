@@ -31,6 +31,30 @@ Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not nee
 
 sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
 
+## Hints (toki lili pi pana sona)
+Hover over the level number to see hint.
+
+o tawa e misa lon nanpa tan toki lili pi pana sona.
+
+| **English *(toki Inli)*** | **Toki Pona *(toki pona)*** |
+| :---: | :---: |
+| <a href="#" title="Move you onto win.">**00**</a> | <a href="#" title="o tawa e sina tawa pona.">**00**</a> |
+| <a href="#" title="Go around.">**01**</a> | <a href="#" title="o tawa sike.">**01**</a> |
+| <a href="#" title="Reread the rules.">**02**</a> | <a href="#" title="o lukin sin e lawa.">**02**</a> |
+| <a href="#" title="Push past.">**03**</a> | <a href="#" title="o utala tan tawa.">**03**</a> |
+| <a href="#" title="You are win.">**04**</a> | <a href="#" title="sina pona">**04**</a> |
+| <a href="#" title="Don't negate it.">**05**</a> | <a href="#" title="o ala ala">**05**</a> |
+| <a href="#" title="Fire is deadly.">**06**</a> | <a href="#" title="seli li ken moli.">**06**</a> |
+| <a href="#" title="Fire is not deadly.">**07**</a> | <a href="#" title="seli li ken ala moli.">**07**</a> |
+| <a href="#" title="Wall isn't anything.">**08**</a> | <a href="#" title="monsi li ala.">**08**</a> |
+| <a href="#" title="Nothing is air.">**09**</a> | <a href="#" title="ala li kon.">**09**</a> |
+| <a href="#" title="A whole new you!">**10**</a> | <a href="#" title="sina sin a!">**10**</a> |
+| <a href="#" title="The flag is gullible.">**11**</a> | <a href="#" title="len li kute mute.">**11**</a> |
+| <a href="#" title="Press space or enter to pass.">**12**</a> | <a href="#" title="o kepeken e ilo kon anu ilo lon tan tawa ala.">**12**</a> |
+| <a href="#" title="You aren't stop.">**13**</a> | <a href="#" title="sina awen ala.">**13**</a> |
+| <a href="#" title="Unsync the yous.">**14**</a> | <a href="#" title="o ante e sina tu.">**14**</a> |
+| <a href="#" title="IS THAT LOSS!?">**15**</a> | <a href="#" title="ona li sitelen weka anu seme a!?">**15**</a> |
+
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
 * Levels by Nolan McCall and Bach Davis *(kipisi tan jan Nolen en jan Pa)*
@@ -38,6 +62,7 @@ sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka 
 * Sprites by Nolan McCall *(sitelen tan jan Nolen)*
 * Design by Nolan McCall *(nasin lukin tan jan Nolen)*
 * Logo by Bach Davis *(sitelen suli tan jan Pa)*
+* README File by Bach Davis *(lipu* README *tan jan Pa)*
 * Hints by Bach Davis *(toki lili pi pana sona tan jan Pa)*
 * Inspired by [*Baba is You*](https://store.steampowered.com/app/736260/Baba_Is_You/) by Hempuli Oy *(sona mama tan* [*musi* Baba is You](https://store.steampowered.com/app/736260/Baba_Is_You/) *tan jan Empuli)*
 * [Toki Pona](tokipona.org) Created by Sonja Lang *([toki pona](tokipona.org) tan jan Sonja)* 

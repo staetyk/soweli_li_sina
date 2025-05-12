@@ -77,9 +77,9 @@ tSelo
 0
 0
 0
-wSeli,tSinpin,tSelo
+tSinpin,wSeli,tSelo
 0
-wSoweli,tSinpin,tSelo
+tSinpin,wSoweli,tSelo
 0
 tSeli
 0
@@ -99,9 +99,9 @@ tSelo
 0
 0
 0
-wMoli,tSinpin,tSelo
+tSinpin,wMoli,tSelo
 0
-wSina,tSinpin,tSelo
+tSinpin,wSina,tSelo
 0
 tSeli
 0
