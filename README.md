@@ -53,7 +53,7 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 | <a href="#" title="Press space or enter to pass.">**12**</a> | <a href="#" title="o kepeken e ilo kon anu ilo lon tan tawa ala.">**12**</a> |
 | <a href="#" title="You aren't stop.">**13**</a> | <a href="#" title="sina awen ala.">**13**</a> |
 | <a href="#" title="Unsync the yous.">**14**</a> | <a href="#" title="o ante e sina tu.">**14**</a> |
-| <a href="https://knowyourmeme.com/memes/loss" title="IS THAT LOSS!?">**15**</a> | <a href="https://knowyourmeme.com/memes/loss" title="ni li sitelen weka anu seme a!?">**15**</a> |
+| <a href="https://knowyourmeme.com/memes/loss" title="IS THAT LOSS!?">**15**</a> | <a href="https://knowyourmeme.com/memes/loss" title="ni li sitelen pi kama jo ala anu seme a!?">**15**</a> |
 
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
