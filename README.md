@@ -4,12 +4,11 @@ In this fun Toki Pona game, you solve various puzzles by changing the rules of t
 musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e lawa musi a! musi ni li musi, taso ike, li lon tan musi *Baba is You* li tenpo pona, ale la!
 
 ## Table of Contents (kipisi lipu)
-* [Table of Contents (kipisi lipu)](#table-of-contents-kipisi-lipu)
-* [Controls (nasin pali)](#controls-nasin-pali)
-* [Adjectives (nimi nasin)](#adjectives-nimi-nasin)
-* [Misc. Instructions (toki lawa ante)](#misc-instructions-toki-lawa-ante)
-* [Hints (toki lili pi pana sona)](#hints-toki-lili-pi-pana-sona)
-* [Credits (kulupu pali)](#credits-kulupu-pali)
+* [Controls *(nasin pali)*](#controls-nasin-pali)
+* [Misc. Instructions *(toki lawa ante)*](#misc-instructions-toki-lawa-ante)
+* [Adjectives *(nimi nasin)*](#adjectives-nimi-nasin)
+* [Hints *(toki lili pi pana sona)*](#hints-toki-lili-pi-pana-sona)
+* [Credits *(kulupu pali)*](#credits-kulupu-pali)
 
 ## Controls (nasin pali)
 | **Key *(ilo)*** | **Effect *(pali)*** |
@@ -22,6 +21,11 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `Esc`, `Backspace` | Back *(weka)* |
 | `r` | Reset *(open sin)* |
 
+## Misc. Instructions (toki lawa ante)
+Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
+
+sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
+
 ## Adjectives (nimi nasin)
 | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
@@ -33,11 +37,6 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `pona` | win | Wins level when on `sina` or `powe` object. |
 | `moli` | kill | Destroys any `sina` object on it. |
 | `powe` | proxy | Wins level when on a `pona` object. |
-
-## Misc. Instructions (toki lawa ante)
-Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
-
-sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
 
 ## Hints (toki lili pi pana sona)
 Hover over the level number to see hint.
