@@ -75,5 +75,5 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 * README File by Bach Davis *(lipu* README *tan jan Pa)*
 * Hints by Bach Davis *(toki lili pi pana sona tan jan Pa)*
 * Inspired by [*Baba is You*](https://store.steampowered.com/app/736260/Baba_Is_You/) by Hempuli Oy *(sona mama tan* [*musi* Baba is You](https://store.steampowered.com/app/736260/Baba_Is_You/) *tan jan Empuli)*
-* [Toki Pona](tokipona.org) Created by Sonja Lang *([toki pona](tokipona.org) tan jan Sonja)* 
+* [Toki Pona](https://tokipona.org) Created by Sonja Lang *([toki pona](https://tokipona.org) tan jan Sonja)* 
 * Emotional Support from Sullivan Plitt *(pali pi pona pilin tan jan Suliwan)*
