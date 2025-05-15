@@ -67,7 +67,7 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 
 ## Credits (kulupu pali)
 * Code by Bach Davis *(toki sona tan jan Pa)*
-* Levels by Nolan McCall and Bach Davis *(kipisi tan jan Nolen en jan Pa)*
+* Levels by Nolan McCall *(kipisi tan jan Nolen)*
 * Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan Pa)*
 * Sprites by Nolan McCall *(sitelen tan jan Nolen)*
 * Design by Nolan McCall *(nasin lukin tan jan Nolen)*
