@@ -11,7 +11,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 * [Credits *(kulupu pali)*](#credits-kulupu-pali)
 * [Similar Works *(pali sama)*](#similar-works-pali-sama)
 
-## Controls (nasin pali)
+## Controls *(nasin pali)*
 | **Key *(ilo)*** | **Effect *(pali)*** |
 | :---: | ---: |
 | `w`, `↑` | Up *(sewi)* |
@@ -22,12 +22,12 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `Esc`, `Backspace` | Back *(weka)* |
 | `r` | Reset *(open sin)* |
 
-## Misc. Instructions (toki lawa ante)
+## Misc. Instructions *(toki lawa ante)*
 Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
 
 sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
 
-## Adjectives (nimi nasin)
+## Adjectives *(nimi nasin)*
 | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
 | `sina` | you | Controllable object, wins level when on a `pona` object. |
@@ -39,7 +39,7 @@ sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka 
 | `moli` | kill | Destroys any `sina` object on it. |
 | `powe` | proxy | Wins level when on a `pona` object. |
 
-## Hints (toki lili pi pana sona)
+## Hints *(toki lili pi pana sona)*
 Hover over the level number to see hint.
 
 o tawa e misa lon nanpa tan toki lili pi pana sona.
@@ -66,7 +66,7 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 | <a href="#" title="Wall isn't air, is it?">**17**</a> | <a href="#" title="sinpin li kon ala, anu seme?">**17**</a> |
 | <a href="#" title="Air should be win.">**18**</a> | <a href="#" title="kon o pona.">**18**</a> |
 
-## Credits (kulupu pali)
+## Credits *(kulupu pali)*
 * Code by Bach Davis *(toki sona tan jan Pa)*
 * Levels by Nolan McCall *(kipisi tan jan Nolen)*
 * Sitelen Leko Luka Font by Bach Davis *(sitelen leko luka tan jan Pa)*
@@ -79,6 +79,6 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 * [Toki Pona](https://tokipona.org) Created by Sonja Lang *([toki pona](https://tokipona.org) tan jan Sonja)* 
 * Emotional Support from Sullivan Plitt *(pali pi pona pilin tan jan Suliwan)*
 
-## Similar Works (pali sama)
+## Similar Works *(pali sama)*
 * [*Soweli li Mi*](https://formicant.github.io/soweli-li-mi/) by Formicant *(*[*musi* soweli li mi](https://formicant.github.io/soweli-li-mi/) *tan jan Pomikan)*
 * [*Ale li Nimi*](https://editor.p5js.org/not-without-text/full/oE11X3Pnj) by Notwithouttext *(*[*musi* ale li nimi](https://editor.p5js.org/not-without-text/full/oE11X3Pnj) *tan jan Nowitateka)*
