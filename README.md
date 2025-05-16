@@ -23,9 +23,9 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `r` | Reset *(open sin)* |
 
 ## Misc. Instructions *(toki lawa ante)*
-Run `lib/main.py` to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
+Run [`lib/main.py`](./lib/main.py) to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
 
-sina wile musi la o open e lipu ni: `lib/main.py`. sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
+sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
 
 ## Adjectives *(nimi nasin)*
 | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
