@@ -8,7 +8,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 
 ## Table of Contents *(kipisi lipu)*
 * [Controls *(nasin pali)*](#controls-nasin-pali)
-* [Misc. Instructions *(toki lawa ante)*](#misc-instructions-toki-lawa-ante)
+* [Misc. Instructions *(toki kute ante)*](#misc-instructions-toki-kute-ante)
 * [Hints *(toki lili pi pana sona)*](#hints-toki-lili-pi-pana-sona)
 * [Words *(nimi)*](#words-nimi)
 * [Credits *(kulupu pali)*](#credits-kulupu-pali)
@@ -25,7 +25,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `Esc`, `Backspace` | Back *(weka)* |
 | `r` | Reset *(open sin)* |
 
-## Misc. Instructions *(toki lawa ante)*
+## Misc. Instructions *(toki kute ante)*
 Run [`lib/main.py`](./lib/main.py) to play. Delete `save.csv` to start a new game; You do not need to do this the first time. If it starts to slow down, stop it and run it again.
 
 sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala. tenpo pali li kama suli la, o pini o open e ona.
