@@ -34,7 +34,7 @@ sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile op
 ### Nouns *(nimi ijo)*
 | **Sprite *(sitelen ijo)*** | **Glyph *(sitelen nimi)*** | **Word *(nimi)*** | **Translation *(toki ante)*** |
 | :---: | :---: | :---: | :---: |
-| | | `soweli` | animal |
+| ![](./images/Things/tSoweli.png) | ![](./images/Words/wSoweli.png) | `soweli` | animal |
 | | | `len` | flag |
 | | | `sinpin` | wall |
 | | | `seli` | fire |
