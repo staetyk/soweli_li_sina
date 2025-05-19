@@ -26,9 +26,9 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 | `r` | Reset *(open sin)* |
 
 ## Misc. Instructions *(toki lawa ante)*
-Run [`lib/main.py`](./lib/main.py) to play. Delete `save.csv` to start a new game; You do not need to do this the first time.
+Run [`lib/main.py`](./lib/main.py) to play. Delete `save.csv` to start a new game; You do not need to do this the first time. If it starts to slow down, stop it and run it again.
 
-sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
+sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala. tenpo pali li kama suli la, o pini o open e ona.
 
 ## Hints *(toki lili pi pana sona)*
 Hover over the level number to see hint.
