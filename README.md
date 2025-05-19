@@ -88,7 +88,7 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
 | ![](./images/Words/wLi.png) | li | Used as equivalent to `is`, `and` for predicates. |
-| ![](./images/Words/wEn.png) | en | `and` for subjects. |
+| ![](./images/Words/wEn.png) | en | Used as `and` for subjects. |
 | ![](./images/Words/wAla.png) | ala | Negator for subjects and/or predicates, used after word being negated. |
 
 ## Credits *(kulupu pali)*
