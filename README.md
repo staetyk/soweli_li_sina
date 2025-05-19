@@ -9,7 +9,7 @@ musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e l
 ## Table of Contents *(kipisi lipu)*
 * [Controls *(nasin pali)*](#controls-nasin-pali)
 * [Misc. Instructions *(toki lawa ante)*](#misc-instructions-toki-lawa-ante)
-* [Adjectives *(nimi nasin)*](#adjectives-nimi-nasin)
+* [Words *(nimi)*](#words-nimi)
 * [Hints *(toki lili pi pana sona)*](#hints-toki-lili-pi-pana-sona)
 * [Credits *(kulupu pali)*](#credits-kulupu-pali)
 * [Similar Works *(pali sama)*](#similar-works-pali-sama)
@@ -30,7 +30,22 @@ Run [`lib/main.py`](./lib/main.py) to play. Delete `save.csv` to start a new gam
 
 sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile open sin la o weka e lipu ni: `save.csv`; tenpo nanpa wan la sina o ni ala.
 
-## Adjectives *(nimi nasin)*
+## Words *(nimi)*
+### Nouns *(nimi ijo)*
+| **Sprite *(sitelen ijo)*** | **Glyph *(sitelen nimi)*** | **Word *(nimi)*** | **Translation *(toki ante)*** |
+| :---: | :---: | :---: | :---: |
+| | | `soweli` | animal |
+| | | `len` | flag |
+| | | `sinpin` | wall |
+| | | `seli` | fire |
+| | | `pipi` | bug |
+| | | `kiwen` | rock |
+| | | `kon` | air |
+| | | `selo` | outline |
+| | | `lupa` | door |
+| | | `ilo` | key |
+
+### Adjectives *(nimi nasin)*
 | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
 | `sina` | you | Controllable object, wins level when on a `pona` object. |
@@ -41,6 +56,13 @@ sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile op
 | `pona` | win | Wins level when on `sina` or `powe` object. |
 | `moli` | kill | Destroys any `sina` object on it. |
 | `powe` | proxy | Wins level when on a `pona` object. |
+
+### Particles *(nimi lili)*
+| **Glyph *(sitelen)*** | **Word *(nimi)*** | **Usage *(pali)*** |
+| :---: | :---: | :--- |
+| | `li` | Used as equivalent to IS, AND for objects. |
+| | `en` | AND for subjects. |
+| | `ala` | Negator for subjects and/or objects, use after word being negated. |
 
 ## Hints *(toki lili pi pana sona)*
 Hover over the level number to see hint.
