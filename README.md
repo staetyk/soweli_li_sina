@@ -48,21 +48,21 @@ sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile op
 ### Adjectives *(nimi nasin)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
 | :---: | :---: | :---: | :--- |
-| | `sina` | you | Controllable object, wins level when on a `pona` object. |
-| | `pini` | shut | Destroys self and an `open` object when they share a space. |
-| | `open` | open | Destroys self and a `pini` object when they share a space. |
-| | `awen` | stop | Object cannot be moved. |
-| | `tawa` | push | Object is pushable. |
-| | `pona` | win | Wins level when on `sina` or `powe` object. |
-| | `moli` | kill | Destroys any `sina` object on it. |
-| | `powe` | proxy | Wins level when on a `pona` object. |
+| ![](./images/Words/wSina.png) | `sina` | you | Controllable object, wins level when on a `pona` object. |
+| ![](./images/Words/wPini.png) | `pini` | shut | Destroys self and an `open` object when they share a space. |
+| ![](./images/Words/wOpen.png) | `open` | open | Destroys self and a `pini` object when they share a space. |
+| ![](./images/Words/wAwen.png) | `awen` | stop | Object cannot be moved. |
+| ![](./images/Words/wTawa.png) | `tawa` | push | Object is pushable. |
+| ![](./images/Words/wPona.png) | `pona` | win | Wins level when on `sina` or `powe` object. |
+| ![](./images/Words/wMoli.png) | `moli` | kill | Destroys any `sina` object on it. |
+| ![](./images/Words/wPowe.png) | `powe` | proxy | Wins level when on a `pona` object. |
 
 ### Particles *(nimi lili)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
-| | `li` | Used as equivalent to IS, AND for objects. |
-| | `en` | AND for subjects. |
-| | `ala` | Negator for subjects and/or objects, used after word being negated. |
+| ![](./images/Words/wLi.png) | `li` | Used as equivalent to IS, AND for objects. |
+| ![](./images/Words/wEn.png) | `en` | AND for subjects. |
+| ![](./images/Words/wAla.png) | `ala` | Negator for subjects and/or objects, used after word being negated. |
 
 ## Hints *(toki lili pi pana sona)*
 Hover over the level number to see hint.
