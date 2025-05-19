@@ -34,16 +34,16 @@ sina wile musi la o open e lipu ni: [`lib/main.py`](./lib/main.py). sina wile op
 ### Nouns *(nimi ijo)*
 | **Sprite *(sitelen ijo)*** | **Glyph *(sitelen nimi)*** | **Word *(nimi)*** | **Translation *(toki ante)*** |
 | :---: | :---: | :---: | :---: |
-| ![](./images/Things/tSoweli.png) | ![](./images/Words/wSoweli.png) | `soweli` | animal |
-| | | `len` | flag |
-| | | `sinpin` | wall |
-| | | `seli` | fire |
-| | | `pipi` | bug |
-| | | `kiwen` | rock |
-| | | `kon` | air |
-| | | `selo` | outline |
-| | | `lupa` | door |
-| | | `ilo` | key |
+| ![](./images/Things/tSoweliFront.png) ![](./images/Things/tSoweliSide.png) ![](./images/Things/tSoweliBack.png) | ![](./images/Words/wSoweli.png) | `soweli` | animal |
+| ![](./images/Things/tLen.png) | ![](./images/Words/wLen.png) | `len` | flag |
+| ![](./images/Things/tSinpin.png) | ![](./images/Words/wSinpin.png) | `sinpin` | wall |
+| ![](./images/Things/tSeli.png) | ![](./images/Words/wSeli.png) | `seli` | fire |
+| ![](./images/Things/tPipi.png) | ![](./images/Words/wPipi.png) | `pipi` | bug |
+| ![](./images/Things/tKiwen.png) | ![](./images/Words/wKiwen.png) | `kiwen` | rock |
+| | ![](./images/Words/wKon.png) | `kon` | air |
+| ![](./images/Things/tSelo.png) | ![](./images/Words/wSelo.png) | `selo` | outline |
+| ![](./images/Things/tLupa.png) | ![](./images/Words/wLupa.png) | `lupa` | door |
+| ![](./images/Things/tIlo.png) | ![](./images/Words/wIlo.png) | `ilo` | key |
 
 ### Adjectives *(nimi nasin)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
