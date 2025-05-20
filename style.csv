@@ -61,7 +61,7 @@ sel_cur_len_y, p, 0.25
 sel_cur_pad_x, p, 0.05
 sel_cur_pad_y, p, 0.03
 sel_num_x, n, 5
-sel_num_y, n, 3
+sel_num_y, n, 4
 set_bg, c, #9DB29E
 set_lab_col, c, #220000
 set_lab_font_eng, fc, sitelenselikiwen/sitelenselikiwenmonoasuki.ttf
