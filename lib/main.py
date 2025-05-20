@@ -8,7 +8,7 @@ import csv
 pygame.init()
 
 
-demo = True
+demo = False
 
 
 screen = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
