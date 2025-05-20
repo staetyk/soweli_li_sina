@@ -48,14 +48,14 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 | <a href="#" title="Wall isn't anything.">**08**</a> | <a href="#" title="monsi li ala.">**08**</a> |
 | <a href="#" title="Nothing is air.">**09**</a> | <a href="#" title="ala li kon.">**09**</a> |
 | <a href="#" title="A whole new you!">**10**</a> | <a href="#" title="sina sin a!">**10**</a> |
-| <a href="#" title="The flag is gullible.">**11**</a> | <a href="#" title="len li kute mute.">**11**</a> |
-| <a href="#" title="Press space or enter to pass.">**12**</a> | <a href="#" title="o kepeken e ilo kon anu ilo lon tan tawa ala.">**12**</a> |
-| <a href="#" title="You aren't stop.">**13**</a> | <a href="#" title="sina awen ala.">**13**</a> |
-| <a href="#" title="Unsync the yous.">**14**</a> | <a href="#" title="o ante e sina tu.">**14**</a> |
-| <a href="https://knowyourmeme.com/memes/loss" title="IS THAT LOSS!?">**15**</a> | <a href="https://knowyourmeme.com/memes/loss" title="ni li sitelen pi kama jo ala anu seme a!?">**15**</a> |
-| <a href="#" title="Is door stop?">**16**</a> | <a href="#" title="lupa li awen ala awen?">**16**</a> |
-| <a href="#" title="Wall isn't air, is it?">**17**</a> | <a href="#" title="sinpin li kon ala, anu seme?">**17**</a> |
-| <a href="#" title="Air should be win.">**18**</a> | <a href="#" title="kon o pona.">**18**</a> |
+| <a href="#" title="The flag is gullible.">**12**</a> | <a href="#" title="len li kute mute.">**12**</a> |
+| <a href="#" title="Press space or enter to pass.">**13**</a> | <a href="#" title="o kepeken e ilo kon anu ilo lon tan tawa ala.">**13**</a> |
+| <a href="#" title="You aren't stop.">**14**</a> | <a href="#" title="sina awen ala.">**14**</a> |
+| <a href="#" title="Unsync the yous.">**15**</a> | <a href="#" title="o ante e sina tu.">**15**</a> |
+| <a href="https://knowyourmeme.com/memes/loss" title="IS THAT LOSS!?">**16**</a> | <a href="https://knowyourmeme.com/memes/loss" title="ni li sitelen pi kama jo ala anu seme a!?">**16**</a> |
+| <a href="#" title="Is door stop?">**17**</a> | <a href="#" title="lupa li awen ala awen?">**17**</a> |
+| <a href="#" title="Wall isn't air, is it?">**18**</a> | <a href="#" title="sinpin li kon ala, anu seme?">**18**</a> |
+| <a href="#" title="Air should be win.">**19**</a> | <a href="#" title="kon o pona.">**19**</a> |
 
 ## Words *(nimi)*
 ### Nouns *(nimi ijo)*
