@@ -129,8 +129,7 @@ def move_lili(A: list[Thing | Word], coords: tuple[int, int], direction: int, le
         p = props(x)
         if "tawa" in p: out.append(x)
         elif "awen" in p:
-            if (("pini" if nasin < 0 else "open") in p) & abs(nasin) > 0: out.append(x)
-            else: return 0
+            if (("pini" if nasin < 0 else "open") not in p) or abs(nasin) <= 0: return 0
         else: continue
 
     else:
