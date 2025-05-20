@@ -103,7 +103,6 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 * Hints by Bach Davis *(toki lili pi pana sona tan jan Pa)*
 * Inspired by [*Baba is You*](https://store.steampowered.com/app/736260/Baba_Is_You/) by Hempuli Oy *(sona mama tan* [*musi* Baba is You](https://store.steampowered.com/app/736260/Baba_Is_You/) *tan jan Empuli)*
 * [Toki Pona](https://tokipona.org) by Sonja Lang *([toki pona](https://tokipona.org) tan jan Sonja)* 
-* Emotional Support from Sullivan Plitt *(pali pi pona pilin tan jan Suliwan)*
 
 ## Similar Works *(pali sama)*
 * [*Soweli li Mi*](https://formicant.github.io/soweli-li-mi/) by Formicant *(*[*musi* soweli li mi](https://formicant.github.io/soweli-li-mi/) *tan jan Pomikan)*
