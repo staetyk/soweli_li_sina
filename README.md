@@ -107,4 +107,4 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 
 ## Similar Works *(pali sama)*
 * [*Soweli li Mi*](https://formicant.github.io/soweli-li-mi/) by Formicant *(*[*musi* soweli li mi](https://formicant.github.io/soweli-li-mi/) *tan jan Pomikan)*
-* [*Ale li Nimi*](https://editor.p5js.org/not-without-text/full/oE11X3Pnj) by Notwithouttext *(*[*musi* ale li nimi](https://editor.p5js.org/not-without-text/full/oE11X3Pnj) *tan jan Nowitateka)*
+* [*Ale li Nimi*](https://editor.p5js.org/not-without-text/full/oE11X3Pnj) by Notwithouttext *(*[*musi* ale li nimi](https://editor.p5js.org/not-without-text/full/oE11X3Pnj) *tan nimi "lon ala weka nimi")*
