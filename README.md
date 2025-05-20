@@ -48,6 +48,7 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 | <a href="#" title="Wall isn't anything.">**08**</a> | <a href="#" title="monsi li ala.">**08**</a> |
 | <a href="#" title="Nothing is air.">**09**</a> | <a href="#" title="ala li kon.">**09**</a> |
 | <a href="#" title="A whole new you!">**10**</a> | <a href="#" title="sina sin a!">**10**</a> |
+| <a href="#" title="Use the keys sparingly.">**11**</a> | <a href="#" title="o kepeken lili e ilo.">**11**</a> |
 | <a href="#" title="The flag is gullible.">**12**</a> | <a href="#" title="len li kute mute.">**12**</a> |
 | <a href="#" title="Press space or enter to pass.">**13**</a> | <a href="#" title="o kepeken e ilo kon anu ilo lon tan tawa ala.">**13**</a> |
 | <a href="#" title="You aren't stop.">**14**</a> | <a href="#" title="sina awen ala.">**14**</a> |
