@@ -77,21 +77,21 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 ### Adjectives *(nimi nasin)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
 | :---: | :---: | :---: | :--- |
-| ![](./images/Words/wSina.png) | sina | you | Controllable object, wins level when on a `pona` object. |
-| ![](./images/Words/wPini.png) | pini | shut | Destroys self and an `open` object when they share a space. |
-| ![](./images/Words/wOpen.png) | open | open | Destroys self and a `pini` object when they share a space. |
 | ![](./images/Words/wAwen.png) | awen | stop | Object cannot be moved. |
-| ![](./images/Words/wTawa.png) | tawa | push | Object is pushable. |
-| ![](./images/Words/wPona.png) | pona | win | Wins level when on `sina` or `powe` object. |
 | ![](./images/Words/wMoli.png) | moli | kill | Destroys any `sina` object on it. |
+| ![](./images/Words/wOpen.png) | open | open | Destroys self and a `pini` object when they share a space. |
+| ![](./images/Words/wPini.png) | pini | shut | Destroys self and an `open` object when they share a space. |
+| ![](./images/Words/wPona.png) | pona | win | Wins level when on `sina` or `powe` object. |
 | ![](./images/Words/wPowe.png) | powe | proxy | Wins level when on a `pona` object. |
+| ![](./images/Words/wSina.png) | sina | you | Controllable object, wins level when on a `pona` object. |
+| ![](./images/Words/wTawa.png) | tawa | push | Object is pushable. |
 
 ### Particles *(nimi lili)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
-| ![](./images/Words/wLi.png) | li | Used as `is`, `and` for predicates. |
-| ![](./images/Words/wEn.png) | en | Used as `and` for subjects. |
 | ![](./images/Words/wAla.png) | ala | Negator for subjects and/or predicates, used after word being negated. |
+| ![](./images/Words/wEn.png) | en | Used as `and` for subjects. |
+| ![](./images/Words/wLi.png) | li | Used as `is`, `and` for predicates. |
 
 ## Credits *(kulupu pali)*
 * Code by Bach Davis *(toki sona tan jan Pa)*
