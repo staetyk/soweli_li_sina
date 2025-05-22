@@ -63,35 +63,35 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 ### Nouns *(nimi ijo)*
 | **Sprite *(sitelen ijo)*** | **Glyph *(sitelen nimi)*** | **Word *(nimi)*** | **Translation *(toki ante)*** |
 | :---: | :---: | :---: | :---: |
-| ![](./images/Things/tIlo.png) | ![](./images/Words/wIlo.png) | ilo | key |
-| ![](./images/Things/tKiwen.png) | ![](./images/Words/wKiwen.png) | kiwen | rock |
-| | ![](./images/Words/wKon.png) | kon | air |
-| ![](./images/Things/tLen.png) | ![](./images/Words/wLen.png) | len | flag |
-| ![](./images/Things/tLupa.png) | ![](./images/Words/wLupa.png) | lupa | door |
-| ![](./images/Things/tPipi.png) | ![](./images/Words/wPipi.png) | pipi | bug |
-| ![](./images/Things/tSeli.png) | ![](./images/Words/wSeli.png) | seli | fire |
-| ![](./images/Things/tSelo.png) | ![](./images/Words/wSelo.png) | selo | outline |
-| ![](./images/Things/tSinpin.png) | ![](./images/Words/wSinpin.png) | sinpin | wall |
-| ![](./images/Things/tSoweliFront.png) ![](./images/Things/tSoweliSide.png) ![](./images/Things/tSoweliBack.png) | ![](./images/Words/wSoweli.png) | soweli | animal |
+| ![ilo](./images/Things/tIlo.png) | ![ilo](./images/Words/wIlo.png) | ilo | key |
+| ![kiwen](./images/Things/tKiwen.png) | ![kiwen](./images/Words/wKiwen.png) | kiwen | rock |
+| | ![kon](./images/Words/wKon.png) | kon | air |
+| ![len](./images/Things/tLen.png) | ![len](./images/Words/wLen.png) | len | flag |
+| ![lupa](./images/Things/tLupa.png) | ![lupa](./images/Words/wLupa.png) | lupa | door |
+| ![pipi](./images/Things/tPipi.png) | ![pipi](./images/Words/wPipi.png) | pipi | bug |
+| ![seli](./images/Things/tSeli.png) | ![seli](./images/Words/wSeli.png) | seli | fire |
+| ![selo](./images/Things/tSelo.png) | ![selo](./images/Words/wSelo.png) | selo | outline |
+| ![sinpin](./images/Things/tSinpin.png) | ![sinpin](./images/Words/wSinpin.png) | sinpin | wall |
+| ![soweli](./images/Things/tSoweliFront.png) ![soweli](./images/Things/tSoweliSide.png) ![soweli](./images/Things/tSoweliBack.png) | ![soweli](./images/Words/wSoweli.png) | soweli | animal |
 
 ### Adjectives *(nimi nasin)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Translation *(toki ante)*** | **Usage *(pali)*** |
 | :---: | :---: | :---: | :--- |
-| ![](./images/Words/wAwen.png) | awen | stop | Object cannot be moved. |
-| ![](./images/Words/wMoli.png) | moli | kill | Destroys any `sina` object on it. |
-| ![](./images/Words/wOpen.png) | open | open | Destroys self and a `pini` object when they share a space. |
-| ![](./images/Words/wPini.png) | pini | shut | Destroys self and an `open` object when they share a space. |
-| ![](./images/Words/wPona.png) | pona | win | Wins level when on `sina` or `powe` object. |
-| ![](./images/Words/wPowe.png) | powe | proxy | Wins level when on a `pona` object. |
-| ![](./images/Words/wSina.png) | sina | you | Controllable object, wins level when on a `pona` object. |
-| ![](./images/Words/wTawa.png) | tawa | push | Object is pushable. |
+| ![awen](./images/Words/wAwen.png) | awen | stop | Object cannot be moved. |
+| ![moli](./images/Words/wMoli.png) | moli | kill | Destroys any `sina` object on it. |
+| ![open](./images/Words/wOpen.png) | open | open | Destroys self and a `pini` object when they share a space. |
+| ![pini](./images/Words/wPini.png) | pini | shut | Destroys self and an `open` object when they share a space. |
+| ![pona](./images/Words/wPona.png) | pona | win | Wins level when on `sina` or `powe` object. |
+| ![powe](./images/Words/wPowe.png) | powe | proxy | Wins level when on a `pona` object. |
+| ![sina](./images/Words/wSina.png) | sina | you | Controllable object, wins level when on a `pona` object. |
+| ![tawa](./images/Words/wTawa.png) | tawa | push | Object is pushable. |
 
 ### Particles *(nimi lili)*
 | **Glyph *(sitelen)*** | **Word *(nimi)*** | **Usage *(pali)*** |
 | :---: | :---: | :--- |
-| ![](./images/Words/wAla.png) | ala | Negator for subjects and/or predicates, used after word being negated. |
-| ![](./images/Words/wEn.png) | en | Used as `and` for subjects. |
-| ![](./images/Words/wLi.png) | li | Used as `is`, `and` for predicates. |
+| ![ala](./images/Words/wAla.png) | ala | Negator for subjects and/or predicates, used after word being negated. |
+| ![en](./images/Words/wEn.png) | en | Used as `and` for subjects. |
+| ![li](./images/Words/wLi.png) | li | Used as `is`, `and` for predicates. |
 
 ## Credits *(kulupu pali)*
 * Code by Bach Davis *(toki sona tan jan Pa)*
