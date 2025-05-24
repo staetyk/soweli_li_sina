@@ -54,7 +54,7 @@ o tawa e misa lon nanpa tan toki lili pi pana sona.
 | <a href="#" title="Press space or enter to pass.">**13**</a> | <a href="#" title="o kepeken e ilo kon anu ilo lon tan tawa ala.">**13**</a> |
 | <a href="#" title="You aren't stop.">**14**</a> | <a href="#" title="sina awen ala.">**14**</a> |
 | <a href="#" title="Unsync the yous.">**15**</a> | <a href="#" title="o ante e sina tu.">**15**</a> |
-| <a href="https://knowyourmeme.com/memes/loss" title="Words can be covered by things.">**16**</a> | <a href="https://knowyourmeme.com/memes/loss" title="nimi li ken len lon monsi ijo.">**16**</a> |
+| <a href="https://knowyourmeme.com/memes/loss" title="Words can be covered by things.">**16**</a> | <a href="https://knowyourmeme.com/memes/loss" title="ijo li ken len e nimi.">**16**</a> |
 | <a href="#" title="Is door stop?">**17**</a> | <a href="#" title="lupa li awen ala awen?">**17**</a> |
 | <a href="#" title="Wall isn't air, is it?">**18**</a> | <a href="#" title="sinpin li kon ala, anu seme?">**18**</a> |
 | <a href="#" title="Air should be win.">**19**</a> | <a href="#" title="kon o pona.">**19**</a> |
