@@ -6,6 +6,8 @@ In this fun Toki Pona game, you solve various puzzles by changing the rules of t
 
 musi toki pona musi ni la, sina pona e musi sona mute kepeken nasin ni: ante e lawa musi a! musi ni li musi, taso ike, li lon tan musi *Baba is You* li tenpo pona, ale la!
 
+![Playthrough (lukin pali)](./playthrough.mp4)
+
 ## Table of Contents *(kipisi lipu)*
 * [Description *(toki lili)*](#soweli-li-sina)
 * [Controls *(nasin pali)*](#controls-nasin-pali)
