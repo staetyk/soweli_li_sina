@@ -7,3 +7,6 @@ packages = ["SDL2", "SDL2_image", "SDL2_mixer", "SDL2_ttf", "fontconfig", "freet
 
 [deployment]
 run = ["sh", "-c", "python3 lib/main.py"]
+
+[agent]
+expertMode = true

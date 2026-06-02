@@ -236,7 +236,7 @@ def read():
                     phrase += " "
                     coords = (j + d * k, i + (1 - d) * k)
                     if node == 0:
-                        n =  search(coords, lambda x : x._type == 1)
+                        n = search(coords, lambda x : x._type == 1)
                         if n is not None:
                             phrase += n._name
                             node = 1
@@ -305,8 +305,10 @@ def read():
                             continue
                         else: node = 7
 
-                else: 
+                else:
                     phrase = phrase.strip()
+                    if phrase.endswith(" li"):
+                        phrase = phrase[:-3].strip()
                     out.append(phrase)
     return out
 
